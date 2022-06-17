@@ -7,18 +7,20 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Contact Us</title>
   <style>
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
     * {
       margin: 0;
       padding: 0;
-      font-family: sans-serif;
+      font-family: 'Permanent Marker';
       box-sizing: border-box;
       text-align: center;
-      color: white;
+      color: black;
     }
 
     #contact_body {
       min-height: 100vh;
-      background-image: url(https://wallpapercave.com/wp/wp4676574.jpg);
+      background-image: url(https://images2.alphacoders.com/559/559116.png);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -71,9 +73,12 @@
     textarea {
       grid-column: 2 / span 10;
       resize: none;
-      background-color: rgb(175, 170, 170);
+      background-color: transparent;
       height: 50px;
       border-radius: 5px;
+      outline: none;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      border: transparent;
     }
 
     input {
@@ -82,11 +87,14 @@
       border: transparent;
       margin: 10px 0px 20px 0px;
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
-      background-color: rgb(175, 170, 170);
+      background-color: transparent;
+      outline: none;
+      font-weight: 600;
+      letter-spacing: 3px;
     }
 
     button {
-      background-color: rgb(175, 170, 170);
+      background-color: transparent;
       grid-column: span 12;
       text-align: center;
       margin: auto;
@@ -97,11 +105,12 @@
       font-weight: 600;
       border-radius: 5px;
       border: transparent;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
     }
 
     button:hover {
-      background-color: rgb(122, 177, 122);
-      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
       cursor: pointer;
     }
   </style>

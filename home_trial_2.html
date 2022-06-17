@@ -18,28 +18,24 @@
     background-color: green;
   } */
 
-  .container {
-    /* margin: auto; */
+  .home_page_container {
+    margin-left: 10%;
     display: flex;
     flex-direction: column;
     height: 370vh;
-    width: 830px;
+    width: 80%;
     flex-wrap: wrap;
     gap: 20px;
-    /* border: 5px solid black; */
-    /* overflow: hidden; */
-
-
   }
 
-  .card {
+  .home_card {
     padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     height: fit-content;
     width: 150px;
   }
 
-  .card:first-child {
+  .home_card:first-child {
     display: none;
   }
 
@@ -48,13 +44,13 @@
     color: blue;
   }
 
-  img {
+  .home_image {
     width: 100%;
   }
 </style>
 
 <body>
-  <div class="container">
+  <div class="home_page_container">
   </div>
 </body>
 
@@ -839,7 +835,7 @@
   displayContent();
 
   function displayContent() {
-    var container = document.querySelector(".container");
+    var container = document.querySelector(".home_page_container");
 
     for (let i = 0; i < 30; i++) {
 
@@ -853,11 +849,12 @@
 
       let card = document.createElement("div");
       card.classList.add("card");
-      card.setAttribute("class", "card")
+      card.setAttribute("class", "home_card")
 
       let imgLink = dataBase[random].image;
       let img = document.createElement("img");
       img.setAttribute("src", imgLink);
+      img.setAttribute("class", "home_image")
       card.append(img);
 
       let name = document.createElement("p");

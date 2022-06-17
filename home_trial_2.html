@@ -14,6 +14,10 @@
     padding: 0;
   }
 
+  body{
+    background-color: green;
+  }
+
   .container {
     margin: auto;
     display: flex;
@@ -26,6 +30,7 @@
   }
 
   .card {
+    background-color: red;
     padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     border-radius: 6px;
@@ -55,7 +60,8 @@
 </html>
 
 <script>
-  var dataBase = [{
+  var dataBase = [
+    {
       image: "https://images-eu.ssl-images-amazon.com/images/I/41m7FD8ZB4L.jpg",
       url: "https://ideakart.com/book/startup-karnarach-mi-udyojak-honarach-mi-isbn10-9385223941-isbn13-9789385223945",
       name: "Startup Karnarach Mi Udyojak Honarach Mi (स्टार्टअप करणारच मी, उद्योजक होणारच मी)",
@@ -343,7 +349,7 @@
     let img = document.createElement("img");
     img.setAttribute("src", imgLink);
     card.append(img);
-
+    
     let name = document.createElement("p");
     name.innerText = dataBase[i].name;
     name.style.fontSize = "smaller";

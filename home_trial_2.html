@@ -20,19 +20,22 @@
 
   .home_page_container {
     margin-left: 10%;
+    /* display: grid;
+    grid-template-columns: repeat(4, auto); */
     display: flex;
     flex-direction: column;
     height: 380vh;
     width: 80%;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
+    /* gap: 20px; */
   }
 
   .home_card {
     padding: 20px;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     height: fit-content;
-    width: 150px;
+    width: 170px;
   }
 
   .home_card:first-child {
@@ -837,7 +840,7 @@
   function displayContent() {
     var container = document.querySelector(".home_page_container");
 
-    for (let i = 0; i < 33; i++) {
+    for (let i = 0; i < 30; i++) {
 
       let random = generateRandom();
 

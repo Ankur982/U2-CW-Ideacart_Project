@@ -6,6 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
   <style>
     * {
       margin: 0;
@@ -25,10 +27,6 @@
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       gap: 30px;
-    }
-
-    main {
-      margin: 60px 40px;
     }
 
     main h2 {
@@ -51,6 +49,29 @@
 </head>
 
 <body>
+
+  <!-- navBar section -->
+
+
+  <section id="header">
+    <a href="home_page.html" class="logo">IdeaKart💡</a>
+    <div id="search_box">
+      <input type="text" placeholder="Search for product">
+      <button>Search</button>
+    </div>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="home_page.html" class="active">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li><a href="login.html">LogIn</a></li>
+        <li><a href="cart.html">🛒</a></li>
+
+      </ul>
+    </div>
+  </section>
+
   <section class="about_data">
     <main class="grid">
       <h2>Welcome To Ideakart</h2>
@@ -67,6 +88,34 @@
       <div class="cards">Akshay</div> -->
     </main>
   </section>
+
+  <!-- footer part of ideakart -->
+
+  <div id="foot-of-page">
+    <h3>Get To Know Us</h3>
+    <ul>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="refund.html">Refund Policy</a>
+      </li>
+      <li>
+        <a href="earn_money.html">Earn Money Online</a>
+      </li>
+
+    </ul>
+  </div>
+
 </body>
 
 </html>

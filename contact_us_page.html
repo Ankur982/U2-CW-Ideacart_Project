@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Contact Us</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      font-family: 'Spartan',sans-serif;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
+    }
+
+    #contact_body {
+      /* min-height: 100vh; */
+      /* background-image: url(https://images2.alphacoders.com/559/559116.png); */
+      background-image: url(https://cdn.wallpapersafari.com/72/85/HeqdzI.jpg);
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+
+    #contact_section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      width: 100%;
+    }
+
+
+    .contact_container {
+      position: relative;
+      z-index: 1000;
+      width: 100%;
+      max-width: 1000px;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 25px 45px rgba(207, 189, 189, 0.1);
+      backdrop-filter: blur(5px);
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    #contact {
+      grid-column: span 12;
+      margin-bottom: 30px;
+    }
+
+    .left-name {
+      grid-column: span 6;
+      letter-spacing: 2px;
+    }
+
+    .right-name {
+      grid-column: span 6;
+      letter-spacing: 2px;
+    }
+
+    .left {
+      grid-column: 2 / span 4;
+      letter-spacing: 2px;
+    }
+
+    .right {
+      grid-column: 8 / span 4;
+      letter-spacing: 2px;
+    }
+
+    textarea {
+      grid-column: 2 / span 10;
+      resize: none;
+      background-color: transparent;
+      height: 50px;
+      border-radius: 5px;
+      outline: none;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      border: transparent;
+    }
+
+    input {
+      height: 30px;
+      border-radius: 5px;
+      border: transparent;
+      margin: 10px 0px 20px 0px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      background-color: transparent;
+      outline: none;
+      /* font-weight: 600; */
+      letter-spacing: 3px;
+    }
+
+    button {
+      background-color: transparent;
+      grid-column: span 12;
+      text-align: center;
+      margin: auto;
+      margin-top: 30px;
+      padding: 10px 40px;
+      width: fit-content;
+      color: white;
+      font-weight: 600;
+      border-radius: 5px;
+      border: transparent;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+
+    }
+
+    button:hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body id="contact_body">
+
+
+     <!-- navBar section of ideakart -->
+
+
+ <section id="header">
+    <a href="home_page.html" class="logo">IdeaKart💡</a>
+    <div id="search_box">
+        <input type="text" placeholder="Search for product">
+        <button>Search</button>
+    </div>
+
+    <div>
+        <ul id="navbar">
+            <li><a href="home_page.html">Home</a></li>
+            <li><a href="about_page.html">About</a></li>
+            <li><a href="contact_us_page.html" class="active">Contact</a></li>
+            <li><a href="login.html">LogIn</a></li>
+            <li><a href="cart.html">🛒</a></li>
+
+        </ul>
+    </div>    
+</section>
+
+
+ <!-- contact us section of ideakart -->
+
+  <section id="contact_section">
+    <div class="contact_container">
+      <h2 id="contact">Contact Us</h2>
+      <h5 class="left-name">First Name</h5>
+      <h5 class="right-name">Last Name</h5>
+      <input type="text" class="left" id="first_name" autocomplete="off" required>
+      <input type="text" class="right" id="last_name" autocomplete="off" required>
+
+      <h5 class="left-name">Email ID</h5>
+      <h5 class="right-name">Mobile</h5>
+      <input type="email" class="left" id="email" autocomplete="off" required>
+      <input type="tel" class="right" id="mobile" autocomplete="off" required>
+
+      <h2 id="contact">Message</h2>
+      <textarea name="" id=""></textarea>
+
+      <br>
+
+      <button id="submit">Submit</button>
+
+    </div>
+  </section>
+
+
+
+   <!-- footer part of ideakart -->
+
+   <div id="foot-of-page">
+    <h3>Get To Know Us</h3>
+    <ul>
+        <li>
+            <a href="about.html">About</a>
+        </li>
+        <li>
+            <a href="contact.html">Contact</a>
+        </li>
+        <li>
+            <a href="search.html">Search</a>
+        </li>
+        <li>
+            <a href="privacy_policy.html">Privacy Policy</a>
+        </li>
+        <li>
+            <a href="refund.html">Refund Policy</a>
+        </li>
+        <li>
+            <a href="earn_money.html">Earn Money Online</a>
+        </li>
+        
+    </ul>
+</div>
+
+
+</body>
+
+</html>
+
+<script>
+  let user_messages = JSON.parse(localStorage.getItem("user_messages")) || [];
+
+  document.querySelector
+</script>

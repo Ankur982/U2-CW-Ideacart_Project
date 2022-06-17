@@ -4,42 +4,7 @@
     box-sizing: border-box;
     font-family: 'Spartan',sans-serif;
 }
-h1{
-    font-size: 50px;
-    line-height: 64px;
-    color: #222;
-}
 
-h2{
-    font-size: 46px;
-    line-height: 64px;
-    color: #222;
-}
-
-h4{
-    font-size: 20px;
-    color: #222;
-}
-
-h6{
-    font-weight: 700;
-    font-size: 12px;
-}
-
-p{
-    font-size: 16px;
-    color: #465b52;
-    margin: 15px 0 20px 0;
-}
-
-.section-p1{
-    padding: 40px 80px;
-}
-
-body{
-    width: 100%;
-
-}
 
 #header{
 
@@ -70,6 +35,8 @@ body{
 }
 
 
+
+
 #search_box{
     width: 30%;
 }
@@ -97,7 +64,7 @@ body{
 #search_box>button:hover{
     background: #465b52;
     color: white;
-}
+} 
 
 #navbar{
     display: flex;

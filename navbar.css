@@ -7,7 +7,6 @@
 
 
 #header {
-
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -38,7 +37,7 @@
 
 
 #search_box {
-  width: 30%;
+  width: 400px;
 }
 
 #search_box>input {

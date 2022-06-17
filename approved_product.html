@@ -4,14 +4,14 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
+    <title>Aproved Products</title>
     <link rel="icon" type="image/x-icon" href="https://ideakart.com/assets/favicon-dc419e035c991f8f9c077a885c6ba6d589c3b552a1e4073cf07a392c54b93db7.jpg" />
-    <!-- <link rel="stylesheet" href="navbar_style.css">
-    <link rel="stylesheet" href="footer_style.css"> -->
     <link rel="stylesheet" href="final_dashbord.css">
 </head>
 <body>
-  <!-- side bar of dashbord -->
+
+    
+    <!-- side bar of dashbord -->
     <div class="sidebar">
         <header>Dashboard</header>
         <ul>
@@ -26,32 +26,10 @@
         </ul>
       </div>
 
-    <!-- Home page details -->
-
-
-      <!-- added products aproved or unappoved products details details -->
-      <div id="product_details">
-
-      <div id="approved">Products Approved----
-           <i></i> 
-        </div>
-
-        <div id="review">
-            
-        </div>
-        <div id="rejected">
-            Couldn't pass Review---
-            
-        </div>
-      </div>
-    
-
+    <div id="uploded">
+        <!-- approved product shown here -->
+    </div>
 </body>
 </html>
-<script >
-    let review=JSON.parse(localStorage.getItem("review"));
-    document.querySelector("#review").innerHTML="Under Review"+" - "+(review || 0);
-
-
-</script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script>
+<script src="approved_product.js"></script>
+<script src="https://kit.fontawesome.com/a076d05399.js"></script> 

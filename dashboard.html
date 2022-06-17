@@ -6,16 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard</title>
     <link rel="icon" type="image/x-icon" href="https://ideakart.com/assets/favicon-dc419e035c991f8f9c077a885c6ba6d589c3b552a1e4073cf07a392c54b93db7.jpg" />
-    <!-- <link rel="stylesheet" href="navbar_style.css">
-    <link rel="stylesheet" href="footer_style.css"> -->
-    <link rel="stylesheet" href="final_dashbord.css">
+   
+    <link rel="stylesheet" href="final_dashboard.css">
 </head>
 <body>
   <!-- side bar of dashbord -->
     <div class="sidebar">
         <header>Dashboard</header>
         <ul>
-           <li id="home">  <a href="dashbord.html">  <i class="fas fa-home"></i>Home</a></li>
+           <li id="home">  <a href="dashboard.html">  <i class="fas fa-home"></i>Home</a></li>
            <li id="new_product">  <a href="upload_product.html">  <i class="fa fa-upload"></i>Upload Product </a></li>
             <li id="credits">  <a href="#">  <i class="fa fa-credit-card"></i>Credits</a></li>
             <li id="#">  <a href="added_products.html">  <i class="fa fa-plus"></i> Added Product</a></li>
@@ -32,8 +31,8 @@
       <!-- added products aproved or unappoved products details details -->
       <div id="product_details">
 
-      <div id="approved">Products Approved----
-           <i></i> 
+      <div id="approved">
+                 
         </div>
 
         <div id="review">
@@ -51,6 +50,12 @@
 <script >
     let review=JSON.parse(localStorage.getItem("review"));
     document.querySelector("#review").innerHTML="Under Review"+" - "+(review || 0);
+
+    let aproved=JSON.parse(localStorage.getItem("aproved"));
+    document.querySelector("#approved").innerHTML="Products Approved"+" - "+(aproved || 0);
+
+    let rejected=JSON.parse(localStorage.getItem("reject"));
+    document.querySelector("#rejected").innerHTML="Products Rejected"+" - "+(rejected || 0);
 
 
 </script>

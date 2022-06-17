@@ -1,23 +1,26 @@
-let addedProductArr=JSON.parse(localStorage.getItem("New-Product"));
+let addedProductArr=JSON.parse(localStorage.getItem("rejected-Product"));
 
 function displayUploaded(addedProductArr){
     
-  let div=document.createElement("div");
+  
   
   addedProductArr.map(function(el){
-  let image=document.createElement("img")
+    let tr=document.createElement("tr");
+  let td1=document.createElement("td")
+    let image=document.createElement("img");
   image.src=el.image;
+  td1.append(image);
 
-  let name=document.createElement("h2")
+  let name=document.createElement("td")
   name.innerText=el.description;
 
-  let price=document.createElement("h2")
+  let price=document.createElement("td")
   price.innerText=el.price;
 
- div.append(image,name,price)
+ tr.append(td1,name,price)
 
-document.querySelector("#uploded").append(div)
+document.querySelector("#tbody").append(tr)
 
   });  
 }
-displayUploaded(addedProductArr);
+displayUploaded(addedProductArr)

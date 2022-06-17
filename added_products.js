@@ -2,9 +2,10 @@ let addedProductArr=JSON.parse(localStorage.getItem("New-Product"));
 
 function displayUploaded(addedProductArr){
     
-  let tr=document.createElement("tr");
+  
   
   addedProductArr.map(function(el){
+    let tr=document.createElement("tr");
   let td1=document.createElement("td")
     let image=document.createElement("img");
   image.src=el.image;

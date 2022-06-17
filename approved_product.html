@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aproved Products</title>
     <link rel="icon" type="image/x-icon" href="https://ideakart.com/assets/favicon-dc419e035c991f8f9c077a885c6ba6d589c3b552a1e4073cf07a392c54b93db7.jpg" />
-    <link rel="stylesheet" href="final_dashbord.css">
+    <link rel="stylesheet" href="final_dashboard.css">
 </head>
 <body>
 
@@ -15,7 +15,7 @@
     <div class="sidebar">
         <header>Dashboard</header>
         <ul>
-           <li id="home">  <a href="dashbord.html">  <i class="fas fa-home"></i>Home</a></li>
+           <li id="home">  <a href="dashboard.html">  <i class="fas fa-home"></i>Home</a></li>
            <li id="new_product">  <a href="upload_product.html">  <i class="fa fa-upload"></i>Upload Product </a></li>
             <li id="credits">  <a href="#">  <i class="fa fa-credit-card"></i>Credits</a></li>
             <li id="#">  <a href="added_products.html">  <i class="fa fa-plus"></i> Added Product</a></li>
@@ -26,10 +26,22 @@
         </ul>
       </div>
 
-    <div id="uploded">
-        <!-- approved product shown here -->
-    </div>
+      <h2 id="heading">Products under review!</h2>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          </tr>
+          
+        </thead>
+        <tbody id="tbody">
+        <!-- Added products will appended here -->
+        </tbody>
+      </table>
 </body>
 </html>
 <script src="approved_product.js"></script>
-<script src="https://kit.fontawesome.com/a076d05399.js"></script> 
+<script src="https://kit.fontawesome.com/a076d05399.js"></script>

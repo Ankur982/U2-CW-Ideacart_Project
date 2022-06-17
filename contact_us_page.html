@@ -10,50 +10,133 @@
     * {
       margin: 0;
       padding: 0;
-      font-family: sans;
+      font-family: sans-serif;
+      box-sizing: border-box;
+      text-align: center;
+      color: white;
     }
 
     body {
-      background-image: url(https://wallpapercave.com/wp/wp4729478.jpg);
+      min-height: 100vh;
+      background-image: url(https://wallpapercave.com/wp/wp4676574.jpg);
+      background-size: cover;
       background-repeat: no-repeat;
-      background-size: 100%;
-      display: flex;
-      justify-content: center;
     }
 
-    #container {
-      display: flex;
-      margin-top: 150px;
-      width: 50%;
-      height: 350px;
-      border: 2px solid white;
-    }
-
-    #image {
+    section {
       display: flex;
       justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding: 20px;
+      width: 100%;
+    }
+
+
+    .container {
+      position: relative;
+      z-index: 1000;
+      width: 100%;
+      max-width: 1000px;
+      padding: 50px;
+      background: rgba(255, 255, 255, 0.2);
+      border-radius: 10px;
+      box-shadow: 0 25px 45px rgba(207, 189, 189, 0.1);
+      backdrop-filter: blur(5px);
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+    }
+
+    #contact {
+      grid-column: span 12;
+      margin-bottom: 30px;
+    }
+
+    .left-name {
+      grid-column: span 6;
+    }
+
+    .right-name {
+      grid-column: span 6;
+    }
+
+    .left {
+      grid-column: 2 / span 4;
+    }
+
+    .right {
+      grid-column: 8 / span 4;
+    }
+
+    textarea {
+      grid-column: 2 / span 10;
+      resize: none;
+      background-color: rgb(175, 170, 170);
+      height: 50px;
+      border-radius: 5px;
+    }
+
+    input {
+      height: 30px;
+      border-radius: 5px;
+      border: transparent;
+      margin: 10px 0px 20px 0px;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+      background-color: rgb(175, 170, 170);
+    }
+
+    button {
+      background-color: rgb(175, 170, 170);
+      grid-column: span 12;
       text-align: center;
+      margin: auto;
+      margin-top: 30px;
+      padding: 10px 40px;
+      width: fit-content;
+      color: black;
+      font-weight: 600;
+      border-radius: 5px;
+      border: transparent;
     }
 
-    #image img {
+    button:hover {
+      background-color: rgb(122, 177, 122);
+      box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+      cursor: pointer;
     }
   </style>
 </head>
 
 <body>
-  <div id="container">
-    <div id="image">
-      <img src="https://pngimg.com/uploads/email/email_PNG100740.png" alt="">
+
+  <section>
+    <div class="container">
+      <h2 id="contact">Contact Us</h2>
+      <h5 class="left-name">First Name</h5>
+      <h5 class="right-name">Last Name</h5>
+      <input type="text" class="left" id="first_name" required>
+      <input type="text" class="right" id="last_name" required>
+
+      <h5 class="left-name">Email ID</h5>
+      <h5 class="right-name">Mobile</h5>
+      <input type="email" class="left" id="email" required>
+      <input type="tel" class="right" id="mobile" required>
+
+      <h2 id="contact">Message</h2>
+      <textarea name="" id=""></textarea>
+
+      <br>
+
+      <button id="submit">Submit</button>
+
     </div>
-    <div>
-      <h2>Lets Talk</h2>
-      <h2>Enter your contact info here</h2>
-      <input type="text" placeholder="Enter Name">
-      <input type="text" placeholder="Enter Email">
-      <input type="text" placeholder="Feedback">
-      <input type="submit" value="Submit">
-    </div>
-  </div>
+  </section>
 </body>
 
 </html>
+
+<script>
+  let user_messages = JSON.parse(localStorage.getItem("user_messages")) || [];
+
+  document.querySelector
+</script>

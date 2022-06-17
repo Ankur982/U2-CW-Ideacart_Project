@@ -3,9 +3,7 @@ let acceptedArr=JSON.parse(localStorage.getItem("accepted-Product"));
 let rejectedArr=JSON.parse(localStorage.getItem("rejected-Product"));
 
 function displayUploaded(addedProductArr){
-    
- 
-  
+     
   addedProductArr.map(function(el){
     let tr=document.createElement("tr");
   let td1=document.createElement("td")

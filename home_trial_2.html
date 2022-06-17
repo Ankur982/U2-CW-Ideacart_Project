@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home Page 2</title>
+</head>
+
+<style>
+  * {
+    margin: 0;
+    padding: 0;
+  }
+
+  .container {
+    margin: auto;
+    display: flex;
+    /* grid-template-columns: repeat(4, 1fr); */
+    flex-direction: column;
+    height: 500vh;
+    width: 80%;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .card {
+    padding: 20px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    border-radius: 6px;
+    height: fit-content;
+    width: 10em;
+  }
+
+  .card:first-child {
+    display: none;
+  }
+
+  .price {
+    padding: 10px 0;
+    color: blue;
+  }
+
+  img {
+    width: 100%;
+  }
+</style>
+
+<body>
+  <div class="container">
+  </div>
+</body>
+
+</html>
+
+<script>
+  var dataBase = [{
+      image: "https://images-eu.ssl-images-amazon.com/images/I/41m7FD8ZB4L.jpg",
+      url: "https://ideakart.com/book/startup-karnarach-mi-udyojak-honarach-mi-isbn10-9385223941-isbn13-9789385223945",
+      name: "Startup Karnarach Mi Udyojak Honarach Mi (स्टार्टअप करणारच मी, उद्योजक होणारच मी)",
+      price: "240.0"
+
+    },
+
+    {
+      image: "https://images-eu.ssl-images-amazon.com/images/I/51prFYi1qHL.jpg",
+      url: "https://ideakart.com/book/make-think-imagine-engineering-the-future-of-civilisation-isbn10-1526605708-isbn13-9781526605702",
+      name: "Make, Think, Imagine: Engineering the Future of Civilisation",
+      price: "1229.0"
+
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41oyhZiOxcL.jpg",
+      "url": "https://ideakart.com/book/jennifer-one-woman-two-continents-and-a-truth-called-child-trafficking-isbn10-9353338417-isbn13-9789353338411",
+      "name": "JENNIFER: One Woman, Two Continents and a Truth Called Child Trafficking",
+      "price": "198.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41o7R-iL8jL.jpg",
+      "url": "https://ideakart.com/book/handbook-of-visual-optics-volume-one-fundamentals-and-eye-optics-isbn10-0367869926-isbn13-9780367869922",
+      "name": "Handbook of Visual Optics, Volume One: Fundamentals and Eye Optics",
+      "price": "4035.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51d33xdLR4L.jpg",
+      "url": "https://ideakart.com/book/kurti-on-sale-2018-hoc-kurti-long-for-women-latest-design-party-wear-kurti-latest-design-kurti-materials-for-women-unstitched-kurtas-for-womens-below-300-kurta-and-kurti-for-women-ladies-kurta-cotton-latest-design-kurta-dresses-for-women-isbn10--isbn13-0000595175398",
+      "name": "kurti on sale 2018 HOC kurti long for women latest design party wear kurti latest design kurti materials for women unstitched kurtas for womens below 300 kurta and kurti for women ladies kurta cotton latest design kurta dresses for women",
+      "price": "474.0"
+
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/616uNJHZCSL.jpg",
+      "url": "https://ideakart.com/book/taylor-swift-2019-mini-wall-calendar-isbn10-1975403851-isbn13-9781975403850",
+      "name": "Taylor Swift 2019 Mini Wall Calendar",
+      "price": "476.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/518LUFZvQ9L.jpg",
+      "url": "https://ideakart.com/book/studies-in-the-history-of-accounting-edited-on-behalf-of-the-association-of-university-teachers-of-accounting-and-the-american-accounting-association-classic-reprint-isbn10-1527715019-isbn13-9781527715011",
+      "name": "Studies in the History of Accounting: Edited on Behalf of the Association of University Teachers of Accounting and the American Accounting Association (Classic Reprint)",
+      "name": "1179.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41fiYTORdxL.jpg",
+      "url": "https://ideakart.com/book/m-s-golwakar-the-rss-and-india-isbn10-9388689488-isbn13-9789388689489",
+      "name": "M.S. Golwakar, the RSS and India",
+      "price": "221.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/418-LcVQzhL.jpg",
+      "url": "https://ideakart.com/book/drug-information-handbook-for-oncology-isbn10-1591953685-isbn13-9781591953685",
+      "name": "Drug Information Handbook for Oncology",
+      "price": "4245.68"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51rDgyyItGL.jpg",
+      "url": "https://ideakart.com/book/muslims-the-real-history-isbn10-9353041120-isbn13-9789353041120",
+      "name": "Muslims: The Real History",
+      "price": "608.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51yURGyytuL.jpg",
+      "url": "https://ideakart.com/book/red-card-fifa-and-the-fall-of-the-most-powerful-men-in-sports-isbn10-1788160622-isbn13-9781788160629",
+      "name": "Red Card: FIFA and the Fall of the Most Powerful Men in Sports",
+      "price": "517.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41wZNUxDYyL.jpg",
+      "url": "https://ideakart.com/book/ssc-je-civil-engineering-objective-solved-papers-2007-2018-isbn10-9388137337-isbn13-9789388137331",
+      "name": "SSC- JE: Civil Engineering Objective Solved Papers (2007-2018)",
+      "price": "599.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41CPqhoKaJL.jpg",
+      "url": "https://ideakart.com/book/the-art-in-painting-classic-reprint-isbn10-1396841709-isbn13-9781396841705",
+      "name": "The Art in Painting (Classic Reprint)",
+      "price": "1649.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Ca%2BMvsi1L.jpg",
+      "url": "https://ideakart.com/book/photographic-memory-10-steps-to-remember-anything-superfast-accelerated-learning-for-unlimited-memory-efficiency-create-habits-to-help-you-improve-your-memory-focus-and-clarity-mind-hacking-isbn10-1922320846-isbn13-9781922320841",
+      "name": "Photographic Memory: 10 Steps to remember Anything Superfast! Accelerated Learning for Unlimited Memory Efficiency. Create Habits to Help You Improve Your Memory, Focus and Clarity. Mind Hacking!",
+      "price": "1079.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41iAdfMfCbL.jpg",
+      "url": "https://ideakart.com/book/the-conference-of-the-birds-isbn10-0393355543-isbn13-9780393355543",
+      "name": "The Conference of the Birds",
+      "price": "826.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/514iC7YecML.jpg",
+      "url": "https://ideakart.com/book/saleon-cltllzen-financial-and-business-office-calculator-with-large-lcd-display-black-804-isbn10--isbn13-0791115518442",
+      "name": "SaleOn™ CLTLLZEN Financial and Business Office Calculator with Large LCD Display (Black)-804",
+      "price": "289.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/617SpYp565L.jpg",
+      "url": "https://ideakart.com/book/amelia-bedelia-chapter-book-12-amelia-bedelia-digs-in-isbn10-0062658425-isbn13-9780062658425",
+      "name": "Amelia Bedelia Chapter Book #12: Amelia Bedelia Digs In",
+      "price": "168.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/31aRTOajxkL.jpg",
+      "url": "https://ideakart.com/book/money-vintage-minis-isbn10-1784874027-isbn13-9781784874025",
+      "name": "Money: Vintage Minis",
+      "price": "131.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51O83zLg80L.jpg",
+      "url": "https://ideakart.com/book/onshine-wooden-solar-system-planets-jigsaw-play-puzzle-isbn10--isbn13-0713482673739",
+      "name": "Onshine Wooden Solar System Planets Jigsaw Play Puzzle",
+      "price": "999.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41XKb30wzsL.jpg",
+      "url": "https://ideakart.com/book/ielts-general-training-practice-tests-2018-ielts-general-training-book-with-140-reading-writing-speaking-vocabulary-test-prep-questions-for-the-ielts-exam-isbn10-0999876449-isbn13-9780999876442",
+      "name": "Ielts General Training Practice Tests 2018: Ielts General Training Book with 140 Reading, Writing, Speaking & Vocabulary Test Prep Questions for the Ielts Exam",
+      "price": "1408.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Sis1-V8eL.jpg",
+      "url": "https://ideakart.com/book/starting-saving-seeds-grow-the-perfect-vegetables-fruits-herbs-and-flowers-for-your-garden-isbn10-9780760360798-isbn13-9780760360798",
+      "name": "Starting & Saving Seeds: Grow the Perfect Vegetables, Fruits, Herbs, and Flowers for Your Garden",
+      "price": "1331.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41V2VNLNQrL.jpg",
+      "url": "https://ideakart.com/book/the-moonshot-game-adventures-of-an-indian-venture-capitalist-isbn10-0670091200-isbn13-9780670091201",
+      "name": "The Moonshot Game: Adventures of an Indian Venture Capitalist",
+      "price": "416.89"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51JU%2B3-9pxL.jpg",
+      "url": "https://ideakart.com/book/illustrator-cc-in-simple-steps-isbn10-938842526X-isbn13-9789388425261",
+      "name": "Illustrator CC in Simple Steps",
+      "price": "332.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41z-ix17lpL.jpg",
+      "url": "https://ideakart.com/book/lose-weight-now-a-new-approach-to-losing-weight-for-good-isbn10-1409185559-isbn13-9781409185550",
+      "name": "Lose Weight Now!: A new approach to losing weight for good",
+      "price": "193.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/4179Ly8SvAL.jpg",
+      "url": "https://ideakart.com/book/how-to-be-an-antiracist-isbn10-1847925995-isbn13-9781847925992",
+      "name": "How To Be an Antiracist",
+      "price": "1240.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/4194ehA8AmL.jpg",
+      "url": "https://ideakart.com/book/intelligence-bureau-2018-security-assistant-executive-isbn10-9388426312-isbn13-9789388426312",
+      "name": "Intelligence Bureau 2018: Security Assistant/Executive",
+      "price": "356.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51NhI%2Bi6bmL.jpg",
+      "url": "https://ideakart.com/book/howard-stern-comes-again-isbn10-1501194291-isbn13-9781501194290",
+      "name": "Howard Stern Comes Again",
+      "price": "1903.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51FcPOduAqL.jpg",
+      "url": "https://ideakart.com/book/padhuka-s-students-handbook-on-advanced-auditing-ca-final-old-syllabus-for-may-2019-exams-and-onwards-isbn10-9388313488-isbn13-9789388313483",
+      "name": "Padhuka's Students Handbook On Advanced Auditing: CA final Old Syllabus- for May 2019 Exams and onwards",
+      "price": "769.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/513Pzz7lsHL.jpg",
+      "url": "https://ideakart.com/book/lessons-from-lucy-the-simple-joys-of-an-old-happy-dog-isbn10-1501161156-isbn13-9781501161155",
+      "name": "Lessons From Lucy: The Simple Joys of an Old, Happy Dog",
+      "price": "1412.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/517HT5A8oxL.jpg",
+      "url": "https://ideakart.com/book/evolve-isbn10-8193769104-isbn13-9788193769102",
+      "name": "Evolve",
+      "price": "300.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41-wJJlYXlL.jpg",
+      "url": "https://ideakart.com/book/nuggets-of-wisdom-some-path-breaking-judgments-of-the-supreme-court-isbn10-8126929162-isbn13-9788126929160",
+      "name": "Nuggets of wisdom: Some path breaking judgments of the supreme court",
+      "price": "628.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41UHlG5rxFL.jpg",
+      "url": "https://ideakart.com/book/enjocho-wristwatch-fashion-creative-paper-watch-led-waterproof-clock-tyvek-paper-strap-digital-watches-2018-one-size-n-isbn10--isbn13-0653729719915",
+      "name": "Enjocho Wristwatch Fashion Creative Paper Watch Led Waterproof Clock Tyvek Paper Strap Digital Watches 2018 one Size N",
+      "price": "271.32"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41%2B%2BJ8XOXhL.jpg",
+      "url": "https://ideakart.com/book/wooden-carrom-board-black-with-coins-20-inch-isbn10--isbn13-0639385317610",
+      "name": "Wooden Carrom Board (Black) with Coins 20\"Inch",
+      "price": "699.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51wglZz4InL.jpg",
+      "url": "https://ideakart.com/book/comptia-security-practice-tests-exam-sy0-501-isbn10-1119416922-isbn13-9781119416920",
+      "name": "CompTIA Security+ Practice Tests: Exam SY0–501",
+      "price": "2111.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51NLkeu4afL.jpg",
+      "url": "https://ideakart.com/book/begin-to-code-with-python-isbn10-1509304525-isbn13-9781509304523",
+      "name": "Begin to Code with Python",
+      "price": "1848.54"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/61mZ97lsm1L.jpg",
+      "url": "https://ideakart.com/book/the-art-of-statistics-how-to-learn-from-data-isbn10-1541618513-isbn13-9781541618510",
+      "name": "The Art of Statistics: How to Learn from Data",
+      "price": "1744.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/5142RsS986L.jpg",
+      "url": "https://ideakart.com/book/neelkanth-large-very-soft-4-feet-lovable-huggable-teddy-bear-with-neck-bow-for-girlfriend-birthday-gift-boy-girl-122-cm-brown-isbn10--isbn13-0689786537339",
+      "name": "Neelkanth Large Very Soft 4 Feet Lovable/Huggable Teddy Bear with Neck Bow for Girlfriend/Birthday Gift/Boy/Girl (122 CM, Brown)",
+      "price": "1099.0"
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41HPI4itdyL.jpg",
+      "url": "https://ideakart.com/book/36-slots-flexible-canvas-pencils-pens-brush-holder-pouch-roll-up-storage-wrap-case-for-marker-pens-painting-brushes-black-isbn10--isbn13-0715538583276",
+      "name": "36 Slots Flexible Canvas Pencils Pens Brush Holder Pouch Roll-up Storage Wrap Case for Marker Pens, Painting Brushes - Black",
+      "price": 500
+    },
+
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/41mB6UsBKRL.jpg",
+      "url": "https://ideakart.com/book/selections-illustrating-the-history-of-greek-mathematics-vol-1-of-2-from-thales-to-euclid-classic-reprint-isbn10-9780282625801-isbn13-9780282625801",
+      "name": "Selections Illustrating the History of Greek Mathematics, Vol. 1 of 2: From Thales to Euclid (Classic Reprint)",
+      "price": "1629.0"
+    },
+    {
+      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Zl02gjroL.jpg",
+      "url": "https://ideakart.com/book/ipad-with-ios-11-and-higher-for-seniors-learn-to-work-with-the-ipad-computer-books-for-seniors-isbn10-9059054245-isbn13-9789059054240",
+      "name": "iPad with IOS 11 and Higher for Seniors: Learn to Work with the iPad (Computer Books for Seniors)",
+      "price": "1299.0"
+    }
+  ]
+
+
+  var container = document.querySelector(".container");
+
+  for (let i = 0; i < dataBase.length; i++) {
+    let card = document.createElement("div");
+    card.classList.add("card");
+    card.setAttribute("class", "card")
+
+    let imgLink = dataBase[i].image;
+    let img = document.createElement("img");
+    img.setAttribute("src", imgLink);
+    card.append(img);
+
+    let name = document.createElement("p");
+    name.innerText = dataBase[i].name;
+    name.style.fontSize = "smaller";
+    card.append(name);
+
+    let price = document.createElement("p");
+    price.innerText = dataBase[i].price;
+    price.setAttribute("class", "price")
+
+    card.append(price);
+
+    let addToCart = document.createElement("div");
+    addToCart.innerText = "🛒 Add To Cart";
+    card.append(addToCart);
+
+    container.append(card);
+  }
+</script>

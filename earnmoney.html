@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+
+        <style>
+                .headearn {
+                        /* background-image: url("earn.jpg"); */
+                        background-color: rgb(140, 192, 213)
+                                /* background-size: auto;
+                        background-position: cover;
+                        background-repeat: no-repeat */
+                }
+
+                * {
+                        box-sizing: border-box
+                }
+
+                #earncontainer {
+                        display: flex;
+                        width: 48vw;
+                        margin: auto
+                }
+
+                #earncontainer>div:nth-child(1) {
+                        background-color: #0ca8dc;
+                        color: whitesmoke;
+
+
+                }
+
+                #earncontainer>div:nth-child(2) {
+                        background-color: #0ca8dc;
+                        color: whitesmoke;
+
+                }
+
+
+
+                #earncontainer>div:nth-child(3) {
+                        background-color: #0ca8dc;
+                        color: white;
+
+
+                }
+
+                .earn1 {
+
+                        height: 230px;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        width: 30px;
+                        flex: 0.5;
+                        margin: 10px;
+                        position: relative;
+                        transition: flex 0.7s ease-in;
+
+                }
+
+                .earn1 h3 {
+                        font-size: 22px;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                        margin: 0;
+                        /* opacity: 0; */
+
+                }
+
+                .earn1.active {
+                        flex: 5;
+                        /* background-image: url("earn.jpg");
+                        background-color: antiquewhite;
+                        background-size: auto;
+                        background-position: cover;
+                        background-repeat: no-repeat */
+                }
+
+                .earn1 ul {
+                        overflow: hidden;
+                        opacity: 0;
+                }
+
+                .earn1.active ul {
+
+                        opacity: 2;
+                }
+
+                .earn1.active {
+                        width: 35px;
+                        height: 230px
+                }
+
+                #earnvideo {
+                        margin: auto;
+                        margin-top: 10px;
+                        margin-left: 140px;
+                        width: 80%;
+                        height: 400px;
+                }
+
+                #getstart {
+                        width: 100px;
+                        padding: 20px;
+                        background-color: #0ca8dc;
+                        cursor: pointer;
+                        margin-top: 10px;
+                        margin-left: 620px;
+
+                        border-radius: 10px;
+
+                        color: white;
+                }
+        </style>
+</head>
+
+<body>
+        <div class="headearn">
+                <div id="earncontainer">
+
+
+                        <div class="earn1 ">
+                                <h3>Upload Products that you have!</h3>
+                                <ul>
+
+                                        <li>Create your Account by clicking here</li>
+                                        <li> Verify your account</li>
+                                        <li> Go to Dashboard</li>
+                                        <li> Pick any product. For example mobile phone, or any item.</li>
+                                        <li> Search for it in the Database.</li>
+                                        <li> If it's available, upload a photograph.</li>
+                                        <li> Please mention the price you bought it at.</li>
+
+
+                                </ul>
+                        </div>
+                        <div class="earn1 ">
+                                <h3>Provide a brief description of how to use!</h3>
+                                <ul>
+
+
+                                        <li> Describe the product you just uploaded.</li>
+                                        <li> Mention from where you bought it, online or offline</li>
+                                        <li> A Video increases your chances of getting a product approved, but it is not
+                                                mandatory to upload videos.</li>
+
+
+
+                                </ul>
+                        </div>
+                        <div class="earn1 ">
+                                <h3>On Approval get scratch cards and earn money!</h3>
+                                <ul>
+                                        <li>We will review the products you uploaded.</li>
+                                        <li>On approval you will get a scratch card, which can be money or coupon code.
+                                        </li>
+                                        <li>Make sure you provide the correct bank details or UPI Id, to which you want
+                                                the
+                                                money to transfer</li>
+                                </ul>
+                        </div>
+                </div>
+                <iframe id="earnvideo" height="480" width="500" src="https://www.youtube.com/embed/TfQyg-DSHBo">
+                </iframe><br>
+                <button id="getstart">Get Started</button>
+        </div>
+
+
+</body>
+
+</html>
+<script>
+        let earn1 = document.querySelectorAll(".earn1");
+        earn1.forEach((earn1) => {
+                // console.log(earn1)
+                earn1.addEventListener("click", () => {
+                        removeActiveClasses()
+                        earn1.classList.add("active")
+                })
+        })
+        function removeActiveClasses() {
+                earn1.forEach(earn1 => {
+                        earn1.classList.remove("active")
+
+
+
+                })
+        }
+</script>

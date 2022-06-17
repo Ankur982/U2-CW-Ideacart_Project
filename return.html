@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Document</title>
+        <style>
+                /* .refundcontainer {
+                        display: grid;
+                        grid-template-rows: repeat(3, 150px);
+                        grid-template-columns: repeat(2, 200px);
+
+                } */
+
+                .refundcontainer {
+                        display: flex;
+                        width: 48vw;
+                        margin: auto;
+
+
+                }
+
+                .refund>div:nth-child(1) {
+                        background-color: rgb(241, 245, 10);
+                        color: black;
+
+
+                }
+
+                .refund>div:nth-child(2) {
+                        background-color: rgb(240, 229, 12);
+                        color: black;
+
+                }
+
+                .refund>div:nth-child(3) {
+                        background-color: rgb(236, 228, 4);
+                        color: rgb(5, 5, 5);
+
+
+                }
+
+                .refund>div:nth-child(4) {
+                        background-color: rgb(236, 228, 4);
+                        color: rgb(5, 5, 5);
+
+
+                }
+
+                .refund>div:nth-child(5) {
+                        background-color: rgb(236, 228, 4);
+                        color: rgb(5, 5, 5);
+
+
+                }
+
+                .refund {
+                        height: 42vh;
+                        border-radius: 50px;
+                        cursor: pointer;
+                        overflow: hidden;
+                        width: 30px;
+                        /* flex: 0.5; */
+                        margin: 10px;
+                        position: relative;
+                        transition: flex 0.7s ease-in;
+
+                }
+
+                .refund h3 {
+                        font-size: 22px;
+                        position: absolute;
+                        bottom: 20px;
+                        left: 20px;
+                        margin: 0;
+                        /* opacity: 0; */
+
+                }
+
+                .refund.active {
+                        flex: 5;
+
+                }
+
+                .refund p {
+                        overflow: hidden;
+                        opacity: 0;
+                }
+
+                .refund.active ul {
+
+                        opacity: 2;
+                }
+
+                .refund.active {
+                        width: 40px;
+                        height: 200px
+                }
+        </style>
+</head>
+
+
+
+
+
+<body>
+        <div class="refundcontainer">
+                <div class="refund">
+                        <h2>Return & Refund Policy</h2>
+                        <p>
+
+                                Thanks for shopping at Ideakart.com.
+
+                                If you are not entirely satisfied with your purchase, we're here to help.
+                        </p>
+                </div>
+                <div class="refund">
+                        <h2>Returns</h2>
+                        <p>You have 7 calendar days to return an item from the date you received it.
+
+                                To be eligible for a return, your item must be unused and in the same condition that you
+                                received it.
+
+                                Your item must be in the original packaging.
+
+                                Your item needs to have the receipt or proof of purchase.</p>
+                </div>
+                <div class="refund">
+                        <h2>Refunds</h2>
+                        <p>Once we receive your item, we will inspect it and notify you that we have received your
+                                returned item. We will immediately notify you on the status of your refund after
+                                inspecting the item.
+
+                                If your return is approved, we will initiate a refund to your method of payment(Credit
+                                Card/Debit Card/Bank etc).
+
+                                You will receive the credit within a certain amount of days, depending on your banks
+                                policies.</p>
+                </div>
+                <div class="refund">
+                        <h2>Shipping</h2>
+                        <p>You will be responsible for paying for your own shipping costs for returning your item.
+                                Shipping costs are non­refundable.
+
+                                If you receive a refund, the cost of return shipping will be deducted from your refund.
+                        </p>
+                </div>
+                <div class="refund">
+                        <h2>Contact Us</h2>
+
+                        <p>If you have any questions on how to return your item to us, contact us at 9650122736</p>
+                </div>
+        </div>
+
+</body>
+
+</html>
+
+<script>
+        // let earn1 = document.querySelectorAll(".earn1");
+        // earn1.forEach((earn1) => {
+        //         // console.log(earn1)
+        //         earn1.addEventListener("click", () => {
+        //                 removeActiveClasses()
+        //                 earn1.classList.add("active")
+        //         })
+        // })
+        // function removeActiveClasses() {
+        //         earn1.forEach(earn1 => {
+        //                 earn1.classList.remove("active")
+
+
+
+        //         })
+        // }
+</script>

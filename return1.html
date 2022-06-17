@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>return</title>
+</head>
+<style>
+        * {
+                margin: 0;
+                padding: 0;
+                box-sizing: border-box;
+        }
+
+        body {
+                font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica,
+                        Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+        }
+
+        .refundcontainer {
+                padding: 30px;
+        }
+
+        /* HEADING */
+
+        .refundheading {
+                text-align: center;
+        }
+
+        .refundtitle {
+                font-weight: 600;
+        }
+
+        .refundcredits {
+                margin: 10px 0px;
+                color: #888888;
+                font-size: 25px;
+                transition: all 0.5s;
+        }
+
+        .refundlink {
+                text-decoration: none;
+        }
+
+        .refundcredits .refundlink {
+                color: inherit;
+        }
+
+        /* refundcard */
+
+        .refundcard {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+        }
+
+        .refund {
+                margin: 20px;
+                padding: 20px;
+                width: 500px;
+                min-height: 200px;
+                display: grid;
+
+                grid-template-rows: 20px 50px 1fr 50px;
+                border-radius: 10px;
+                box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.25);
+                transition: all 0.2s;
+        }
+
+        .refund:hover {
+                box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.4);
+                transform: scale(1.01);
+        }
+
+        .refund__link,
+        .refund__exit,
+        .refund__icon {
+                position: relative;
+                text-decoration: none;
+                color: rgba(255, 255, 255, 0.9);
+        }
+
+        .refund__link::after {
+                position: absolute;
+                top: 25px;
+                left: 0;
+                content: "";
+                width: 0%;
+                height: 3px;
+                background-color: rgba(255, 255, 255, 0.6);
+                transition: all 0.5s;
+        }
+
+        .refund__link:hover::after {
+                width: 100%;
+        }
+
+        .refund__exit {
+                grid-row: 1/2;
+                justify-self: end;
+        }
+
+        .refund__icon {
+                grid-row: 2/3;
+                font-size: 30px;
+        }
+
+        .refund__title {
+                grid-row: 3/4;
+                font-weight: 400;
+                color: #ffffff;
+        }
+
+        .refund__apply {
+                grid-row: 4/5;
+                align-self: center;
+        }
+
+        /* refund BACKGROUNDS */
+
+        .refund-1 {
+                background: radial-gradient(#1fe4f5, #3fbafe);
+        }
+
+        .refund-2 {
+                background: radial-gradient(#fbc1cc, #fa99b2);
+        }
+
+        .refund-3 {
+                background: radial-gradient(#76b2fe, #b69efe);
+        }
+
+        .refund-4 {
+                background: radial-gradient(#60efbc, #58d5c9);
+        }
+
+        .refund-5 {
+                background: radial-gradient(#f588d8, #c0a3e5);
+        }
+
+        /* RESPONSIVE */
+
+        @media (max-width: 1600px) {
+                .refundrefund {
+                        justify-content: center;
+                }
+        }
+</style>
+
+
+
+<body>
+
+
+        <div class="refundcontainer">
+
+                <div class="refundcard">
+                        <div class="refund refund-1">
+                                <div class="refund__icon"><i class="fas fa-bolt"></i></div>
+                                <p class="refund__exit"><i class="fas fa-times"></i></p>
+                                <h2 class="refund__title">Return & Refund Policy</h2>
+                                <p class="refund__apply">
+
+
+                                        Thanks for shopping at Ideakart.com.
+
+                                        If you are not entirely satisfied with your purchase, we're here to help.
+
+                                </p>
+                        </div>
+                        <div class="refund refund-2">
+                                <div class="refund__icon"><i class="fas fa-bolt"></i></div>
+                                <p class="refund__exit"><i class="fas fa-times"></i></p>
+                                <h2 class="refund__title">Returns</h2>
+                                <p class="refund__apply">
+                                        You have 7 calendar days to return an item from the date you received it.
+
+                                        To be eligible for a return, your item must be unused and in the same condition
+                                        that you received it.
+
+                                        Your item must be in the original packaging.
+
+                                        Your item needs to have the receipt or proof of purchase.
+
+                                </p>
+                        </div>
+                        <div class="refund refund-3">
+                                <div class="refund__icon"><i class="fas fa-bolt"></i></div>
+                                <p class="refund__exit"><i class="fas fa-times"></i></p>
+                                <h2 class="refund__title">Refunds</h2>
+                                <p class="refund__apply">
+                                        Once we receive your item, we will inspect it and notify you that we have
+                                        received your returned item. We will immediately notify you on the status of
+                                        your refund after inspecting the item.
+
+                                        If your return is approved, we will initiate a refund to your method of
+                                        payment(Credit Card/Debit Card/Bank etc).
+
+                                        You will receive the credit within a certain amount of days, depending on your
+                                        banks policies.
+                                </p>
+                        </div>
+                        <div class="refund refund-4">
+                                <div class="refund__icon"><i class="fas fa-bolt"></i></div>
+                                <p class="refund__exit"><i class="fas fa-times"></i></p>
+                                <h2 class="refund__title">Shipping</h2>
+                                <p class="refund__apply">
+                                        You will be responsible for paying for your own shipping costs for returning
+                                        your item. Shipping costs are non­refundable.
+
+                                        If you receive a refund, the cost of return shipping will be deducted
+                                </p>
+                        </div>
+                        <div class="refund refund-5">
+                                <div class="refund__icon"><i class="fas fa-bolt"></i></div>
+                                <p class="refund__exit"><i class="fas fa-times"></i></p>
+                                <h2 class="refund__title">Contact Us
+                                </h2>
+                                <p class="refund__apply">
+                                        If you have any questions on how to return your item to us, contact us at
+                                        9650122736
+                                </p>
+                        </div>
+
+                </div>
+        </div>
+
+
+
+</body>
+
+</html>

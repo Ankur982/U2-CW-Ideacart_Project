@@ -12,15 +12,16 @@
     * {
       margin: 0;
       padding: 0;
-      font-family: 'Permanent Marker';
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       box-sizing: border-box;
       text-align: center;
-      color: black;
+      color: white;
     }
 
     #contact_body {
-      min-height: 100vh;
-      background-image: url(https://images2.alphacoders.com/559/559116.png);
+      /* min-height: 100vh; */
+      /* background-image: url(https://images2.alphacoders.com/559/559116.png); */
+      background-image: url(https://cdn.wallpapersafari.com/72/85/HeqdzI.jpg);
       background-size: cover;
       background-repeat: no-repeat;
     }
@@ -56,18 +57,22 @@
 
     .left-name {
       grid-column: span 6;
+      letter-spacing: 2px;
     }
 
     .right-name {
       grid-column: span 6;
+      letter-spacing: 2px;
     }
 
     .left {
       grid-column: 2 / span 4;
+      letter-spacing: 2px;
     }
 
     .right {
       grid-column: 8 / span 4;
+      letter-spacing: 2px;
     }
 
     textarea {
@@ -89,7 +94,7 @@
       box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
       background-color: transparent;
       outline: none;
-      font-weight: 600;
+      /* font-weight: 600; */
       letter-spacing: 3px;
     }
 
@@ -101,7 +106,7 @@
       margin-top: 30px;
       padding: 10px 40px;
       width: fit-content;
-      color: black;
+      color: white;
       font-weight: 600;
       border-radius: 5px;
       border: transparent;
@@ -123,13 +128,13 @@
       <h2 id="contact">Contact Us</h2>
       <h5 class="left-name">First Name</h5>
       <h5 class="right-name">Last Name</h5>
-      <input type="text" class="left" id="first_name" required>
-      <input type="text" class="right" id="last_name" required>
+      <input type="text" class="left" id="first_name" autocomplete="off" required>
+      <input type="text" class="right" id="last_name" autocomplete="off" required>
 
       <h5 class="left-name">Email ID</h5>
       <h5 class="right-name">Mobile</h5>
-      <input type="email" class="left" id="email" required>
-      <input type="tel" class="right" id="mobile" required>
+      <input type="email" class="left" id="email" autocomplete="off" required>
+      <input type="tel" class="right" id="mobile" autocomplete="off" required>
 
       <h2 id="contact">Message</h2>
       <textarea name="" id=""></textarea>

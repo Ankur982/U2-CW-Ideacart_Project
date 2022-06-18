@@ -158,14 +158,14 @@
             <h2>Welcome</h2>
             <label>
                 <span>Email</span>
-                <input type="email" />
+                <input id="entered_email" type="email" />
             </label>
             <label>
                 <span>Password</span>
-                <input type="password" />
+                <input id="entered_password" type="password" />
             </label>
             <p class="forgot-pass">Forgot password?</p>
-            <button type="button" class="submit">Sign In</button>
+            <button type="button" class="submit" id="signin">Sign In</button>
          
         </div>
         <div class="sub-cont">
@@ -187,25 +187,25 @@
                 <h2>Create your Account</h2>
                 <label>
                     <span>Name</span>
-                    <input type="text" />
+                    <input id="name" type="text" />
                 </label>
                 <label>
                     <span>Mobile number</span>
-                    <input type="tel" />
+                    <input id="mobile" type="tel" />
                 </label>
                 <label>
                     <span>Email</span>
-                    <input type="email" />
+                    <input id="email" type="email" />
                 </label>
                 <label>
                     <span>Password</span>
-                    <input type="password" />
+                    <input id="password" type="password" />
                 </label>
                 <label>
                     <span>Conform Password</span>
                     <input type="password" />
                 </label>
-                <button type="button" class="submit">Sign Up</button>
+                <button type="button" class="submit" id="signup">Sign Up</button>
                 
             </div>
         </div>
@@ -250,4 +250,8 @@
     document.querySelector('.img__btn').addEventListener('click', function() {
         document.querySelector('.cont').classList.toggle('s--signup');
     });
+
+    
 </script>
+<script src="signup.js"></script>
+<script src="signin.js"></script>

@@ -10,7 +10,7 @@
   margin: 0px;
   left: 0;
   width: 20%;
-  height: 100%;
+
   background-color: darkslategray;
 }
 .sidebar header {
@@ -47,18 +47,18 @@ ul li:hover a {
 /* Home dashboard CSS start */
 
 #home-head {
-  margin: 0px 0px 50px 750px;
-  padding: 80px;
+  margin: 0px 0px 50px 650px;
+  padding: 70px;
 }
 
 #home-container {
-  margin-left: 25%;
+  margin: 0% 0% 10% 22%;
   display: flex;
 }
 #home-container > div {
   margin: 8px;
   padding: 100px;
-  transition: 7s;
+  transition: 1s;
   border-radius: 49%;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }

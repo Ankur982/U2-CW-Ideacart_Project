@@ -1,0 +1,39 @@
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  font-family: "Open Sans", Helvetica, Arial, sans-serif;
+}
+
+#foot-of-page {
+  width: 100%;
+  /* margin-top: 70px; */
+  margin-bottom: 40px;
+}
+#foot-of-page > ul {
+  margin: auto;
+  display: flex;
+  justify-content: space-around;
+}
+#foot-of-page > h3 {
+  background-color: #e3e6f3;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  font-weight: 600;
+}
+
+#foot-of-page > ul > li {
+  font-size: 20px;
+  padding: 5px 0px;
+}
+
+#foot-of-page > ul > li > a {
+  text-decoration: none;
+  color: black;
+}
+
+#foot-of-page a:hover {
+  color: rgb(46, 165, 165);
+}

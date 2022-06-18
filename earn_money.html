@@ -151,7 +151,7 @@
                 <li><a href="home_page.html" class="active">Home</a></li>
                 <li><a href="about_page.html">About</a></li>
                 <li><a href="contact_us_page.html">Contact</a></li>
-                <li><a href="login.html">LogIn</a></li>
+                <li><a id="login_text" href="login.html">LogIn</a></li>
                 <li><a href="cart.html">🛒</a></li>
 
             </ul>
@@ -267,3 +267,11 @@
                 })
         }
 </script>
+
+
+<script>
+        let isSignin = JSON.parse(localStorage.getItem("signinData"));
+          if(isSignin){
+            document.querySelector("#login_text").innerText = isSignin.userEmail;
+          }
+      </script>

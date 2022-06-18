@@ -8,7 +8,10 @@
     <link rel="icon" type="image/x-icon" href="https://ideakart.com/assets/favicon-dc419e035c991f8f9c077a885c6ba6d589c3b552a1e4073cf07a392c54b93db7.jpg" />
    
     <link rel="stylesheet" href="final_dashboard.css">
+    <link rel="stylesheet" href="dashboard_home.css">
 </head>
+
+
 <body>
   <!-- side bar of dashbord -->
     <div class="sidebar">
@@ -16,8 +19,8 @@
         <ul>
            <li id="home">  <a href="dashboard.html">  <i class="fas fa-home"></i>Home</a></li>
            <li id="new_product">  <a href="upload_product.html">  <i class="fa fa-upload"></i>Upload Product </a></li>
-            <li id="credits">  <a href="#">  <i class="fa fa-credit-card"></i>Credits</a></li>
-            <li id="#">  <a href="added_products.html">  <i class="fa fa-plus"></i> Added Product</a></li>
+           <li id="credits"><a href="credits.html">  <i class="fa fa-credit-card"></i>Credits</a></li>
+            <li >  <a href="added_products.html">  <i class="fa fa-plus"></i> Added Product</a></li>
             <li>   <a href="approved_product.html">  <i class="fa fa-check"></i>Product Approved</a> </li>
             <li>  <a href="under_review.html">   <i class="fas fa-comments"></i>Under Review</a></li>
             <li>   <a href="rejected_product.html">  <i class="fa fa-exclamation-triangle"></i>Product Rejected</a></li>
@@ -29,7 +32,8 @@
 
 
       <!-- added products aproved or unappoved products details details -->
-      <div id="product_details">
+      <h1 id="home-head">Wellcome !</h1>
+      <div id="home-container">
 
       <div id="approved">
                  
@@ -47,6 +51,8 @@
 
 </body>
 </html>
+
+
 <script >
     let review=JSON.parse(localStorage.getItem("review"));
     document.querySelector("#review").innerHTML="Under Review"+" - "+(review || 0);

@@ -21,7 +21,7 @@ function displayProducts(uploadedArr){
 
   let accept=document.createElement("td");
   accept.innerText="Accept"
-  accept.style.color="green";
+ 
   accept.addEventListener("click",function(){
     acceptFun(el)
   });
@@ -29,7 +29,7 @@ function displayProducts(uploadedArr){
 
   let reject=document.createElement("td");
   reject.innerText=" Reject"
-  reject.style.color="red";
+ 
   reject.addEventListener("click",function(){
     rejectFun(el);
   })

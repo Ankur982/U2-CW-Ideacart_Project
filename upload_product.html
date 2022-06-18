@@ -16,7 +16,7 @@
         <ul>
            <li id="home"><a href="dashboard.html"><i class="fas fa-home"></i>Home</a></li>
            <li id="new_product"><a href="upload_product.html"><i class="fa fa-upload"></i>Upload Product </a></li>
-            <li id="credits"><a href="#"><i class="fa fa-credit-card"></i>Credits</a></li>
+           <li id="credits"><a href="credits.html">  <i class="fa fa-credit-card"></i>Credits</a></li>
             <li id="added_product"><a href="added_products.html"><i class="fa fa-plus"></i> Added Product</a></li>
             <li><a href="#"><i class="fa fa-check"></i>Product Approved</a></li>
             <li><a id="#"><i class="fas fa-comments"></i>Under Review</a></li>
@@ -27,30 +27,34 @@
 
 
       <!-- add new product here -->
-<div>
+<div class="upload-product-box">
     <h1>Add a New Product</h1>
     <form action="" id="form">
-        <label for="">Title</label>
-        <input type="text" id="name" required>
-
-        <label for="">Image</label>
-        <input type="url" id="image" name="img" accept="image/*" >
-
-        <label for="">Price</label>
-        <input type="number" id="price">
-        
-        <label for="">Type</label>
-        <select name="type" id="type" value="">
+        <label  class="form-name" for="">Title</label>
+        <br>
+        <input class="input1" type="text" id="name" required>
+        <br>
+        <label class="form-name" for="">Image url</label>
+        <br>
+        <input class="input1" type="url" id="image" name="img" accept="image/*" >
+        <br>
+        <label class="form-name" for="">Price</label>
+        <br>
+        <input class="input1" type="number" id="price">
+        <br>
+        <label class="form-name" for="">Type</label>
+        <select class="input2" name="type" id="type" value="">
             <option value="Fiction">Fiction</option>
             <option value="NonFiction">NonFiction</option>
             <option value="Scince">Scince</option>
             <option value="Comic">Comic</option>
         </select>
-
-        <label for="">Product ID</label>
-        <input type="text" id="productid">
-
-        <input type="submit">
+        <br>
+        <label  class="form-name" for="">Product ID</label>
+        <br>
+        <input class="input1" type="text" id="productid">
+        <br>
+        <input class="btn2" type="submit">
     </form>
 </div>
 

@@ -37,6 +37,16 @@
     height: 40px;
   }
 
+  .add_to_cart {
+    border-radius: 30px;
+    padding: 5px 20px;
+  }
+
+  .add_to_cart:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
   .top_picks {
     padding: 30px 50px;
     display: flex;
@@ -56,7 +66,6 @@
 
   .home_card:hover {
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
-
   }
 
   .home_card:first-child {
@@ -77,6 +86,12 @@
   .card_text {
     font-size: large;
   }
+
+  .item_kart {
+    width: 400px;
+    height: 800px;
+    border: 1px solid teal;
+  }
 </style>
 
 <body>
@@ -84,6 +99,10 @@
   <!-- navBar section -->
 
   <!-- check -->
+
+  <div id="item_kart">
+
+  </div>
 
 
   <section id="header">
@@ -98,10 +117,9 @@
         <li><a href="index.html" class="active">Home</a></li>
         <li><a href="about.html">About</a></li>
         <li><a href="blog.html">Contact</a></li>
-        <li><a id="login_text" href="login.html"><select name="" id="login_status">
-              <!-- <option value=""></option> -->
-            </select></a></li>
-        <li><a href="cart.html">🛒</a></li>
+        <li><a id="login_text" href="login.html">Login</a></li>
+        <!-- <option value=""></option> -->
+        <li><a href="cart_epic.html">🛒</a></li>
       </ul>
     </div>
   </section>
@@ -159,9 +177,14 @@
 
 </html>
 
-<script src="added.js"></script>
-
 <script>
+  let isSignin = JSON.parse(localStorage.getItem("signinData"));
+
+  if (isSignin) {
+    document.querySelector("#login_text").innerText = isSignin.userEmail;
+  }
+
+
   var dataBase = [{
       image: 'https://images-eu.ssl-images-amazon.com/images/I/41m7FD8ZB4L.jpg',
       url: 'https://ideakart.com/book/startup-karnarach-mi-udyojak-honarach-mi-isbn10-9385223941-isbn13-9789385223945',
@@ -870,6 +893,8 @@
   }
 
 
+
+
   function generateRandom(maxLimit = dataBase.length) {
     let rand = Math.random() * maxLimit;
     rand = Math.floor(rand);
@@ -879,45 +904,52 @@
 
   currentRandomArray();
 
+  let cartArray = JSON.parse(localStorage.getItem("cartData")) || [];
+
   function displayContent(arr) {
+
+
     document.querySelector(".home_page_container").innerHTML = "";
     var container = document.querySelector(".home_page_container");
 
-
-    for (let i = 0; i < arr.length; i++) {
-
-
+    arr.forEach(function(elem) {
       let card = document.createElement("div");
       card.classList.add("card");
       card.setAttribute("class", "home_card")
 
-
-      let imgLink = arr[i].image;
+      let imgLink = elem.image;
       let img = document.createElement("img");
       img.setAttribute("src", imgLink);
       img.setAttribute("class", "home_image")
       img.addEventListener("click", function() {
-        window.location.href = arr[i].url;
+        window.location.href = elem.url;
       })
       card.append(img);
 
       let name = document.createElement("p");
-      name.innerText = arr[i].name;
+      name.innerText = elem.name;
       name.setAttribute("class", "card_text")
       name.style.fontSize = "smaller";
       card.append(name);
 
       let price = document.createElement("p");
-      price.innerText = ("₹" + arr[i].price);
+      price.innerText = ("₹" + elem.price);
       price.setAttribute("class", "price")
-
       card.append(price);
 
       let addToCart = document.createElement("div");
       addToCart.innerText = "🛒 Add To Cart";
+      addToCart.classList.add("add_to_cart");
       card.append(addToCart);
 
+      addToCart.addEventListener("click", function() {
+        // console.log(elem)
+        // alert("Product added to cart")
+        cartArray.push(elem);
+        localStorage.setItem("cartData", JSON.stringify(cartArray));
+      });
+
       container.append(card);
-    }
+    });
   }
 </script>

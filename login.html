@@ -1,253 +1,262 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>login|signup|page</title>
-    <link rel="stylesheet" href="footer.css">
-    <link rel="stylesheet" href="login.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>login|signup|page</title>
+  <link rel="stylesheet" href="footer.css">
+  <link rel="stylesheet" href="login.css">
 
-    <style>
+  <style>
+    /* navbar css for login page only */
 
-
-/* navbar css for login page only */
-
-*{
-    margin: 0px;
-    padding: 0px;
-    box-sizing: border-box;
-    font-family: 'Spartan',sans-serif;
-}
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Spartan', sans-serif;
+    }
 
 
-#header{
+    #header {
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 20px 80px;
-    background-color: #E3E6F3;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    z-index: 999;
-    position: sticky;
-    top: 0px;
-    left: 0px;
-}
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 20px 80px;
+      background-color: #E3E6F3;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      z-index: 999;
+      position: sticky;
+      top: 0px;
+      left: 0px;
+    }
 
-.logo{
-    font-size: 25px;
-    text-decoration: none;
-    font-family: sans-serif;
-    color: #088178;
-    font-weight:bold;
-    background-image: url("button.png");
-    background-size: cover;
-}
+    .logo {
+      font-size: 25px;
+      text-decoration: none;
+      font-family: sans-serif;
+      color: #088178;
+      font-weight: bold;
+      background-image: url("button.png");
+      background-size: cover;
+    }
 
-::placeholder{
-    padding-left: 10px;
-}
+    ::placeholder {
+      padding-left: 10px;
+    }
 
-#search_box{
-    display: flex;
-    width: 30%;
-}
+    #search_box {
+      display: flex;
+      width: 30%;
+    }
 
-#search_box>#search{
-    width: 100%;
-    height: 32px;
-    background-color:white;
-    border: 1px solid white;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-    border-radius: 5px;
-}
+    #search_box>#search {
+      width: 100%;
+      height: 32px;
+      background-color: white;
+      border: 1px solid white;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      border-radius: 5px;
+    }
 
-#search_box > #seach_button{
-    border: 1px solid;
-    width: 30%;
-    border-radius: 5px;
-    color: #1a1a1a;
-    background-color:#088178 ;
-    margin-top: 5px;
-    height: 32px;
-    font-weight: 600;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.06);
-}
+    #search_box>#seach_button {
+      border: 1px solid;
+      width: 30%;
+      border-radius: 5px;
+      color: #1a1a1a;
+      background-color: #088178;
+      margin-top: 5px;
+      height: 32px;
+      font-weight: 600;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    }
 
-#search_box> #seach_button:hover{
-    background: #465b52;
-    color: white;
-    border: transparent;
-}
+    #search_box>#seach_button:hover {
+      background: #465b52;
+      color: white;
+      border: transparent;
+    }
 
 
-#navbar{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
+    #navbar {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
-#navbar li{
-    list-style: none;
-    padding: 0 20px;
-    position: relative;
-}
+    #navbar li {
+      list-style: none;
+      padding: 0 20px;
+      position: relative;
+    }
 
-#navbar li a{
-    text-decoration: none;
-    font-size: 16px;
-    font-size: 600;
-    color: #1a1a1a;
-    transition: 0.3s ease;
-}
+    #navbar li a {
+      text-decoration: none;
+      font-size: 16px;
+      font-size: 600;
+      color: #1a1a1a;
+      transition: 0.3s ease;
+    }
 
-#navbar li a:hover,
-#navbar li a.active{
-    color: rgb(46, 165, 165);
-}
+    #navbar li a:hover,
+    #navbar li a.active {
+      color: rgb(46, 165, 165);
+    }
 
-#navbar li a.active::after,
-#navbar li a:hover::after{
-    content: "";
-    width:20px;
-    height: 2px;
-    background-color: #088178;
-    position: absolute;
-    bottom: -4px;
-    left:20px
-}
-
-    </style>
+    #navbar li a.active::after,
+    #navbar li a:hover::after {
+      content: "";
+      width: 20px;
+      height: 2px;
+      background-color: #088178;
+      position: absolute;
+      bottom: -4px;
+      left: 20px
+    }
+  </style>
 </head>
+
 <body>
 
 
 
 
 
-      <!-- navBar section -->
+  <!-- navBar section -->
 
 
-      <section id="header">
-        <a href="home_page.html" class="logo">IdeaKart💡</a>
-    
-        <span id="search_box">
-            <input id="search" type="text" placeholder="Search for product">
-            <button id="seach_button">Search</button>
-        </span>
+  <section id="header">
+    <a href="home_page.html" class="logo">IdeaKart💡</a>
 
-        <div>
-            <ul id="navbar">
-                <li><a href="home_page.html">Home</a></li>
-                <li><a href="about_page.html">About</a></li>
-                <li><a href="contact_us_page.html">Contact</a></li>
-                <li><a href="login.html" class="active">LogIn</a></li>
-                <li><a href="cart.html">🛒</a></li>
+    <span id="search_box">
+      <input id="search" type="text" placeholder="Search for product">
+      <button id="seach_button">Search</button>
+    </span>
 
-            </ul>
-        </div>    
-      </section>
+    <div>
+      <ul id="navbar">
+        <li><a href="home_page.html">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li><a href="login.html" class="active">LogIn</a></li>
+        <li><a href="cart.html">🛒</a></li>
 
-
-
-<!-- login and singup page -->
-
-    <div class="cont">
-        <div class="form sign-in">
-            <h2>Welcome</h2>
-            <label>
-                <span>Email</span>
-                <input type="email" />
-            </label>
-            <label>
-                <span>Password</span>
-                <input type="password" />
-            </label>
-            <p class="forgot-pass">Forgot password?</p>
-            <button type="button" class="submit">Sign In</button>
-         
-        </div>
-        <div class="sub-cont">
-            <div class="img">
-                <div class="img__text m--up">
-                 
-                    <h3>Don't have an account? Please Sign up!<h3>
-                </div>
-                <div class="img__text m--in">
-                
-                    <h3>If you already has an account, just sign in.<h3>
-                </div>
-                <div class="img__btn">
-                    <span class="m--up">Sign Up</span>
-                    <span class="m--in">Sign In</span>
-                </div>
-            </div>
-            <div class="form sign-up">
-                <h2>Create your Account</h2>
-                <label>
-                    <span>Name</span>
-                    <input type="text" />
-                </label>
-                <label>
-                    <span>Mobile number</span>
-                    <input type="tel" />
-                </label>
-                <label>
-                    <span>Email</span>
-                    <input type="email" />
-                </label>
-                <label>
-                    <span>Password</span>
-                    <input type="password" />
-                </label>
-                <label>
-                    <span>Conform Password</span>
-                    <input type="password" />
-                </label>
-                <button type="button" class="submit">Sign Up</button>
-                
-            </div>
-        </div>
+      </ul>
     </div>
+  </section>
 
 
 
-      <!-- footer section part -->
+  <!-- login and singup page -->
 
+  <div class="cont">
+    <div class="form sign-in">
+      <h2>Welcome</h2>
+      <label>
+        <span>Email</span>
+        <input id="entered_email" type="email" />
+      </label>
+      <label>
+        <span>Password</span>
+        <input id="entered_password" type="password" />
+      </label>
+      <p class="forgot-pass">Forgot password?</p>
+      <button type="button" class="submit" id="signin">Sign In</button>
 
-      <div id="foot-of-page">
-        <h3>Get To Know Us</h3>
-        <ul>
-            <li>
-                <a href="about.html">About</a>
-            </li>
-            <li>
-                <a href="contact.html">Contact</a>
-            </li>
-            <li>
-                <a href="search.html">Search</a>
-            </li>
-            <li>
-                <a href="privacy_policy.html">Privacy Policy</a>
-            </li>
-            <li>
-                <a href="refund.html">Refund Policy</a>
-            </li>
-            <li>
-                <a href="earn_money.html">Earn Money Online</a>
-            </li>
-            
-        </ul>
     </div>
+    <div class="sub-cont">
+      <div class="img">
+        <div class="img__text m--up">
 
-    
+          <h3>Don't have an account? Please Sign up!<h3>
+        </div>
+        <div class="img__text m--in">
+
+          <h3>If you already has an account, just sign in.<h3>
+        </div>
+        <div class="img__btn">
+          <span class="m--up">Sign Up</span>
+          <span class="m--in">Sign In</span>
+        </div>
+      </div>
+
+
+
+
+      <!-- sign up part -->
+
+      
+      <div class="form sign-up">
+        <h2>Create your Account</h2>
+        <label>
+          <span>Name</span>
+          <input id="name" type="text" />
+        </label>
+        <label>
+          <span>Mobile number</span>
+          <input id="mobile" type="tel" />
+        </label>
+        <label>
+          <span>Email</span>
+          <input id="email" type="email" />
+        </label>
+        <label>
+          <span>Password</span>
+          <input id="password" type="password" />
+        </label>
+        <label>
+          <span>Conform Password</span>
+          <input type="password" />
+        </label>
+        <button type="button" class="submit" id="signup">Sign Up</button>
+
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- footer section part -->
+
+
+  <div id="foot-of-page">
+    <h3>Get To Know Us</h3>
+    <ul>
+      <li>
+        <a href="about.html">About</a>
+      </li>
+      <li>
+        <a href="contact.html">Contact</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="refund.html">Refund Policy</a>
+      </li>
+      <li>
+        <a href="earn_money.html">Earn Money Online</a>
+      </li>
+
+    </ul>
+  </div>
+
+
 </body>
+
 </html>
 
 
 <script>
-    document.querySelector('.img__btn').addEventListener('click', function() {
-        document.querySelector('.cont').classList.toggle('s--signup');
-    });
+  document.querySelector('.img__btn').addEventListener('click', function() {
+    document.querySelector('.cont').classList.toggle('s--signup');
+  });
 </script>
+<script src="signup.js"></script>
+<script src="signin.js"></script>

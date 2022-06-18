@@ -1,46 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>navbar</title>
-    <link rel="stylesheet" href="navbar.css">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>navbar</title>
+  <link rel="stylesheet" href="navbar.css">
 </head>
+
 <body>
 
 
 
-    <!-- navBar section -->
+  <!-- navBar section -->
 
 
-    <section id="header">
-        <a href="home_page.html" class="logo">IdeaKart💡</a>
-        <div id="search_box">
-            <input type="text" placeholder="Search for product">
-            <button>Search</button>
-        </div>
+  <section id="header">
+    <a href="home_page.html" class="logo">IdeaKart💡</a>
+    <div id="search_box">
+      <input type="text" placeholder="Search for product">
+      <button>Search</button>
+    </div>
 
-        <div>
-            <ul id="navbar">
-                <li><a href="home_page.html" class="active">Home</a></li>
-                <li><a href="about_page.html">About</a></li>
-                <li><a href="contact_us_page.html">Contact</a></li>
-                <li><a href="login.html">LogIn</a></li>
-                <li><a href="cart.html">🛒</a></li>
+    <div>
+      <ul id="navbar">
+        <li><a href="home_page.html" class="active">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <select><a id="currentUser" href="login.html">LogIn</a></select>
+        <li><a href="cart.html">🛒</a></li>
 
-            </ul>
-        </div>    
-    </section>
+      </ul>
+    </div>
+  </section>
 
-    
 
-    
+
+
 
 </body>
+
 </html>
 
 
-<script src="script.js">
-
+<script>
+  document.querySelector("#currentUser").innerText = "Name";
 </script>

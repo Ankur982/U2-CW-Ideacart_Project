@@ -8,9 +8,10 @@ function mySignIn(event) {
     userPassword: document.querySelector("#entered_password").value,
   }
 
-  if (data.userEmail == "admin@gmail.com" && data.userPassword == "admin") {
-    window.location.href = "https://www.google.com";
-  } else if (checkSignin(data.userEmail, data.userPassword) == true) {
+  // if (data.userEmail == "admin@gmail.com" && data.userPassword == "admin") {
+  //   window.location.href = "https://www.google.com";
+  // } else
+   if (checkSignin(data.userEmail, data.userPassword) == true) {
     alert("sign in successful")
     window.location.href = "home_page.html";
     localStorage.setItem("signinData", JSON.stringify(data));

@@ -5,7 +5,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home Page</title>
+  <title>Home Page 2</title>
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="footer.css">
 </head>
@@ -16,25 +16,47 @@
     padding: 0;
   }
 
-  /* body {
-    background-color: green;
-  } */
+  body {
+    max-width: 100vw;
+  }
 
   .home_page_container {
+    /* background-color: #a8a3a3; */
+    /* margin-top: 60px; */
     margin-left: 10%;
     display: flex;
     flex-direction: column;
     height: 380vh;
     width: 80%;
-    flex-wrap: wrap;
     gap: 20px;
+    flex-wrap: wrap;
+  }
+
+  #categories {
+    width: 300px;
+    height: 40px;
+  }
+
+  .top_picks {
+    padding: 30px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
   }
 
   .home_card {
     padding: 20px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     height: fit-content;
-    width: 150px;
+    width: 230px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 15px 25px, rgba(0, 0, 0, 0.05) 0px 5px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .home_card:hover {
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
   }
 
   .home_card:first-child {
@@ -47,45 +69,50 @@
   }
 
   .home_image {
+    margin-bottom: 20px;
     width: 100%;
+  }
+
+  .card_text {
+    font-size: large;
   }
 </style>
 
 <body>
 
+  <!-- navBar section -->
 
 
-    <!-- navBar section of ideakart -->
 
-
- <section id="header">
-    <a href="home_page.html" class="logo">IdeaKart💡</a>
+  <section id="header">
+    <a href="#" class="logo">IdeaKart💡</a>
     <div id="search_box">
-        <input type="text" placeholder="Search for product">
-        <button>Search</button>
+      <input type="text" placeholder="Search for product">
+      <button>Search</button>
     </div>
 
     <div>
-        <ul id="navbar">
-            <li><a href="home_page.html" class="active">Home</a></li>
-            <li><a href="about_page.html">About</a></li>
-            <li><a href="contact_us_page.html">Contact</a></li>
-            <li><a href="login.html">LogIn</a></li>
-            <li><a href="cart.html">🛒</a></li>
-
-        </ul>
-    </div>    
-</section>
-
-
- <!-- home page section of ideakart -->
-
-
-
-  <div class="home_page_container">
+      <ul id="navbar">
+        <li><a href="home_page.html" class="active">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li><a href="login.html" >LogIn</a></li>
+        <li><a href="cart.html">🛒</a></li>
+      </ul>
+    </div>
+  </section>
+  <div class="top_picks">
+    <h2>What's New?</h2>
+    <select name="categories" id="categories">
+      <option value="sort_by_price">Price</option>
+      <option value="sort_alpha">A - Z</option>
+    </select>
   </div>
 
 
+  <!-- home page cards section -->
+  <div class="home_page_container">
+  </div>
 
 
   <!-- footer part of ideakart -->
@@ -93,29 +120,27 @@
   <div id="foot-of-page">
     <h3>Get To Know Us</h3>
     <ul>
-        <li>
-            <a href="about.html">About</a>
-        </li>
-        <li>
-            <a href="contact.html">Contact</a>
-        </li>
-        <li>
-            <a href="search.html">Search</a>
-        </li>
-        <li>
-            <a href="privacy_policy.html">Privacy Policy</a>
-        </li>
-        <li>
-            <a href="refund.html">Refund Policy</a>
-        </li>
-        <li>
-            <a href="earn_money.html">Earn Money Online</a>
-        </li>
-        
+      <li>
+        <a href="about_page.html">About</a>
+      </li>
+      <li>
+        <a href="contact_us_page.html">Contact</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="refund.html">Refund Policy</a>
+      </li>
+      <li>
+        <a href="earn_money.html">Earn Money Online</a>
+      </li>
+
     </ul>
-</div>
-
-
+  </div>
 
 </body>
 
@@ -123,776 +148,646 @@
 
 <script>
   var dataBase = [{
-      image: "https://images-eu.ssl-images-amazon.com/images/I/41m7FD8ZB4L.jpg",
-      url: "https://ideakart.com/book/startup-karnarach-mi-udyojak-honarach-mi-isbn10-9385223941-isbn13-9789385223945",
-      name: "Startup Karnarach Mi Udyojak Honarach Mi (स्टार्टअप करणारच मी, उद्योजक होणारच मी)",
-      price: "240.0"
-
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41m7FD8ZB4L.jpg',
+      url: 'https://ideakart.com/book/startup-karnarach-mi-udyojak-honarach-mi-isbn10-9385223941-isbn13-9789385223945',
+      name: 'Startup Karnarach Mi Udyojak Honarach Mi (स्टार्टअप करणारच मी, उद्योजक होणारच मी)',
+      price: '240.0',
+      id: 1001
     },
-
     {
-      image: "https://images-eu.ssl-images-amazon.com/images/I/51prFYi1qHL.jpg",
-      url: "https://ideakart.com/book/make-think-imagine-engineering-the-future-of-civilisation-isbn10-1526605708-isbn13-9781526605702",
-      name: "Make, Think, Imagine: Engineering the Future of Civilisation",
-      price: "1229.0"
-
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51prFYi1qHL.jpg',
+      url: 'https://ideakart.com/book/make-think-imagine-engineering-the-future-of-civilisation-isbn10-1526605708-isbn13-9781526605702',
+      name: 'Make, Think, Imagine: Engineering the Future of Civilisation',
+      price: '1229.0',
+      id: 1002
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41oyhZiOxcL.jpg",
-      "url": "https://ideakart.com/book/jennifer-one-woman-two-continents-and-a-truth-called-child-trafficking-isbn10-9353338417-isbn13-9789353338411",
-      "name": "JENNIFER: One Woman, Two Continents and a Truth Called Child Trafficking",
-      "price": "198.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41oyhZiOxcL.jpg',
+      url: 'https://ideakart.com/book/jennifer-one-woman-two-continents-and-a-truth-called-child-trafficking-isbn10-9353338417-isbn13-9789353338411',
+      name: 'JENNIFER: One Woman, Two Continents and a Truth Called Child Trafficking',
+      price: '198.0',
+      id: 1003
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41o7R-iL8jL.jpg",
-      "url": "https://ideakart.com/book/handbook-of-visual-optics-volume-one-fundamentals-and-eye-optics-isbn10-0367869926-isbn13-9780367869922",
-      "name": "Handbook of Visual Optics, Volume One: Fundamentals and Eye Optics",
-      "price": "4035.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41o7R-iL8jL.jpg',
+      url: 'https://ideakart.com/book/handbook-of-visual-optics-volume-one-fundamentals-and-eye-optics-isbn10-0367869926-isbn13-9780367869922',
+      name: 'Handbook of Visual Optics, Volume One: Fundamentals and Eye Optics',
+      price: '4035.0',
+      id: 1004
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51d33xdLR4L.jpg",
-      "url": "https://ideakart.com/book/kurti-on-sale-2018-hoc-kurti-long-for-women-latest-design-party-wear-kurti-latest-design-kurti-materials-for-women-unstitched-kurtas-for-womens-below-300-kurta-and-kurti-for-women-ladies-kurta-cotton-latest-design-kurta-dresses-for-women-isbn10--isbn13-0000595175398",
-      "name": "kurti on sale 2018 HOC kurti long for women latest design party wear kurti latest design kurti materials for women unstitched kurtas for womens below 300 kurta and kurti for women ladies kurta cotton latest design kurta dresses for women",
-      "price": "474.0"
-
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51d33xdLR4L.jpg',
+      url: 'https://ideakart.com/book/kurti-on-sale-2018-hoc-kurti-long-for-women-latest-design-party-wear-kurti-latest-design-kurti-materials-for-women-unstitched-kurtas-for-womens-below-300-kurta-and-kurti-for-women-ladies-kurta-cotton-latest-design-kurta-dresses-for-women-isbn10--isbn13-0000595175398',
+      name: 'kurti on sale 2018 HOC kurti long for women latest design party wear kurti latest design kurti materials for women unstitched kurtas for womens below 300 kurta and kurti for women ladies kurta cotton latest design kurta dresses for women',
+      price: '474.0',
+      id: 1005
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/616uNJHZCSL.jpg",
-      "url": "https://ideakart.com/book/taylor-swift-2019-mini-wall-calendar-isbn10-1975403851-isbn13-9781975403850",
-      "name": "Taylor Swift 2019 Mini Wall Calendar",
-      "price": "476.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/616uNJHZCSL.jpg',
+      url: 'https://ideakart.com/book/taylor-swift-2019-mini-wall-calendar-isbn10-1975403851-isbn13-9781975403850',
+      name: 'Taylor Swift 2019 Mini Wall Calendar',
+      price: '476.0',
+      id: 1006
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/518LUFZvQ9L.jpg",
-      "url": "https://ideakart.com/book/studies-in-the-history-of-accounting-edited-on-behalf-of-the-association-of-university-teachers-of-accounting-and-the-american-accounting-association-classic-reprint-isbn10-1527715019-isbn13-9781527715011",
-      "name": "Studies in the History of Accounting: Edited on Behalf of the Association of University Teachers of Accounting and the American Accounting Association (Classic Reprint)",
-      "name": "1179.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/518LUFZvQ9L.jpg',
+      url: 'https://ideakart.com/book/studies-in-the-history-of-accounting-edited-on-behalf-of-the-association-of-university-teachers-of-accounting-and-the-american-accounting-association-classic-reprint-isbn10-1527715019-isbn13-9781527715011',
+      name: '1179.0',
+      id: 1007
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41fiYTORdxL.jpg",
-      "url": "https://ideakart.com/book/m-s-golwakar-the-rss-and-india-isbn10-9388689488-isbn13-9789388689489",
-      "name": "M.S. Golwakar, the RSS and India",
-      "price": "221.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41fiYTORdxL.jpg',
+      url: 'https://ideakart.com/book/m-s-golwakar-the-rss-and-india-isbn10-9388689488-isbn13-9789388689489',
+      name: 'M.S. Golwakar, the RSS and India',
+      price: '221.0',
+      id: 1008
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/418-LcVQzhL.jpg",
-      "url": "https://ideakart.com/book/drug-information-handbook-for-oncology-isbn10-1591953685-isbn13-9781591953685",
-      "name": "Drug Information Handbook for Oncology",
-      "price": "4245.68"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/418-LcVQzhL.jpg',
+      url: 'https://ideakart.com/book/drug-information-handbook-for-oncology-isbn10-1591953685-isbn13-9781591953685',
+      name: 'Drug Information Handbook for Oncology',
+      price: '4245.68',
+      id: 1009
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51rDgyyItGL.jpg",
-      "url": "https://ideakart.com/book/muslims-the-real-history-isbn10-9353041120-isbn13-9789353041120",
-      "name": "Muslims: The Real History",
-      "price": "608.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51rDgyyItGL.jpg',
+      url: 'https://ideakart.com/book/muslims-the-real-history-isbn10-9353041120-isbn13-9789353041120',
+      name: 'Muslims: The Real History',
+      price: '608.0',
+      id: 1010
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51yURGyytuL.jpg",
-      "url": "https://ideakart.com/book/red-card-fifa-and-the-fall-of-the-most-powerful-men-in-sports-isbn10-1788160622-isbn13-9781788160629",
-      "name": "Red Card: FIFA and the Fall of the Most Powerful Men in Sports",
-      "price": "517.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51yURGyytuL.jpg',
+      url: 'https://ideakart.com/book/red-card-fifa-and-the-fall-of-the-most-powerful-men-in-sports-isbn10-1788160622-isbn13-9781788160629',
+      name: 'Red Card: FIFA and the Fall of the Most Powerful Men in Sports',
+      price: '517.0',
+      id: 1011
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41wZNUxDYyL.jpg",
-      "url": "https://ideakart.com/book/ssc-je-civil-engineering-objective-solved-papers-2007-2018-isbn10-9388137337-isbn13-9789388137331",
-      "name": "SSC- JE: Civil Engineering Objective Solved Papers (2007-2018)",
-      "price": "599.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41wZNUxDYyL.jpg',
+      url: 'https://ideakart.com/book/ssc-je-civil-engineering-objective-solved-papers-2007-2018-isbn10-9388137337-isbn13-9789388137331',
+      name: 'SSC- JE: Civil Engineering Objective Solved Papers (2007-2018)',
+      price: '599.0',
+      id: 1012
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41CPqhoKaJL.jpg",
-      "url": "https://ideakart.com/book/the-art-in-painting-classic-reprint-isbn10-1396841709-isbn13-9781396841705",
-      "name": "The Art in Painting (Classic Reprint)",
-      "price": "1649.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41CPqhoKaJL.jpg',
+      url: 'https://ideakart.com/book/the-art-in-painting-classic-reprint-isbn10-1396841709-isbn13-9781396841705',
+      name: 'The Art in Painting (Classic Reprint)',
+      price: '1649.0',
+      id: 1013
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Ca%2BMvsi1L.jpg",
-      "url": "https://ideakart.com/book/photographic-memory-10-steps-to-remember-anything-superfast-accelerated-learning-for-unlimited-memory-efficiency-create-habits-to-help-you-improve-your-memory-focus-and-clarity-mind-hacking-isbn10-1922320846-isbn13-9781922320841",
-      "name": "Photographic Memory: 10 Steps to remember Anything Superfast! Accelerated Learning for Unlimited Memory Efficiency. Create Habits to Help You Improve Your Memory, Focus and Clarity. Mind Hacking!",
-      "price": "1079.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51Ca%2BMvsi1L.jpg',
+      url: 'https://ideakart.com/book/photographic-memory-10-steps-to-remember-anything-superfast-accelerated-learning-for-unlimited-memory-efficiency-create-habits-to-help-you-improve-your-memory-focus-and-clarity-mind-hacking-isbn10-1922320846-isbn13-9781922320841',
+      name: 'Photographic Memory: 10 Steps to remember Anything Superfast! Accelerated Learning for Unlimited Memory Efficiency. Create Habits to Help You Improve Your Memory, Focus and Clarity. Mind Hacking!',
+      price: '1079.0',
+      id: 1014
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41iAdfMfCbL.jpg",
-      "url": "https://ideakart.com/book/the-conference-of-the-birds-isbn10-0393355543-isbn13-9780393355543",
-      "name": "The Conference of the Birds",
-      "price": "826.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41iAdfMfCbL.jpg',
+      url: 'https://ideakart.com/book/the-conference-of-the-birds-isbn10-0393355543-isbn13-9780393355543',
+      name: 'The Conference of the Birds',
+      price: '826.0',
+      id: 1015
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/514iC7YecML.jpg",
-      "url": "https://ideakart.com/book/saleon-cltllzen-financial-and-business-office-calculator-with-large-lcd-display-black-804-isbn10--isbn13-0791115518442",
-      "name": "SaleOn™ CLTLLZEN Financial and Business Office Calculator with Large LCD Display (Black)-804",
-      "price": "289.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/514iC7YecML.jpg',
+      url: 'https://ideakart.com/book/saleon-cltllzen-financial-and-business-office-calculator-with-large-lcd-display-black-804-isbn10--isbn13-0791115518442',
+      name: 'SaleOn™ CLTLLZEN Financial and Business Office Calculator with Large LCD Display (Black)-804',
+      price: '289.0',
+      id: 1016
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/617SpYp565L.jpg",
-      "url": "https://ideakart.com/book/amelia-bedelia-chapter-book-12-amelia-bedelia-digs-in-isbn10-0062658425-isbn13-9780062658425",
-      "name": "Amelia Bedelia Chapter Book #12: Amelia Bedelia Digs In",
-      "price": "168.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/617SpYp565L.jpg',
+      url: 'https://ideakart.com/book/amelia-bedelia-chapter-book-12-amelia-bedelia-digs-in-isbn10-0062658425-isbn13-9780062658425',
+      name: 'Amelia Bedelia Chapter Book #12: Amelia Bedelia Digs In',
+      price: '168.0',
+      id: 1017
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/31aRTOajxkL.jpg",
-      "url": "https://ideakart.com/book/money-vintage-minis-isbn10-1784874027-isbn13-9781784874025",
-      "name": "Money: Vintage Minis",
-      "price": "131.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/31aRTOajxkL.jpg',
+      url: 'https://ideakart.com/book/money-vintage-minis-isbn10-1784874027-isbn13-9781784874025',
+      name: 'Money: Vintage Minis',
+      price: '131.0',
+      id: 1018
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51O83zLg80L.jpg",
-      "url": "https://ideakart.com/book/onshine-wooden-solar-system-planets-jigsaw-play-puzzle-isbn10--isbn13-0713482673739",
-      "name": "Onshine Wooden Solar System Planets Jigsaw Play Puzzle",
-      "price": "999.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51O83zLg80L.jpg',
+      url: 'https://ideakart.com/book/onshine-wooden-solar-system-planets-jigsaw-play-puzzle-isbn10--isbn13-0713482673739',
+      name: 'Onshine Wooden Solar System Planets Jigsaw Play Puzzle',
+      price: '999.0',
+      id: 1019
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41XKb30wzsL.jpg",
-      "url": "https://ideakart.com/book/ielts-general-training-practice-tests-2018-ielts-general-training-book-with-140-reading-writing-speaking-vocabulary-test-prep-questions-for-the-ielts-exam-isbn10-0999876449-isbn13-9780999876442",
-      "name": "Ielts General Training Practice Tests 2018: Ielts General Training Book with 140 Reading, Writing, Speaking & Vocabulary Test Prep Questions for the Ielts Exam",
-      "price": "1408.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41XKb30wzsL.jpg',
+      url: 'https://ideakart.com/book/ielts-general-training-practice-tests-2018-ielts-general-training-book-with-140-reading-writing-speaking-vocabulary-test-prep-questions-for-the-ielts-exam-isbn10-0999876449-isbn13-9780999876442',
+      name: 'Ielts General Training Practice Tests 2018: Ielts General Training Book with 140 Reading, Writing, Speaking & Vocabulary Test Prep Questions for the Ielts Exam',
+      price: '1408.0',
+      id: 1020
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Sis1-V8eL.jpg",
-      "url": "https://ideakart.com/book/starting-saving-seeds-grow-the-perfect-vegetables-fruits-herbs-and-flowers-for-your-garden-isbn10-9780760360798-isbn13-9780760360798",
-      "name": "Starting & Saving Seeds: Grow the Perfect Vegetables, Fruits, Herbs, and Flowers for Your Garden",
-      "price": "1331.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51Sis1-V8eL.jpg',
+      url: 'https://ideakart.com/book/starting-saving-seeds-grow-the-perfect-vegetables-fruits-herbs-and-flowers-for-your-garden-isbn10-9780760360798-isbn13-9780760360798',
+      name: 'Starting & Saving Seeds: Grow the Perfect Vegetables, Fruits, Herbs, and Flowers for Your Garden',
+      price: '1331.0',
+      id: 1021
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41V2VNLNQrL.jpg",
-      "url": "https://ideakart.com/book/the-moonshot-game-adventures-of-an-indian-venture-capitalist-isbn10-0670091200-isbn13-9780670091201",
-      "name": "The Moonshot Game: Adventures of an Indian Venture Capitalist",
-      "price": "416.89"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41V2VNLNQrL.jpg',
+      url: 'https://ideakart.com/book/the-moonshot-game-adventures-of-an-indian-venture-capitalist-isbn10-0670091200-isbn13-9780670091201',
+      name: 'The Moonshot Game: Adventures of an Indian Venture Capitalist',
+      price: '416.89',
+      id: 1022
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51JU%2B3-9pxL.jpg",
-      "url": "https://ideakart.com/book/illustrator-cc-in-simple-steps-isbn10-938842526X-isbn13-9789388425261",
-      "name": "Illustrator CC in Simple Steps",
-      "price": "332.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51JU%2B3-9pxL.jpg',
+      url: 'https://ideakart.com/book/illustrator-cc-in-simple-steps-isbn10-938842526X-isbn13-9789388425261',
+      name: 'Illustrator CC in Simple Steps',
+      price: '332.0',
+      id: 1023
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41z-ix17lpL.jpg",
-      "url": "https://ideakart.com/book/lose-weight-now-a-new-approach-to-losing-weight-for-good-isbn10-1409185559-isbn13-9781409185550",
-      "name": "Lose Weight Now!: A new approach to losing weight for good",
-      "price": "193.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41z-ix17lpL.jpg',
+      url: 'https://ideakart.com/book/lose-weight-now-a-new-approach-to-losing-weight-for-good-isbn10-1409185559-isbn13-9781409185550',
+      name: 'Lose Weight Now!: A new approach to losing weight for good',
+      price: '193.0',
+      id: 1024
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/4179Ly8SvAL.jpg",
-      "url": "https://ideakart.com/book/how-to-be-an-antiracist-isbn10-1847925995-isbn13-9781847925992",
-      "name": "How To Be an Antiracist",
-      "price": "1240.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/4179Ly8SvAL.jpg',
+      url: 'https://ideakart.com/book/how-to-be-an-antiracist-isbn10-1847925995-isbn13-9781847925992',
+      name: 'How To Be an Antiracist',
+      price: '1240.0',
+      id: 1025
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/4194ehA8AmL.jpg",
-      "url": "https://ideakart.com/book/intelligence-bureau-2018-security-assistant-executive-isbn10-9388426312-isbn13-9789388426312",
-      "name": "Intelligence Bureau 2018: Security Assistant/Executive",
-      "price": "356.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/4194ehA8AmL.jpg',
+      url: 'https://ideakart.com/book/intelligence-bureau-2018-security-assistant-executive-isbn10-9388426312-isbn13-9789388426312',
+      name: 'Intelligence Bureau 2018: Security Assistant/Executive',
+      price: '356.0',
+      id: 1026
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51NhI%2Bi6bmL.jpg",
-      "url": "https://ideakart.com/book/howard-stern-comes-again-isbn10-1501194291-isbn13-9781501194290",
-      "name": "Howard Stern Comes Again",
-      "price": "1903.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51NhI%2Bi6bmL.jpg',
+      url: 'https://ideakart.com/book/howard-stern-comes-again-isbn10-1501194291-isbn13-9781501194290',
+      name: 'Howard Stern Comes Again',
+      price: '1903.0',
+      id: 1027
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51FcPOduAqL.jpg",
-      "url": "https://ideakart.com/book/padhuka-s-students-handbook-on-advanced-auditing-ca-final-old-syllabus-for-may-2019-exams-and-onwards-isbn10-9388313488-isbn13-9789388313483",
-      "name": "Padhuka's Students Handbook On Advanced Auditing: CA final Old Syllabus- for May 2019 Exams and onwards",
-      "price": "769.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51FcPOduAqL.jpg',
+      url: 'https://ideakart.com/book/padhuka-s-students-handbook-on-advanced-auditing-ca-final-old-syllabus-for-may-2019-exams-and-onwards-isbn10-9388313488-isbn13-9789388313483',
+      name: "Padhuka's Students Handbook On Advanced Auditing: CA final Old Syllabus- for May 2019 Exams and onwards",
+      price: '769.0',
+      id: 1028
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/513Pzz7lsHL.jpg",
-      "url": "https://ideakart.com/book/lessons-from-lucy-the-simple-joys-of-an-old-happy-dog-isbn10-1501161156-isbn13-9781501161155",
-      "name": "Lessons From Lucy: The Simple Joys of an Old, Happy Dog",
-      "price": "1412.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/513Pzz7lsHL.jpg',
+      url: 'https://ideakart.com/book/lessons-from-lucy-the-simple-joys-of-an-old-happy-dog-isbn10-1501161156-isbn13-9781501161155',
+      name: 'Lessons From Lucy: The Simple Joys of an Old, Happy Dog',
+      price: '1412.0',
+      id: 1029
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/517HT5A8oxL.jpg",
-      "url": "https://ideakart.com/book/evolve-isbn10-8193769104-isbn13-9788193769102",
-      "name": "Evolve",
-      "price": "300.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/517HT5A8oxL.jpg',
+      url: 'https://ideakart.com/book/evolve-isbn10-8193769104-isbn13-9788193769102',
+      name: 'Evolve',
+      price: '300.0',
+      id: 1030
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41-wJJlYXlL.jpg",
-      "url": "https://ideakart.com/book/nuggets-of-wisdom-some-path-breaking-judgments-of-the-supreme-court-isbn10-8126929162-isbn13-9788126929160",
-      "name": "Nuggets of wisdom: Some path breaking judgments of the supreme court",
-      "price": "628.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41-wJJlYXlL.jpg',
+      url: 'https://ideakart.com/book/nuggets-of-wisdom-some-path-breaking-judgments-of-the-supreme-court-isbn10-8126929162-isbn13-9788126929160',
+      name: 'Nuggets of wisdom: Some path breaking judgments of the supreme court',
+      price: '628.0',
+      id: 1031
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41UHlG5rxFL.jpg",
-      "url": "https://ideakart.com/book/enjocho-wristwatch-fashion-creative-paper-watch-led-waterproof-clock-tyvek-paper-strap-digital-watches-2018-one-size-n-isbn10--isbn13-0653729719915",
-      "name": "Enjocho Wristwatch Fashion Creative Paper Watch Led Waterproof Clock Tyvek Paper Strap Digital Watches 2018 one Size N",
-      "price": "271.32"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41UHlG5rxFL.jpg',
+      url: 'https://ideakart.com/book/enjocho-wristwatch-fashion-creative-paper-watch-led-waterproof-clock-tyvek-paper-strap-digital-watches-2018-one-size-n-isbn10--isbn13-0653729719915',
+      name: 'Enjocho Wristwatch Fashion Creative Paper Watch Led Waterproof Clock Tyvek Paper Strap Digital Watches 2018 one Size N',
+      price: '271.32',
+      id: 1032
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41%2B%2BJ8XOXhL.jpg",
-      "url": "https://ideakart.com/book/wooden-carrom-board-black-with-coins-20-inch-isbn10--isbn13-0639385317610",
-      "name": "Wooden Carrom Board (Black) with Coins 20\"Inch",
-      "price": "699.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41%2B%2BJ8XOXhL.jpg',
+      url: 'https://ideakart.com/book/wooden-carrom-board-black-with-coins-20-inch-isbn10--isbn13-0639385317610',
+      name: 'Wooden Carrom Board (Black) with Coins 20"Inch',
+      price: '699.0',
+      id: 1033
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51wglZz4InL.jpg",
-      "url": "https://ideakart.com/book/comptia-security-practice-tests-exam-sy0-501-isbn10-1119416922-isbn13-9781119416920",
-      "name": "CompTIA Security+ Practice Tests: Exam SY0–501",
-      "price": "2111.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51wglZz4InL.jpg',
+      url: 'https://ideakart.com/book/comptia-security-practice-tests-exam-sy0-501-isbn10-1119416922-isbn13-9781119416920',
+      name: 'CompTIA Security+ Practice Tests: Exam SY0–501',
+      price: '2111.0',
+      id: 1034
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51NLkeu4afL.jpg",
-      "url": "https://ideakart.com/book/begin-to-code-with-python-isbn10-1509304525-isbn13-9781509304523",
-      "name": "Begin to Code with Python",
-      "price": "1848.54"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51NLkeu4afL.jpg',
+      url: 'https://ideakart.com/book/begin-to-code-with-python-isbn10-1509304525-isbn13-9781509304523',
+      name: 'Begin to Code with Python',
+      price: '1848.54',
+      id: 1035
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/61mZ97lsm1L.jpg",
-      "url": "https://ideakart.com/book/the-art-of-statistics-how-to-learn-from-data-isbn10-1541618513-isbn13-9781541618510",
-      "name": "The Art of Statistics: How to Learn from Data",
-      "price": "1744.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/61mZ97lsm1L.jpg',
+      url: 'https://ideakart.com/book/the-art-of-statistics-how-to-learn-from-data-isbn10-1541618513-isbn13-9781541618510',
+      name: 'The Art of Statistics: How to Learn from Data',
+      price: '1744.0',
+      id: 1036
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/5142RsS986L.jpg",
-      "url": "https://ideakart.com/book/neelkanth-large-very-soft-4-feet-lovable-huggable-teddy-bear-with-neck-bow-for-girlfriend-birthday-gift-boy-girl-122-cm-brown-isbn10--isbn13-0689786537339",
-      "name": "Neelkanth Large Very Soft 4 Feet Lovable/Huggable Teddy Bear with Neck Bow for Girlfriend/Birthday Gift/Boy/Girl (122 CM, Brown)",
-      "price": "1099.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/5142RsS986L.jpg',
+      url: 'https://ideakart.com/book/neelkanth-large-very-soft-4-feet-lovable-huggable-teddy-bear-with-neck-bow-for-girlfriend-birthday-gift-boy-girl-122-cm-brown-isbn10--isbn13-0689786537339',
+      name: 'Neelkanth Large Very Soft 4 Feet Lovable/Huggable Teddy Bear with Neck Bow for Girlfriend/Birthday Gift/Boy/Girl (122 CM, Brown)',
+      price: '1099.0',
+      id: 1037
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41HPI4itdyL.jpg",
-      "url": "https://ideakart.com/book/36-slots-flexible-canvas-pencils-pens-brush-holder-pouch-roll-up-storage-wrap-case-for-marker-pens-painting-brushes-black-isbn10--isbn13-0715538583276",
-      "name": "36 Slots Flexible Canvas Pencils Pens Brush Holder Pouch Roll-up Storage Wrap Case for Marker Pens, Painting Brushes - Black",
-      "price": 500
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41HPI4itdyL.jpg',
+      url: 'https://ideakart.com/book/36-slots-flexible-canvas-pencils-pens-brush-holder-pouch-roll-up-storage-wrap-case-for-marker-pens-painting-brushes-black-isbn10--isbn13-0715538583276',
+      name: '36 Slots Flexible Canvas Pencils Pens Brush Holder Pouch Roll-up Storage Wrap Case for Marker Pens, Painting Brushes - Black',
+      price: 500,
+      id: 1038
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41mB6UsBKRL.jpg",
-      "url": "https://ideakart.com/book/selections-illustrating-the-history-of-greek-mathematics-vol-1-of-2-from-thales-to-euclid-classic-reprint-isbn10-9780282625801-isbn13-9780282625801",
-      "name": "Selections Illustrating the History of Greek Mathematics, Vol. 1 of 2: From Thales to Euclid (Classic Reprint)",
-      "price": "1629.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41mB6UsBKRL.jpg',
+      url: 'https://ideakart.com/book/selections-illustrating-the-history-of-greek-mathematics-vol-1-of-2-from-thales-to-euclid-classic-reprint-isbn10-9780282625801-isbn13-9780282625801',
+      name: 'Selections Illustrating the History of Greek Mathematics, Vol. 1 of 2: From Thales to Euclid (Classic Reprint)',
+      price: '1629.0',
+      id: 1039
     },
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Zl02gjroL.jpg",
-      "url": "https://ideakart.com/book/ipad-with-ios-11-and-higher-for-seniors-learn-to-work-with-the-ipad-computer-books-for-seniors-isbn10-9059054245-isbn13-9789059054240",
-      "name": "iPad with IOS 11 and Higher for Seniors: Learn to Work with the iPad (Computer Books for Seniors)",
-      "price": "1299.0"
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51Zl02gjroL.jpg',
+      url: 'https://ideakart.com/book/ipad-with-ios-11-and-higher-for-seniors-learn-to-work-with-the-ipad-computer-books-for-seniors-isbn10-9059054245-isbn13-9789059054240',
+      name: 'iPad with IOS 11 and Higher for Seniors: Learn to Work with the iPad (Computer Books for Seniors)',
+      price: '1299.0',
+      id: 1040
     },
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Zr8Y37aFL.jpg",
-      "url": "https://ideakart.com/book/the-mecca-mystery-probing-the-black-hole-at-the-heart-of-muslim-history-isbn10-0648313204-isbn13-9780648313205",
-      "name": "The Mecca Mystery: Probing the Black Hole at the Heart of Muslim History",
-      "price": "989.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51Zr8Y37aFL.jpg',
+      url: 'https://ideakart.com/book/the-mecca-mystery-probing-the-black-hole-at-the-heart-of-muslim-history-isbn10-0648313204-isbn13-9780648313205',
+      name: 'The Mecca Mystery: Probing the Black Hole at the Heart of Muslim History',
+      price: '989.0',
+      id: 1041
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/513MFvW1RCL.jpg",
-      "url": "https://ideakart.com/book/best-american-travel-writing-2019-the-best-american-travel-writing-isbn10-0358094232-isbn13-9780358094234",
-      "name": "Best American Travel Writing 2019 (The Best American Travel Writing)",
-      "price": "815.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/513MFvW1RCL.jpg',
+      url: 'https://ideakart.com/book/best-american-travel-writing-2019-the-best-american-travel-writing-isbn10-0358094232-isbn13-9780358094234',
+      name: 'Best American Travel Writing 2019 (The Best American Travel Writing)',
+      price: '815.0',
+      id: 1042
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41BePlf%2BBiL.jpg",
-      "url": "https://ideakart.com/book/the-witch-s-warning-aberrations-book-2-isbn10-0241349958-isbn13-9780241349953",
-      "name": "The Witch’s Warning (Aberrations Book 2)",
-      "price": "233.22",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41BePlf%2BBiL.jpg',
+      url: 'https://ideakart.com/book/the-witch-s-warning-aberrations-book-2-isbn10-0241349958-isbn13-9780241349953',
+      name: 'The Witch’s Warning (Aberrations Book 2)',
+      price: '233.22',
+      id: 1043
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41cmbv6IE1L.jpg",
-      "url": "https://ideakart.com/book/mcqs-for-gpat-niper-di-pharmacist-exams-isbn10-9389774225-isbn13-9789389774221",
-      "name": "MCQs for GPAT, NIPER, DI, PHARMACIST EXAMS",
-      "price": "750.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41cmbv6IE1L.jpg',
+      url: 'https://ideakart.com/book/mcqs-for-gpat-niper-di-pharmacist-exams-isbn10-9389774225-isbn13-9789389774221',
+      name: 'MCQs for GPAT, NIPER, DI, PHARMACIST EXAMS',
+      price: '750.0',
+      id: 1044
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/414Hm-aDjmL.jpg",
-      "url": "https://ideakart.com/book/padmavat-an-epic-love-story-isbn10-935304023X-isbn13-9789353040239",
-      "name": "Padmavat: An Epic Love Story",
-      "price": "181.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/414Hm-aDjmL.jpg',
+      url: 'https://ideakart.com/book/padmavat-an-epic-love-story-isbn10-935304023X-isbn13-9789353040239',
+      name: 'Padmavat: An Epic Love Story',
+      price: '181.0',
+      id: 1045
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/61eWhzioAQL.jpg",
-      "url": "https://ideakart.com/book/marvel-encyclopedia-new-edition-isbn10-0241357551-isbn13-9780241357552",
-      "name": "Marvel Encyclopedia New Edition",
-      "price": "1274.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/61eWhzioAQL.jpg',
+      url: 'https://ideakart.com/book/marvel-encyclopedia-new-edition-isbn10-0241357551-isbn13-9780241357552',
+      name: 'Marvel Encyclopedia New Edition',
+      price: '1274.0',
+      id: 1046
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51NCwP0SG0L.jpg",
-      "url": "https://ideakart.com/book/the-towering-sky-thousandth-floor-isbn10-0062418653-isbn13-9780062418654",
-      "name": "The Towering Sky (Thousandth Floor)",
-      "price": "982.28",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51NCwP0SG0L.jpg',
+      url: 'https://ideakart.com/book/the-towering-sky-thousandth-floor-isbn10-0062418653-isbn13-9780062418654',
+      name: 'The Towering Sky (Thousandth Floor)',
+      price: '982.28',
+      id: 1047
     },
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41VswtvdyWL.jpg",
-      "url": "https://ideakart.com/book/dmrc-2019-junior-engineer-mechanical-engineering-previous-years-solved-papers-12-sets-isbn10-9388426177-isbn13-9789388426176",
-      "name": "DMRC 2019: Junior Engineer Mechanical Engineering Previous Years' Solved Papers (12 Sets)",
-      "price": "232.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41VswtvdyWL.jpg',
+      url: 'https://ideakart.com/book/dmrc-2019-junior-engineer-mechanical-engineering-previous-years-solved-papers-12-sets-isbn10-9388426177-isbn13-9789388426176',
+      name: "DMRC 2019: Junior Engineer Mechanical Engineering Previous Years' Solved Papers (12 Sets)",
+      price: '232.0',
+      id: 1048
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41PX1WWurxL.jpg",
-      "url": "https://ideakart.com/book/sakura-gelly-roll-white-gel-pens-set-of-3-pens-assorted-nib-sizes-isbn10--isbn13-8944483296043",
-      "name": "Sakura Gelly Roll white Gel Pens - set of 3 pens - Assorted nib sizes",
-      "price": "140.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41PX1WWurxL.jpg',
+      url: 'https://ideakart.com/book/sakura-gelly-roll-white-gel-pens-set-of-3-pens-assorted-nib-sizes-isbn10--isbn13-8944483296043',
+      name: 'Sakura Gelly Roll white Gel Pens - set of 3 pens - Assorted nib sizes',
+      price: '140.0',
+      id: 1049
     },
-
-
-
-
     {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41Y-Bk-ZpbL.jpg",
-      "url": "https://ideakart.com/book/hyperfocus-how-to-manage-your-attention-in-a-world-of-distraction-isbn10-0525522255-isbn13-9780525522256",
-      "name": "Hyperfocus: How to Manage Your Attention in a World of Distraction",
-      "price": "829.0",
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41Y-Bk-ZpbL.jpg',
+      url: 'https://ideakart.com/book/hyperfocus-how-to-manage-your-attention-in-a-world-of-distraction-isbn10-0525522255-isbn13-9780525522256',
+      name: 'Hyperfocus: How to Manage Your Attention in a World of Distraction',
+      price: '829.0',
+      id: 1050
     },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51ZSEIPxjSL.jpg",
-      "url": "https://ideakart.com/book/the-obesity-code-cookbook-recipes-to-help-you-manage-your-insulin-lose-weight-and-improve-your-health-isbn10-1912854635-isbn13-9781912854639",
-      "name": "The Obesity Code Cookbook: recipes to help you manage your insulin, lose weight, and improve your health",
-      "price": "1237.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/511dftSCnYL.jpg",
-      "url": "https://ideakart.com/book/iron-curtain-journals-january-may-1965-isbn10-0816699593-isbn13-9780816699599",
-      "name": "Iron Curtain Journals: January-May 1965",
-      "price": "1968.0",
-    },
-
-
-    {
-
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41pco-NLgFL.jpg",
-      "url": "https://ideakart.com/book/black-gorilla-soft-toy-big-plush-king-kong-monkey-toy-figure-soft-toys-35-cms-smart-buy-isbn10--isbn13-8944908834591",
-      "name": "Black Gorilla Soft Toy Big Plush King Kong Monkey Toy Figure Soft Toys +35 cms - Smart Buy",
-    },
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51r9LxJV4ML.jpg",
-      "url": "https://ideakart.com/book/urbashira-chithi-isbn10-164560022X-isbn13-9781645600220",
-      "name": "Urbashira Chithi",
-      "price": "125.0",
-    },
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51ji2aGRlJL.jpg",
-      "url": "https://ideakart.com/book/connecting-the-dots-leadership-lessons-in-a-startup-world-isbn10-0008297045-isbn13-9780008297046",
-      "name": "Connecting the Dots: Leadership Lessons in a Startup World",
-      "price": "437.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41l4uMjw2PL.jpg",
-      "url": "https://ideakart.com/book/the-book-of-why-the-new-science-of-cause-and-effect-isbn10-0241242630-isbn13-9780241242636",
-      "name": "The Book of Why: The New Science of Cause and Effect",
-      "price": "1592.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41vKKWTIYtL.jpg",
-      "url": "https://ideakart.com/book/concept-notes-on-chest-radiology-and-diagnostics-isbn10-9386315122-isbn13-9789386315120",
-      "name": "Concept Notes on Chest Radiology and Diagnostics",
-      "price": "199.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41HU7T2JqPL.jpg",
-      "url": "https://ideakart.com/book/beyond-the-valley-how-innovators-around-the-world-are-overcoming-inequality-and-creating-the-technologies-of-tomorrow-the-mit-press-isbn10-0262043130-isbn13-9780262043137",
-      "name": "Beyond the Valley - How Innovators around the World are Overcoming Inequality and Creating the Technologies of Tomorrow (The MIT Press)",
-      "price": "1732.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/512nh-FwCRL.jpg",
-      "url": "https://ideakart.com/book/machine-learning-with-the-elastic-stack-expert-techniques-to-integrate-machine-learning-with-distributed-search-and-analytics-isbn10-1788477545-isbn13-9781788477543",
-      "name": "Machine Learning with the Elastic Stack: Expert techniques to integrate machine learning with distributed search and analytics",
-      "price": "989.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41UDBLGEjmL.jpg",
-      "url": "https://ideakart.com/book/slay-in-your-lane-the-black-girl-bible-isbn10-0008235627-isbn13-9780008235628",
-      "name": "Slay In Your Lane: The Black Girl Bible",
-      "price": "623.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51UPzY3Lw4L.jpg",
-      "url": "https://ideakart.com/book/dream-beyond-shadows-no-ordinary-tourist-isbn10-9389530474-isbn13-9789389530476",
-      "name": "Dream Beyond Shadows: No Ordinary Tourist",
-      "price": "249.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/31LiMO1PYGL.jpg",
-      "url": "https://ideakart.com/book/ramanujan-s-lost-notebook-part-v-isbn10-9783319778327-isbn13-9783319778327",
-      "name": "Ramanujan's Lost Notebook: Part V",
-      "price": "8057.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41HxQMgfKmL.jpg",
-      "url": "https://ideakart.com/book/spy-school-british-invasion-isbn10-1534424709-isbn13-9781534424708",
-      "name": "Spy School British Invasion",
-      "price": "989.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41tD%2BEB9mvL.jpg",
-      "url": "https://ideakart.com/book/i-ll-be-gone-in-the-dark-isbn10-0571345158-isbn13-9780571345151",
-      "name": "I'll Be Gone in the Dark",
-      "price": "384.23",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51PE8oS6AlL.jpg",
-      "url": "https://ideakart.com/book/the-secret-network-of-nature-isbn10-1847925251-isbn13-9781847925251",
-      "name": "The Secret Network of Nature",
-      "price": "479.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51Nh0O7nI9L.jpg",
-      "url": "https://ideakart.com/book/civil-litigation-2019-2020-legal-practice-course-manuals-isbn10-0198838557-isbn13-9780198838555",
-      "name": "Civil Litigation 2019-2020 (Legal Practice Course Manuals)",
-      "price": "3346.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51%2BaitGLboL.jpg",
-      "url": "https://ideakart.com/book/a-history-of-intellectual-property-in-50-objects-isbn10-110842001X-isbn13-9781108420013",
-      "name": "A History of Intellectual Property in 50 Objects",
-    },
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41iMxygy0KL.jpg",
-      "url": "https://ideakart.com/book/shadow-innovation-1pcs-color-fingerlings-interactive-baby-monkey-toy-for-kids-finger-touch-sensitive-fingertip-monkey-style-toy-color-random-isbn10--isbn13-8903545332389",
-      "name": "Shadow Innovation 1Pcs Color Fingerlings Interactive Baby Monkey Toy for Kids Finger Touch Sensitive Fingertip Monkey Style Toy (Color Random )",
-      "price": "1049.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41Dy-xTdaiL.jpg",
-      "url": "https://ideakart.com/book/unplug-isbn10-0349419132-isbn13-9780349419138",
-      "name": "Unplug",
-      "price": "259.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41KpbkJq9rL.jpg",
-      "url": "https://ideakart.com/book/the-age-of-agile-isbn10-0814439098-isbn13-9780814439098",
-      "name": "THE AGE OF AGILE",
-      "price": "1461.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/412Weq-DeWL.jpg",
-      "url": "https://ideakart.com/book/the-writings-of-oliver-wendell-holmes-classic-reprint-isbn10-9781440041600-isbn13-9781440041600",
-      "name": "The Writings of Oliver Wendell Holmes (Classic Reprint)",
-      "price": "1262.94",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41oaDxhlIkL.jpg",
-      "url": "https://ideakart.com/book/data-analysis-with-python-a-modern-approach-isbn10-1789950066-isbn13-9781789950069",
-      "name": "Data Analysis with Python: A Modern Approach",
-      "price": "1039.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51y2C%2Bv54CL.jpg",
-      "url": "https://ideakart.com/book/python-data-science-essentials-a-practitioner-s-guide-covering-essential-data-science-principles-tools-and-techniques-3rd-edition-isbn10-9781789537864-isbn13-9781789537864",
-      "name": "Python Data Science Essentials: A practitioner's guide covering essential data science principles, tools, and techniques, 3rd Edition",
-      "price": "1143.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/519AE6lPEHL.jpg",
-      "url": "https://ideakart.com/book/running-anatomy-2nd-edition-isbn10-1492548294-isbn13-9781492548294",
-      "name": "Running Anatomy 2nd Edition",
-      "price": "1340.0",
-    },
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51--JQkC3dL.jpg",
-      "url": "https://ideakart.com/book/hands-on-microservices-with-spring-boot-and-spring-cloud-build-and-deploy-java-microservices-using-spring-cloud-istio-and-kubernetes-isbn10-1789613477-isbn13-9781789613476",
-      "name": "Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes",
-      "price": "2127.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51HuEjVCcNL.jpg",
-      "url": "https://ideakart.com/book/design-of-steel-structures-for-building-in-seismic-areas-eurocode-8-design-of-structures-for-earthquake-resistance-part-1-general-design-of-steel-structures-for-buildings-isbn10-3433030103-isbn13-9783433030103",
-      "name": "Design of Steel Structures for Building in Seismic Areas: Eurocode 8: Design of Structures for Earthquake Resistance. Part 1: General Design of Steel Structures for Buildings",
-      "price": "3680.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/414NaZJ%2BtJL.jpg",
-      "url": "https://ideakart.com/book/essays-for-civil-and-judicial-services-examinations-2019-isbn10-9388426576-isbn13-9789388426572",
-      "name": "Essays for Civil and Judicial Services Examinations 2019",
-      "price": "250.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41jXtWw-14L.jpg",
-      "url": "https://ideakart.com/book/vnc-soft-toy-fantastic-puppy-battery-operated-back-flip-jumping-dog-jump-run-toy-kid-isbn10--isbn13-6190639692630",
-      "name": "VNC Soft Toy Fantastic Puppy Battery Operated Back Flip Jumping Dog Jump Run Toy Kid",
-      "price": "399.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/31nsfDwe-3L.jpg",
-      "url": "https://ideakart.com/book/loggas-pen-set-calligraphy-pack-of-8-isbn10--isbn13-8904211626894",
-      "name": "Loggas Pen Set Calligraphy (Pack of 8)",
-      "price": "299.0",
-    },
-
-
-
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51MYxxkTRmL.jpg",
-      "url": "https://ideakart.com/book/wp-speed-cube-snake-ruler-cube-puzzle-pack-24-wedges-twist-puzzle-toys-2-magic-snake-cubes-collection-in-1-box-isbn10--isbn13-4510408762807",
-      "name": "WP Speed Cube Snake Ruler Cube Puzzle Pack | 24 Wedges Twist Puzzle Toys | 2 Magic Snake Cubes Collection in 1 Box",
-      "price": "125.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51yTse%2BHDXL.jpg",
-      "url": "https://ideakart.com/book/reasoning-maths-and-science-olympiad-workbook-combo-class-6-isbn10-938928807X-isbn13-9789389288070",
-
-      "name": "Reasoning, Maths and Science Olympiad Workbook Combo - Class 6",
-
-      "price": "279.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41lasz04WVL.jpg",
-      "url": "https://ideakart.com/book/stillness-is-the-key-isbn10-0525538585-isbn13-9780525538585",
-
-      "name": "Stillness Is the Key",
-
-      "price": "1338.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51u7lK6HnAL.jpg",
-      "url": "https://ideakart.com/book/computer-aided-design-and-analysis-isbn10-9384893420-isbn13-9789384893422",
-
-      "name": "COMPUTER AIDED DESIGN AND ANALYSIS",
-
-      "price": "150.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41kupQvFkPL.jpg",
-      "url": "https://ideakart.com/book/turn-your-dental-practice-into-a-successful-business-isbn10-1731511973-isbn13-9781731511973",
-
-      "name": "Turn Your Dental Practice Into a Successful Business",
-
-      "price": "1530.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41xK6QTWEFL.jpg",
-      "url": "https://ideakart.com/book/i-ll-be-there-for-you-the-one-about-friends-isbn10-1335928286-isbn13-9781335928283",
-
-      "name": "I'll Be There for You: The One About Friends",
-
-      "price": "1546.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51AR-%2BG6R%2BL.jpg",
-      "url": "https://ideakart.com/book/toyzila-talking-tom-interactive-learning-tablet-isbn10--isbn13-0689272684271",
-
-      "name": "ToyZila Talking Tom Interactive Learning Tablet",
-
-      "price": "399.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/511jlx69ceL.jpg",
-      "url": "https://ideakart.com/book/the-age-of-awakening-isbn10-0670090891-isbn13-9780670090891",
-
-      "name": "The Age of Awakening",
-
-      "price": "449.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/61UkHbkAuXL.jpg",
-      "url": "https://ideakart.com/book/pocket-moscow-st-petersburg-travel-guide-isbn10-1787011232-isbn13-9781787011236",
-
-      "name": "Pocket Moscow & St Petersburg (Travel Guide)",
-
-      "price": "493.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41kZkLUPRRL.jpg",
-      "url": "https://ideakart.com/book/andrew-martin-interior-design-review-vol-23-isbn10-3961712050-isbn13-9783961712052",
-
-      "name": "Andrew Martin Interior Design Review Vol. 23",
-
-      "price": "2985.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41mbP8j1CjL.jpg",
-      "url": "https://ideakart.com/book/what-shall-we-tell-about-summer-of-2018-isbn10-9388435036-isbn13-9789388435031",
-
-      "name": "What Shall We Tell? - About Summer of 2018",
-
-      "price": "580.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/41lCeX4j-aL.jpg",
-      "url": "https://ideakart.com/book/being-silly-is-silly-dealing-with-feelings-isbn10-0143440616-isbn13-9780143440611",
-
-      "name": "Being Silly Is Silly (Dealing with Feelings)",
-
-      "price": "135.0",
-    },
-
-    {
-      "image": "https://images-eu.ssl-images-amazon.com/images/I/51IDNamtk8L.jpg",
-      "url": "https://ideakart.com/book/drawing-realistic-pencil-portraits-step-by-step-basic-techniques-for-the-head-and-face-isbn10-1440354618-isbn13-9781440354618",
-
-      "name": "Drawing Realistic Pencil Portraits Step by Step: Basic Techniques for the Head and Face",
-
-      "price": "1577.0",
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51ZSEIPxjSL.jpg',
+      url: 'https://ideakart.com/book/the-obesity-code-cookbook-recipes-to-help-you-manage-your-insulin-lose-weight-and-improve-your-health-isbn10-1912854635-isbn13-9781912854639',
+      name: 'The Obesity Code Cookbook: recipes to help you manage your insulin, lose weight, and improve your health',
+      price: '1237.0',
+      id: 1051
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/511dftSCnYL.jpg',
+      url: 'https://ideakart.com/book/iron-curtain-journals-january-may-1965-isbn10-0816699593-isbn13-9780816699599',
+      name: 'Iron Curtain Journals: January-May 1965',
+      price: '1968.0',
+      id: 1052
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41pco-NLgFL.jpg',
+      url: 'https://ideakart.com/book/black-gorilla-soft-toy-big-plush-king-kong-monkey-toy-figure-soft-toys-35-cms-smart-buy-isbn10--isbn13-8944908834591',
+      name: 'Black Gorilla Soft Toy Big Plush King Kong Monkey Toy Figure Soft Toys +35 cms - Smart Buy',
+      id: 1053
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51r9LxJV4ML.jpg',
+      url: 'https://ideakart.com/book/urbashira-chithi-isbn10-164560022X-isbn13-9781645600220',
+      name: 'Urbashira Chithi',
+      price: '125.0',
+      id: 1054
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51ji2aGRlJL.jpg',
+      url: 'https://ideakart.com/book/connecting-the-dots-leadership-lessons-in-a-startup-world-isbn10-0008297045-isbn13-9780008297046',
+      name: 'Connecting the Dots: Leadership Lessons in a Startup World',
+      price: '437.0',
+      id: 1055
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41l4uMjw2PL.jpg',
+      url: 'https://ideakart.com/book/the-book-of-why-the-new-science-of-cause-and-effect-isbn10-0241242630-isbn13-9780241242636',
+      name: 'The Book of Why: The New Science of Cause and Effect',
+      price: '1592.0',
+      id: 1056
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41vKKWTIYtL.jpg',
+      url: 'https://ideakart.com/book/concept-notes-on-chest-radiology-and-diagnostics-isbn10-9386315122-isbn13-9789386315120',
+      name: 'Concept Notes on Chest Radiology and Diagnostics',
+      price: '199.0',
+      id: 1057
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41HU7T2JqPL.jpg',
+      url: 'https://ideakart.com/book/beyond-the-valley-how-innovators-around-the-world-are-overcoming-inequality-and-creating-the-technologies-of-tomorrow-the-mit-press-isbn10-0262043130-isbn13-9780262043137',
+      name: 'Beyond the Valley - How Innovators around the World are Overcoming Inequality and Creating the Technologies of Tomorrow (The MIT Press)',
+      price: '1732.0',
+      id: 1058
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/512nh-FwCRL.jpg',
+      url: 'https://ideakart.com/book/machine-learning-with-the-elastic-stack-expert-techniques-to-integrate-machine-learning-with-distributed-search-and-analytics-isbn10-1788477545-isbn13-9781788477543',
+      name: 'Machine Learning with the Elastic Stack: Expert techniques to integrate machine learning with distributed search and analytics',
+      price: '989.0',
+      id: 1059
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41UDBLGEjmL.jpg',
+      url: 'https://ideakart.com/book/slay-in-your-lane-the-black-girl-bible-isbn10-0008235627-isbn13-9780008235628',
+      name: 'Slay In Your Lane: The Black Girl Bible',
+      price: '623.0',
+      id: 1060
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51UPzY3Lw4L.jpg',
+      url: 'https://ideakart.com/book/dream-beyond-shadows-no-ordinary-tourist-isbn10-9389530474-isbn13-9789389530476',
+      name: 'Dream Beyond Shadows: No Ordinary Tourist',
+      price: '249.0',
+      id: 1061
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/31LiMO1PYGL.jpg',
+      url: 'https://ideakart.com/book/ramanujan-s-lost-notebook-part-v-isbn10-9783319778327-isbn13-9783319778327',
+      name: "Ramanujan's Lost Notebook: Part V",
+      price: '8057.0',
+      id: 1062
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41HxQMgfKmL.jpg',
+      url: 'https://ideakart.com/book/spy-school-british-invasion-isbn10-1534424709-isbn13-9781534424708',
+      name: 'Spy School British Invasion',
+      price: '989.0',
+      id: 1063
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41tD%2BEB9mvL.jpg',
+      url: 'https://ideakart.com/book/i-ll-be-gone-in-the-dark-isbn10-0571345158-isbn13-9780571345151',
+      name: "I'll Be Gone in the Dark",
+      price: '384.23',
+      id: 1064
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51PE8oS6AlL.jpg',
+      url: 'https://ideakart.com/book/the-secret-network-of-nature-isbn10-1847925251-isbn13-9781847925251',
+      name: 'The Secret Network of Nature',
+      price: '479.0',
+      id: 1065
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51Nh0O7nI9L.jpg',
+      url: 'https://ideakart.com/book/civil-litigation-2019-2020-legal-practice-course-manuals-isbn10-0198838557-isbn13-9780198838555',
+      name: 'Civil Litigation 2019-2020 (Legal Practice Course Manuals)',
+      price: '3346.0',
+      id: 1066
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51%2BaitGLboL.jpg',
+      url: 'https://ideakart.com/book/a-history-of-intellectual-property-in-50-objects-isbn10-110842001X-isbn13-9781108420013',
+      name: 'A History of Intellectual Property in 50 Objects',
+      id: 1067
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41iMxygy0KL.jpg',
+      url: 'https://ideakart.com/book/shadow-innovation-1pcs-color-fingerlings-interactive-baby-monkey-toy-for-kids-finger-touch-sensitive-fingertip-monkey-style-toy-color-random-isbn10--isbn13-8903545332389',
+      name: 'Shadow Innovation 1Pcs Color Fingerlings Interactive Baby Monkey Toy for Kids Finger Touch Sensitive Fingertip Monkey Style Toy (Color Random )',
+      price: '1049.0',
+      id: 1068
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41Dy-xTdaiL.jpg',
+      url: 'https://ideakart.com/book/unplug-isbn10-0349419132-isbn13-9780349419138',
+      name: 'Unplug',
+      price: '259.0',
+      id: 1069
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41KpbkJq9rL.jpg',
+      url: 'https://ideakart.com/book/the-age-of-agile-isbn10-0814439098-isbn13-9780814439098',
+      name: 'THE AGE OF AGILE',
+      price: '1461.0',
+      id: 1070
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/412Weq-DeWL.jpg',
+      url: 'https://ideakart.com/book/the-writings-of-oliver-wendell-holmes-classic-reprint-isbn10-9781440041600-isbn13-9781440041600',
+      name: 'The Writings of Oliver Wendell Holmes (Classic Reprint)',
+      price: '1262.94',
+      id: 1071
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41oaDxhlIkL.jpg',
+      url: 'https://ideakart.com/book/data-analysis-with-python-a-modern-approach-isbn10-1789950066-isbn13-9781789950069',
+      name: 'Data Analysis with Python: A Modern Approach',
+      price: '1039.0',
+      id: 1072
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51y2C%2Bv54CL.jpg',
+      url: 'https://ideakart.com/book/python-data-science-essentials-a-practitioner-s-guide-covering-essential-data-science-principles-tools-and-techniques-3rd-edition-isbn10-9781789537864-isbn13-9781789537864',
+      name: "Python Data Science Essentials: A practitioner's guide covering essential data science principles, tools, and techniques, 3rd Edition",
+      price: '1143.0',
+      id: 1073
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/519AE6lPEHL.jpg',
+      url: 'https://ideakart.com/book/running-anatomy-2nd-edition-isbn10-1492548294-isbn13-9781492548294',
+      name: 'Running Anatomy 2nd Edition',
+      price: '1340.0',
+      id: 1074
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51--JQkC3dL.jpg',
+      url: 'https://ideakart.com/book/hands-on-microservices-with-spring-boot-and-spring-cloud-build-and-deploy-java-microservices-using-spring-cloud-istio-and-kubernetes-isbn10-1789613477-isbn13-9781789613476',
+      name: 'Hands-On Microservices with Spring Boot and Spring Cloud: Build and deploy Java microservices using Spring Cloud, Istio, and Kubernetes',
+      price: '2127.0',
+      id: 1075
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51HuEjVCcNL.jpg',
+      url: 'https://ideakart.com/book/design-of-steel-structures-for-building-in-seismic-areas-eurocode-8-design-of-structures-for-earthquake-resistance-part-1-general-design-of-steel-structures-for-buildings-isbn10-3433030103-isbn13-9783433030103',
+      name: 'Design of Steel Structures for Building in Seismic Areas: Eurocode 8: Design of Structures for Earthquake Resistance. Part 1: General Design of Steel Structures for Buildings',
+      price: '3680.0',
+      id: 1076
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/414NaZJ%2BtJL.jpg',
+      url: 'https://ideakart.com/book/essays-for-civil-and-judicial-services-examinations-2019-isbn10-9388426576-isbn13-9789388426572',
+      name: 'Essays for Civil and Judicial Services Examinations 2019',
+      price: '250.0',
+      id: 1077
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41jXtWw-14L.jpg',
+      url: 'https://ideakart.com/book/vnc-soft-toy-fantastic-puppy-battery-operated-back-flip-jumping-dog-jump-run-toy-kid-isbn10--isbn13-6190639692630',
+      name: 'VNC Soft Toy Fantastic Puppy Battery Operated Back Flip Jumping Dog Jump Run Toy Kid',
+      price: '399.0',
+      id: 1078
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/31nsfDwe-3L.jpg',
+      url: 'https://ideakart.com/book/loggas-pen-set-calligraphy-pack-of-8-isbn10--isbn13-8904211626894',
+      name: 'Loggas Pen Set Calligraphy (Pack of 8)',
+      price: '299.0',
+      id: 1079
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51MYxxkTRmL.jpg',
+      url: 'https://ideakart.com/book/wp-speed-cube-snake-ruler-cube-puzzle-pack-24-wedges-twist-puzzle-toys-2-magic-snake-cubes-collection-in-1-box-isbn10--isbn13-4510408762807',
+      name: 'WP Speed Cube Snake Ruler Cube Puzzle Pack | 24 Wedges Twist Puzzle Toys | 2 Magic Snake Cubes Collection in 1 Box',
+      price: '125.0',
+      id: 1080
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51yTse%2BHDXL.jpg',
+      url: 'https://ideakart.com/book/reasoning-maths-and-science-olympiad-workbook-combo-class-6-isbn10-938928807X-isbn13-9789389288070',
+      name: 'Reasoning, Maths and Science Olympiad Workbook Combo - Class 6',
+      price: '279.0',
+      id: 1081
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41lasz04WVL.jpg',
+      url: 'https://ideakart.com/book/stillness-is-the-key-isbn10-0525538585-isbn13-9780525538585',
+      name: 'Stillness Is the Key',
+      price: '1338.0',
+      id: 1082
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51u7lK6HnAL.jpg',
+      url: 'https://ideakart.com/book/computer-aided-design-and-analysis-isbn10-9384893420-isbn13-9789384893422',
+      name: 'COMPUTER AIDED DESIGN AND ANALYSIS',
+      price: '150.0',
+      id: 1083
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41kupQvFkPL.jpg',
+      url: 'https://ideakart.com/book/turn-your-dental-practice-into-a-successful-business-isbn10-1731511973-isbn13-9781731511973',
+      name: 'Turn Your Dental Practice Into a Successful Business',
+      price: '1530.0',
+      id: 1084
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41xK6QTWEFL.jpg',
+      url: 'https://ideakart.com/book/i-ll-be-there-for-you-the-one-about-friends-isbn10-1335928286-isbn13-9781335928283',
+      name: "I'll Be There for You: The One About Friends",
+      price: '1546.0',
+      id: 1085
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51AR-%2BG6R%2BL.jpg',
+      url: 'https://ideakart.com/book/toyzila-talking-tom-interactive-learning-tablet-isbn10--isbn13-0689272684271',
+      name: 'ToyZila Talking Tom Interactive Learning Tablet',
+      price: '399.0',
+      id: 1086
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/511jlx69ceL.jpg',
+      url: 'https://ideakart.com/book/the-age-of-awakening-isbn10-0670090891-isbn13-9780670090891',
+      name: 'The Age of Awakening',
+      price: '449.0',
+      id: 1087
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/61UkHbkAuXL.jpg',
+      url: 'https://ideakart.com/book/pocket-moscow-st-petersburg-travel-guide-isbn10-1787011232-isbn13-9781787011236',
+      name: 'Pocket Moscow & St Petersburg (Travel Guide)',
+      price: '493.0',
+      id: 1088
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41kZkLUPRRL.jpg',
+      url: 'https://ideakart.com/book/andrew-martin-interior-design-review-vol-23-isbn10-3961712050-isbn13-9783961712052',
+      name: 'Andrew Martin Interior Design Review Vol. 23',
+      price: '2985.0',
+      id: 1089
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41mbP8j1CjL.jpg',
+      url: 'https://ideakart.com/book/what-shall-we-tell-about-summer-of-2018-isbn10-9388435036-isbn13-9789388435031',
+      name: 'What Shall We Tell? - About Summer of 2018',
+      price: '580.0',
+      id: 1090
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/41lCeX4j-aL.jpg',
+      url: 'https://ideakart.com/book/being-silly-is-silly-dealing-with-feelings-isbn10-0143440616-isbn13-9780143440611',
+      name: 'Being Silly Is Silly (Dealing with Feelings)',
+      price: '135.0',
+      id: 1091
+    },
+    {
+      image: 'https://images-eu.ssl-images-amazon.com/images/I/51IDNamtk8L.jpg',
+      url: 'https://ideakart.com/book/drawing-realistic-pencil-portraits-step-by-step-basic-techniques-for-the-head-and-face-isbn10-1440354618-isbn13-9781440354618',
+      name: 'Drawing Realistic Pencil Portraits Step by Step: Basic Techniques for the Head and Face',
+      price: '1577.0',
+      id: 1092
     }
-
   ]
 
   console.log(dataBase.length)
@@ -902,7 +797,7 @@
   function displayContent() {
     var container = document.querySelector(".home_page_container");
 
-    for (let i = 0; i < 33; i++) {
+    for (let i = 0; i < 30; i++) {
 
       let random = generateRandom();
 
@@ -924,11 +819,12 @@
 
       let name = document.createElement("p");
       name.innerText = dataBase[random].name;
+      name.setAttribute("class", "card_text")
       name.style.fontSize = "smaller";
       card.append(name);
 
       let price = document.createElement("p");
-      price.innerText = dataBase[random].price;
+      price.innerText = ("₹" + dataBase[random].price);
       price.setAttribute("class", "price")
 
       card.append(price);

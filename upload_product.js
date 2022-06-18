@@ -2,7 +2,7 @@
 
 let reviewItems= JSON.parse(localStorage.getItem("review")) || 0;
 let productLS=JSON.parse(localStorage.getItem("New-Product")) || [];
-
+JSON.parse(localStorage.getItem("added-Product")) || [];
 document.querySelector("#form").addEventListener("submit",addPoductFun);
 let formData=document.querySelector("#form");
 
@@ -27,7 +27,7 @@ function addPoductFun(){
             
           productLS.push(obj);
           localStorage.setItem("New-Product",JSON.stringify(productLS));
-
+          localStorage.setItem("added-Product",JSON.stringify(productLS));
           localStorage.setItem("review",JSON.stringify(reviewItems));
     }
     

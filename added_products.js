@@ -1,4 +1,4 @@
-let addedProductArr=JSON.parse(localStorage.getItem("New-Product"));
+let addedProductArr=JSON.parse(localStorage.getItem("added-Product"));
 
 function displayUploaded(addedProductArr){
     

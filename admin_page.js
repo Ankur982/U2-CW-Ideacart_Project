@@ -1,12 +1,12 @@
 
-let uploadedArr=JSON.parse(localStorage.getItem("New-Product"));
-
+let uploadedArr=JSON.parse(localStorage.getItem("New-Product")) || [];
+let review=JSON.parse(localStorage.getItem("review"));
 
 function displayProducts(uploadedArr){
     document.querySelector("#tbody").innerHTML="";
   
   
-  uploadedArr.map(function(el,index){
+  uploadedArr.map(function(el){
     let tr=document.createElement("tr");
   let td1=document.createElement("td")
   let image=document.createElement("img");
@@ -23,7 +23,7 @@ function displayProducts(uploadedArr){
   accept.innerText="Accept"
   accept.style.color="green";
   accept.addEventListener("click",function(){
-    acceptFun(el,index)
+    acceptFun(el)
   });
 
 
@@ -31,7 +31,7 @@ function displayProducts(uploadedArr){
   reject.innerText=" Reject"
   reject.style.color="red";
   reject.addEventListener("click",function(){
-    rejectFun(el,index);
+    rejectFun(el);
   })
 
  tr.append(td1,name,price,accept,reject)
@@ -50,18 +50,18 @@ let productLS=[];
 let acceptedItems=0;
 function acceptFun(el){
     let obj={  
-        description:el.name,
+        description:el.description,
         image:el.image,
         price:el.price,
         type:el.type,
-        id:el.productid,
+        id:el.id,
        }
 
        acceptedItems++;
-            
+       review--;     
        productLS.push(obj);
        localStorage.setItem("accepted-Product",JSON.stringify(productLS));
-
+       localStorage.setItem("review",JSON.stringify(review));
        localStorage.setItem("aproved",JSON.stringify(acceptedItems));
  
        //deleting item from LS
@@ -70,7 +70,9 @@ function acceptFun(el){
         return element.id!=el.id;
        });
        uploadedArr=deleted ;
+       localStorage.setItem("New-Product",JSON.stringify(uploadedArr));
        displayProducts(uploadedArr)
+       
 }
 
 
@@ -78,18 +80,18 @@ productLS=[];
 let rejectedItems=0;
 function rejectFun(el){
     let obj={  
-        description:el.name,
+        description:el.description,
         image:el.image,
         price:el.price,
         type:el.type,
-        id:el.productid,
+        id:el.id,
        }
 
        rejectedItems++;
-            
+       review--;    
        productLS.push(obj);
        localStorage.setItem("rejected-Product",JSON.stringify(productLS));
-
+       localStorage.setItem("review",JSON.stringify(review));
        localStorage.setItem("reject",JSON.stringify(rejectedItems));
 
         //deleting item from LS
@@ -98,6 +100,7 @@ function rejectFun(el){
             return element.id!=el.id;
            });
            uploadedArr=deleted ;
+           localStorage.setItem("New-Product",JSON.stringify(uploadedArr));
            displayProducts(uploadedArr)
 
 }

@@ -1,6 +1,5 @@
 let addedProductArr=JSON.parse(localStorage.getItem("New-Product"));
-let acceptedArr=JSON.parse(localStorage.getItem("accepted-Product"));
-let rejectedArr=JSON.parse(localStorage.getItem("rejected-Product"));
+console.log(addedProductArr)
 
 function displayUploaded(addedProductArr){
      
@@ -24,20 +23,8 @@ document.querySelector("#tbody").append(tr)
   });  
 }
 
-let pendingArr=addedProductArr.filter(function(el){
-for(let i=0;i<acceptedArr.length;i++){
-   return acceptedArr[i].id!=el.id; 
-}
+displayUploaded(addedProductArr);
 
-});
-addedProductArr=pendingArr;
 
- pendingArr=addedProductArr.filter(function(el){
-  for(let i=0;i<rejectedArr.length;i++){
-     return rejectedArr[i].id!=el.id; 
-  }
-  addedProductArr=pendingArr;
-  });
 
-displayUploaded(addedProductArr)
 

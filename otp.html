@@ -159,22 +159,21 @@
         
 </body>
 
-</body>
 
 </html>
 
 <script>
-    document.querySelector("form").addEventListener("submit", myfun)
+    document.querySelector("#optform").addEventListener("submit", myfun)
 
     function myfun() {
         event.preventDefault();
-        let otp = document.querySelector("#otp").value
+        let otp = document.querySelector("#otpinput").value
         let obj = {
             otp: otp,
         }
         if (obj.otp == "123456") {
-            alert("payment Successful....!😊");
-            window.location.reload();
+            alert("Payment Successful 🎉🎉!!.. Press Ok To Continue Shopping");
+            window.location.href = "index.html";
         } else {
             alert("Please enter Valid otp...!😓")
             window.location.reload();

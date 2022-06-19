@@ -2,134 +2,145 @@
 <html lang="en">
 
 <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="navbar.css">
-        <link rel="stylesheet" href="footer.css">
-        <style>
-                .headearn {
-                        padding: 30px 0;
-                        /* background-image: url("earn.jpg"); */
-                        background-color: rgb(140, 192, 213)
-                                /* background-size: auto;
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <style>
+    .headearn {
+      padding: 30px 0;
+      /* background-image: url("earn.jpg"); */
+      background-color: rgb(140, 192, 213)
+        /* background-size: auto;
                         background-position: cover;
                         background-repeat: no-repeat */
 
-                }
+    }
 
-                * {
-                        box-sizing: border-box
-                }
+    * {
+      box-sizing: border-box
+    }
 
-                #earncontainer {
-                        display: flex;
-                        width: 48vw;
-                        margin: auto
-                }
+    #earncontainer {
+      display: flex;
+      width: 48vw;
+      margin: auto
+    }
 
-                #earncontainer>div:nth-child(1) {
-                        background-color: #0ca8dc;
-                        color: whitesmoke;
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    #earncontainer>div:nth-child(1) {
+      background-color: #0ca8dc;
+      color: whitesmoke;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
+    }
 
-                }
+    #earncontainer>div:nth-child(1):hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
 
-                #earncontainer>div:nth-child(2) {
-                        background-color: #0ca8dc;
-                        color: whitesmoke;
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    #earncontainer>div:nth-child(2) {
+      background-color: #0ca8dc;
+      color: whitesmoke;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-                }
+    }
 
+    #earncontainer>div:nth-child(2):hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
 
+    #earncontainer>div:nth-child(3) {
+      background-color: #0ca8dc;
+      color: white;
+      box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;
 
-                #earncontainer>div:nth-child(3) {
-                        background-color: #0ca8dc;
-                        color: white;
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+    }
 
-                }
+    #earncontainer>div:nth-child(3):hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    }
 
-                .earn1 {
+    .earn1 {
 
-                        height: 230px;
-                        border-radius: 40px;
-                        cursor: pointer;
-                        overflow: hidden;
-                        width: 30px;
-                        flex: 0.5;
-                        margin: 10px;
-                        position: relative;
-                        transition: flex 0.7s ease-in;
+      height: 230px;
+      border-radius: 40px;
+      cursor: pointer;
+      overflow: hidden;
+      width: 30px;
+      flex: 0.5;
+      margin: 10px;
+      position: relative;
+      transition: flex 0.7s ease-in;
 
-                }
+    }
 
-                .earn1 h3 {
-                        font-size: 22px;
-                        position: absolute;
-                        bottom: 20px;
-                        left: 20px;
-                        margin: 0;
-                        /* opacity: 0; */
+    .earn1 h3 {
+      font-size: 22px;
+      position: absolute;
+      bottom: 20px;
+      left: 20px;
+      margin: 0;
+      /* opacity: 0; */
 
-                }
+    }
 
-                .earn1.active {
-                        flex: 5;
-                        padding: 15px;
-                        /* background-image: url("earn.jpg");
+    .earn1.active {
+      flex: 5;
+      padding: 15px;
+      /* background-image: url("earn.jpg");
                         background-color: antiquewhite;
                         background-size: auto;
                         background-position: cover;
                         background-repeat: no-repeat */
-                }
+    }
 
-                .earn1 ul {
-                        overflow: hidden;
-                        opacity: 0;
-                }
+    .earn1 ul {
+      overflow: hidden;
+      opacity: 0;
+    }
 
-                .earn1.active ul {
+    .earn1.active ul {
 
-                        opacity: 2;
-                }
+      opacity: 2;
+    }
 
-                .earn1.active {
-                        width: 35px;
-                        height: 230px
-                }
+    .earn1.active {
+      width: 35px;
+      height: 230px
+    }
 
-                #earnvideo {
-                        margin: auto;
-                        margin-top: 10px;
-                        margin-left: 140px;
-                        width: 80%;
-                        height: 400px;
-                }
+    #earnvideo {
+      margin: auto;
+      /* margin-top: 10px; */
+      margin: 30px 0;
+      margin-left: 140px;
+      width: 80%;
+      height: 400px;
+    }
 
-                #getstart {
-                        width: 150px;
-                        padding: 15px 20px;
-                        background-color: #0ca8dc;
-                        font-size: 18px;
-                        font-weight: bold;
-                        cursor: pointer;
-                        border: transparent;
-                        display: block;
-                        margin: auto;
-                        margin-top: 10px;
-                        border-radius: 10px;
-                        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-                        color: white;
-                }
+    #getstart {
+      width: 150px;
+      padding: 15px 20px;
+      background-color: #0ca8dc;
+      font-size: 18px;
+      font-weight: bold;
+      cursor: pointer;
+      border: transparent;
+      display: block;
+      margin: 30px 0;
+      margin: auto;
+      /* margin-top: 10px; */
+      border-radius: 10px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      color: white;
+    }
 
-                #getstart:hover {
-                        background-color: #088178;
-                }
-        </style>
+    #getstart:hover {
+      background-color: #088178;
+    }
+  </style>
 </head>
 
 <body>
@@ -137,112 +148,112 @@
 
 
 
-        <!-- navBar section -->
+  <!-- navBar section -->
 
 
-        <section id="header">
-                <a href="index.html" class="logo">IdeaKart💡</a>
-                <div id="search_box">
-                        <input type="text" placeholder="Search for product">
-                        <button>Search</button>
-                </div>
+  <section id="header">
+    <a href="index.html" class="logo">IdeaKart💡</a>
+    <div id="search_box">
+      <input type="text" placeholder="Search for product">
+      <button>Search</button>
+    </div>
 
-                <div>
-                        <ul id="navbar">
-                                <li><a href="index.html" class="active">Home</a></li>
-                                <li><a href="about_page.html">About</a></li>
-                                <li><a href="contact_us_page.html">Contact</a></li>
-                                <li id="login_text"><a href="login.html">Login</a></li>
-                                <li><a href="cart.html">🛒</a></li>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li id="login_text"><a href="login.html">Login</a></li>
+        <li><a href="cart.html">🛒</a></li>
 
-                        </ul>
-                </div>
-        </section>
-
-
-
-        <!-- earn money section -->
-
-        <div class="headearn">
-                <div id="earncontainer">
-
-
-                        <div class="earn1 ">
-                                <h3>Upload Products that you have!</h3>
-                                <ul>
-
-                                        <li>Create your Account by clicking here</li>
-                                        <li> Verify your account</li>
-                                        <li> Go to Dashboard</li>
-                                        <li> Pick any product. For example mobile phone, or any item.</li>
-                                        <li> Search for it in the Database.</li>
-                                        <li> If it's available, upload a photograph.</li>
-                                        <li> Please mention the price you bought it at.</li>
-
-
-                                </ul>
-                        </div>
-                        <div class="earn1 ">
-                                <h3>Provide a brief description of how to use!</h3>
-                                <ul>
-
-
-                                        <li> Describe the product you just uploaded.</li>
-                                        <li> Mention from where you bought it, online or offline</li>
-                                        <li> A Video increases your chances of getting a product approved, but it is not
-                                                mandatory to upload videos.</li>
+      </ul>
+    </div>
+  </section>
 
 
 
-                                </ul>
-                        </div>
-                        <div class="earn1 ">
-                                <h3>On Approval get scratch cards and earn money!</h3>
-                                <ul>
-                                        <li>We will review the products you uploaded.</li>
-                                        <li>On approval you will get a scratch card, which can be money or coupon code.
-                                        </li>
-                                        <li>Make sure you provide the correct bank details or UPI Id, to which you want
-                                                the
-                                                money to transfer</li>
-                                </ul>
-                        </div>
-                </div>
-                <iframe id="earnvideo" height="480" width="500" src="https://www.youtube.com/embed/TfQyg-DSHBo">
-                </iframe><br>
-                <button id="getstart">Get Started</button>
-        </div>
+  <!-- earn money section -->
+
+  <div class="headearn">
+    <div id="earncontainer">
+
+
+      <div class="earn1 ">
+        <h3>Upload Products that you have!</h3>
+        <ul>
+
+          <li>Create your Account by clicking here</li>
+          <li> Verify your account</li>
+          <li> Go to Dashboard</li>
+          <li> Pick any product. For example mobile phone, or any item.</li>
+          <li> Search for it in the Database.</li>
+          <li> If it's available, upload a photograph.</li>
+          <li> Please mention the price you bought it at.</li>
+
+
+        </ul>
+      </div>
+      <div class="earn1 ">
+        <h3>Provide a brief description of how to use!</h3>
+        <ul>
+
+
+          <li> Describe the product you just uploaded.</li>
+          <li> Mention from where you bought it, online or offline</li>
+          <li> A Video increases your chances of getting a product approved, but it is not
+            mandatory to upload videos.</li>
+
+
+
+        </ul>
+      </div>
+      <div class="earn1 ">
+        <h3>On Approval get scratch cards and earn money!</h3>
+        <ul>
+          <li>We will review the products you uploaded.</li>
+          <li>On approval you will get a scratch card, which can be money or coupon code.
+          </li>
+          <li>Make sure you provide the correct bank details or UPI Id, to which you want
+            the
+            money to transfer</li>
+        </ul>
+      </div>
+    </div>
+    <iframe id="earnvideo" height="480" width="500" src="https://www.youtube.com/embed/TfQyg-DSHBo">
+    </iframe><br>
+    <button id="getstart">Get Started</button>
+  </div>
 
 
 
 
 
-        <!-- footer part of ideakart -->
+  <!-- footer part of ideakart -->
 
-        <div id="foot-of-page">
-                <h3>Get To Know Us</h3>
-                <ul>
-                        <li>
-                                <a href="about_page.html">About</a>
-                        </li>
-                        <li>
-                                <a href="contact_us_page.html">Contact</a>
-                        </li>
-                        <li>
-                                <a href="search.html">Search</a>
-                        </li>
-                        <li>
-                                <a href="privacy_policy.html">Privacy Policy</a>
-                        </li>
-                        <li>
-                                <a href="refund_policy.html">Refund Policy</a>
-                        </li>
-                        <li>
-                                <a href="earn_money.html">Earn Money Online</a>
-                        </li>
+  <div id="foot-of-page">
+    <h3>Get To Know Us</h3>
+    <ul>
+      <li>
+        <a href="about_page.html">About</a>
+      </li>
+      <li>
+        <a href="contact_us_page.html">Contact</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="refund_policy.html">Refund Policy</a>
+      </li>
+      <li>
+        <a href="earn_money.html">Earn Money Online</a>
+      </li>
 
-                </ul>
-        </div>
+    </ul>
+  </div>
 
 
 
@@ -251,23 +262,30 @@
 
 </html>
 <script>
-        let earn1 = document.querySelectorAll(".earn1");
-        earn1.forEach((earn1) => {
-                // console.log(earn1)
-                earn1.addEventListener("click", () => {
-                        removeActiveClasses()
-                        earn1.classList.add("active")
-                })
-        })
+  let earn1 = document.querySelectorAll(".earn1");
+  earn1.forEach((earn1) => {
+    // console.log(earn1)
+    earn1.addEventListener("click", () => {
+      removeActiveClasses()
+      earn1.classList.add("active")
+    })
+  })
 
-        function removeActiveClasses() {
-                earn1.forEach(earn1 => {
-                        earn1.classList.remove("active")
+  function removeActiveClasses() {
+    earn1.forEach(earn1 => {
+      earn1.classList.remove("active")
 
 
 
-                })
-        }
+    })
+  }
+
+  document.querySelector("#getstart").addEventListener("click",redir_fun);
+
+  function redir_fun(){
+        alert("Please Sign In to Get Started");
+        window.location.href = "login.html"
+  }
 </script>
 
 
@@ -275,31 +293,31 @@
 
 
 <script>
-        let isSignin = JSON.parse(localStorage.getItem("signinData"));
-        let current_user_name = isSignin[0].name;
+  let isSignin = JSON.parse(localStorage.getItem("signinData"));
+  let current_user_name = isSignin[0].name;
 
-        if (isSignin !== null) {
-                document.querySelector("#login_text").innerHTML =
+  if (isSignin !== null) {
+    document.querySelector("#login_text").innerHTML =
 
-                        `<select name="current_user" id="current_user">
+      `<select name="current_user" id="current_user">
          <option id="useless" class="dash_options" value="">${current_user_name}</option>
          <option class="dash_options" value="Dashboard">Dashboard</option>
          <option class="dash_options" value="Notifications">Notifications</option>
          <option class="dash_options" value="sign_out">Sign Out</option>
        </select>`
-        }
+  }
 
-        let Dash = document.querySelector("#current_user");
-        Dash.addEventListener("change", dashFunction);
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
 
-        function dashFunction() {
-                if (Dash.value == "sign_out") {
-                        localStorage.removeItem("signinData");
-                        window.location.reload();
-                } else if (Dash.value == "Dashboard") {
-                        window.location.href = "dashboard_home.html" //link here
-                } else if (Dash.value == "Notifications") {
-                        window.location.href = "notification.html" //here too 
-                }
-        }
+  function dashFunction() {
+    if (Dash.value == "sign_out") {
+      localStorage.removeItem("signinData");
+      window.location.reload();
+    } else if (Dash.value == "Dashboard") {
+      window.location.href = "dashboard_home.html" //link here
+    } else if (Dash.value == "Notifications") {
+      window.location.href = "notification.html" //here too 
+    }
+  }
 </script>

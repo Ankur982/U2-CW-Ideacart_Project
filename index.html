@@ -147,13 +147,13 @@
 
     <div id="data_selectors">
       <select name="by_name" class="categories" id="alpha" onchange="sortByName()">
-        <option value="all">Sort-by-name</option>
+        <option value="all">Sort-By-Name</option>
         <option value="Ascending">Ascending</option>
         <option value="Descending">Descinding</option>
       </select>
 
       <select name="by_price" class="categories" id="numeric" onchange="sortByPrice()">
-        <option value="all">sort-by-price</option>
+        <option value="all">Sort-By-Price</option>
         <option value="low-to-high">Price: Low-to-High</option>
         <option value="high-to-low">Price: High-to-Low</option>
       </select>
@@ -850,7 +850,7 @@
   })
 
   function currentRandomArray() {
-    for (let i = 0; i < 30; i++) {
+    for (let i = 0; i < 27; i++) {
       let random = generateRandom();
       randomArray.push(dataBase[random]);
     }

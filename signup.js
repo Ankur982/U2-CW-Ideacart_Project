@@ -14,14 +14,15 @@ function mySignup(event) {
     dataArr.push(dataObj);
     localStorage.setItem("userData", JSON.stringify(dataArr));
     if (dataObj.email == "" || dataObj.password == "" || dataObj.name == "") {
-      alert("please fill all details")
+      alert("Please Enter All The Details")
     } else {
-      alert("Sign up completed....please signin");
+      alert("Welcome To IdeaKart ..🎉.. Please Sign In !");
         document.querySelector('.cont').classList.toggle('s--signup');
         // window.location.reload();
     }
   } else {
-    alert("Account already exist")
+    alert("Account Already Exists.. Please Sign In");
+    document.querySelector('.cont').classList.toggle('s--signup');
   }
 
   function checkEmail(email) {

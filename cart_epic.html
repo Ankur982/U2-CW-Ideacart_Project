@@ -25,6 +25,33 @@
     align-items: center;
   }
 
+  #promo_code {
+    padding-left: 10px;
+    height: 30px;
+    width: 200px;
+    border-radius: 10px;
+    border: transparent;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    outline: none;
+  }
+
+  #promo_submit {
+    font-weight: 600;
+    padding: 0 30px;
+    height: 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: white;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+    margin-left: 30px;
+  }
+
+  #promo_submit:hover {
+    background-color: teal;
+    /* font-weight: 600; */
+    cursor: pointer;
+  }
+
   #cart_heading {
     padding: 30px 7%;
   }
@@ -41,6 +68,16 @@
     width: 100%;
   }
 
+  .promo_stuff {
+    display: flex;
+    margin-bottom: 60px;
+  }
+
+  .total_price {
+    display: flex;
+    margin: 40px 0;
+  }
+
   .item_price {
     padding: 30px 0 60px 0;
   }
@@ -53,7 +90,7 @@
 
   .cart_item {
     border-radius: 10px;
-    background-color: rgb(210, 208, 208);
+    background-color: rgb(245 245 245);
     padding: 20px;
     display: flex;
     justify-content: space-between;
@@ -61,7 +98,13 @@
     width: 80%;
     height: fit-content;
     /* border: 2px solid black; */
+    box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     margin-bottom: 30px;
+  }
+  
+  .cart_item:hover {
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+    cursor: pointer;
   }
 
   .item_image {
@@ -70,8 +113,23 @@
     width: 130px;
   }
 
+  #checkout_button {
+    padding: 10px 40px;
+    border-radius: 8px;
+    margin-bottom: 60px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
+  }
+
+  #checkout_button:hover {
+    cursor: pointer;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+  }
+
   .remove_button {
-    background-color: rgb(255, 0, 0);
+    background-color: red;
+    font-weight: 600;
+    color: white;
     border: transparent;
     border-radius: 20px;
     width: 80%;
@@ -114,12 +172,20 @@
 
     <div class="cart_body">
       <h2 id="cart_heading">My Cart</h2>
+    </div>
+
+    <div class="total_price">
+      <h1 id="total_price_outer">Cart Total = <h1 id="total_price">0</h1>
+      </h1>
+    </div>
+
+    <div class="promo_stuff">
       <input type="text" placeholder="Enter Promo Code" id="promo_code">
       <input type="submit" id="promo_submit" value="Submit">
     </div>
 
-    <h1>Cart Total = <h1 id="total_price">0</h1>
-    </h1>
+    <button id="checkout_button">Proceed to Checkout</button>
+
   </div>
   <!-- 
   <table id="cart_table">
@@ -234,11 +300,10 @@
   function applyCoupon() {
     let coupons = document.querySelector("#promo_code").value;
 
-    if(discCount>0){
+    if (discCount > 0) {
       alert("Promo Code Already Used !!");
       return;
-    }
-    else{
+    } else {
       if (coupons == "ik30") {
         discCount += 1;
         let per = totalPrice * 30 / 100;
@@ -250,7 +315,13 @@
     }
   }
 
-  document.querySelector("#promo_submit").addEventListener("click",applyCoupon);
+  document.querySelector("#promo_submit").addEventListener("click", applyCoupon);
+
+  document.querySelector("#checkout_button").addEventListener("click", redirectPayment);
+
+  function redirectPayment() {
+    window.location.href = "#"
+  }
 
 
   function deleteItem(index) {

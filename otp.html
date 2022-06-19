@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="footer.css">
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: 'Spartan', sans-serif;
+        }
+
+
+        #otp_box {
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+            width: 50%;
+            margin: auto;
+            margin-bottom: 60px;
+          
+        }
+
+        #optform {
+            font-size: larger;
+            padding: 50px;
+
+        }
+
+        #optform>label {
+            font-size: 40px;
+            color: #4B5563;
+        }
+
+        #otpsubmit {
+            width: 30%;
+            height: 50px;
+            border-radius: 30px;
+            margin-top: 30px;
+            font-size: xx-large;
+            margin: auto;
+            margin-top: 20px;
+            margin-left: 200px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+        }
+
+        #otpinput {
+            box-sizing: border-box;
+            margin-top: 10px;
+            resize: vertical;
+            width: 100%;
+            height: 60px;
+            font-size: large;
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+
+        }
+
+        #otpsubmit:hover {
+            background: #088178;
+        }
+
+        #payimage{
+            display: flex;
+            justify-content: space-evenly;
+            margin-top: 150px;
+            padding: 0 20px;
+        }
+        #payimage+p{
+            width: 40%;
+            margin: auto;
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 30px;
+        }
+    </style>
+</head>
+
+<body>
+
+
+       <!-- navBar section -->
+
+
+  <section id="header">
+    <a href="index.html" class="logo">IdeaKart💡</a>
+
+    <span id="search_box">
+      <input id="search" type="text" placeholder="Search for product">
+      <button id="seach_button">Search</button>
+    </span>
+
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li id="login_text"><a href="login.html">Login</a></li>
+        <li><a href="cart.html" class="active">🛒</a></li>
+
+      </ul>
+    </div>
+  </section>
+
+  <!-- otp page of ideakart -->
+
+   
+        <div id="payimage">
+            <img src="https://paysecure.udio.in/resources/img/dhanipay_logo.png" alt="error">
+            <img src="https://paysecure.udio.in/resources/img/rupay_logo.png" alt="error">
+        </div>
+        <p>Please enter the One Time Password(OTP) sent to your registered mobile number/email id to successfully complete the transaction</p>
+
+        <div id="otp_box">
+            <form action="" id="optform">
+                <label for="">Please enter OTP</label> <br> <br>
+                <input type="text" name="" id="otpinput"> <br> <br>
+                <input type="submit" name="" id="otpsubmit">
+            </form> 
+        </div>
+
+
+
+
+        
+    <!-- footer part of ideakart -->
+
+  <div id="foot-of-page">
+    <h3>Get To Know Us</h3>
+    <ul>
+      <li>
+        <a href="about_page.html">About</a>
+      </li>
+      <li>
+        <a href="contact_us_page.html">Contact</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="refund_policy.html">Refund Policy</a>
+      </li>
+      <li>
+        <a href="earn_money.html">Earn Money Online</a>
+      </li>
+
+    </ul>
+  </div>
+
+        
+</body>
+
+</body>
+
+</html>
+
+<script>
+    document.querySelector("form").addEventListener("submit", myfun)
+
+    function myfun() {
+        event.preventDefault();
+        let otp = document.querySelector("#otp").value
+        let obj = {
+            otp: otp,
+        }
+        if (obj.otp == "123456") {
+            alert("payment Successful....!😊");
+            window.location.reload();
+        } else {
+            alert("Please enter Valid otp...!😓")
+            window.location.reload();
+        }
+
+
+    }
+</script>
+
+
+
+
+<script>
+  let isSignin = JSON.parse(localStorage.getItem("signinData"));
+  let current_user_name = isSignin[0].name;
+
+  if (isSignin !== null) {
+    document.querySelector("#login_text").innerHTML =
+
+      `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${current_user_name}</option>
+   <option class="dash_options" value="Dashboard">Dashboard</option>
+   <option class="dash_options" value="Notifications">Notifications</option>
+   <option class="dash_options" value="sign_out">Sign Out</option>
+ </select>`
+  }
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
+
+  function dashFunction() {
+    if (Dash.value == "sign_out") {
+      localStorage.removeItem("signinData");
+      window.location.reload();
+    } else if (Dash.value == "Dashboard") {
+      window.location.href = "dashboard_home.html" //link here
+    } else if (Dash.value == "Notifications") {
+      window.location.href = "notification.html" //here too 
+    }
+  }
+</script>

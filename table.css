@@ -1,0 +1,115 @@
+/* Dashboard CSS - Start*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  margin: 0px;
+  left: 0;
+  width: 20%;
+  height: 540px;
+  background-color: #088178;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background-color: rgb(37, 63, 72);
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+/* Dasboard CSS end */
+
+/* Admin page CSS start */
+
+.table-Dashboard {
+  min-height: 80vh;
+  width: 65%;
+
+  margin: 0% 0% 3% 27%;
+}
+.table-Dashboard h2 {
+  padding: 40px;
+  margin-left: 270px;
+}
+.t1 {
+  margin-left: 100px;
+}
+.t1 > thead > tr > th {
+  width: 210px;
+  padding: 10px;
+  color: white;
+  background-color: teal;
+  border-radius: 8px;
+  
+}
+#tbody > tr > td {
+  border: 1px solid grey;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  border: none;
+  border-radius: 10px;
+}
+
+#tbody :nth-child(1) {
+  margin: 3px 0px 3px 20px;
+  padding: 15px;
+  width: 150px;
+  height: 200px;
+}
+#tbody :nth-child(2) {
+  text-align: center;
+
+  width: 150px;
+  height: 190px;
+}
+#tbody :nth-child(3) {
+  font-weight: bold;
+  text-align: center;
+
+  width: 150px;
+  height: 190px;
+}
+#tbody :nth-child(4) {
+  font-weight: bold;
+  text-align: center;
+
+  color: white;
+
+  width: 150px;
+  height: 190px;
+}
+#tbody :nth-child(5) {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+
+  width: 150px;
+  height: 190px;
+}
+
+/* Admin page CSS end */

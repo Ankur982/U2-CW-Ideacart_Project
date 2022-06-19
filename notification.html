@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Notification</title>
+    <style>
+      #notification {
+        min-height: 65vh;
+        margin: 20px;
+
+        text-align: center;
+      }
+      #notify {
+        color: brown;
+        padding: 50px;
+      }
+      #accepted {
+        color: green;
+        padding: 50px;
+      }
+      #rejected {
+        color: red;
+        padding: 50px;
+      }
+      #clear {
+        border: none;
+        border-radius: 10px;
+        background-color: lightblue;
+        padding: 10px;
+        font-size: 25px;
+        
+      }
+      #clear:hover {
+        margin-top: 5px;
+        background-color: teal;
+        color: white;
+        font-weight: 600;
+        cursor: pointer;
+      }
+    </style>
+    <link rel="stylesheet" href="navbar.css" />
+    <link rel="stylesheet" href="footer.css" />
+  </head>
+
+  <body>
+    <!-- navBar section  start-->
+
+    <section id="header">
+      <a href="index.html" class="logo">IdeaKart💡</a>
+      <div id="search_box">
+        <input type="text" placeholder="Search for product" />
+        <button>Search</button>
+      </div>
+
+      <div>
+        <ul id="navbar">
+          <li><a href="index.html" class="active">Home</a></li>
+          <li><a href="about_page.html">About</a></li>
+          <li><a href="contact_us_page.html">Contact</a></li>
+          <li id="login_text"><a href="login.html">Login</a></li>
+          <li><a href="cart.html">🛒</a></li>
+        </ul>
+      </div>
+    </section>
+    <!-- navBar section end -->
+
+    <!-- Notification part of ideakart start here -->
+
+    <div id="notification">
+      <h1 id="notify"></h1>
+      <h2 id="accepted"></h2>
+      <h2 id="rejected"></h2>
+      <button id="clear">Clear Notifications</button>
+    </div>
+    <!-- Notification part of ideakart end here -->
+
+    <!-- footer part of ideakart start -->
+
+    <div id="foot-of-page">
+      <h3>Get To Know Us</h3>
+      <ul>
+        <li>
+          <a href="about.html">About</a>
+        </li>
+        <li>
+          <a href="contact.html">Contact</a>
+        </li>
+        <li>
+          <a href="search.html">Search</a>
+        </li>
+        <li>
+          <a href="privacy_policy.html">Privacy Policy</a>
+        </li>
+        <li>
+          <a href="refund.html">Refund Policy</a>
+        </li>
+        <li>
+          <a href="earn_money.html">Earn Money Online</a>
+        </li>
+      </ul>
+    </div>
+    <!-- footer part of ideakart start -->
+  </body>
+</html>
+
+<script>
+  function display() {
+    let accepted = JSON.parse(localStorage.getItem("aproved"));
+    let rejected = JSON.parse(localStorage.getItem("reject"));
+    let notify = accepted + rejected;
+    document.querySelector("#notify").innerText =
+      "You have " + (notify || 0) + " notifications";
+    document.querySelector("#clear").addEventListener("click", clearNotify);
+
+    if (notify == 0) {
+      accepted = 0;
+      rejected = 0;
+    }
+    if (accepted > 0) {
+      document.querySelector("#accepted").innerText =
+        (accepted || 0) + "  product accepted";
+    }
+    if (rejected > 0) {
+      document.querySelector("#rejected").innerText =
+        (rejected || 0) + "  product rejected";
+    }
+
+    function clearNotify() {
+      notify = 0;
+      document.querySelector("#notify").innerText =
+        "You have " + (notify || 0) + " notifications";
+
+      accepted = 0;
+      rejected = 0;
+
+      if (accepted <= 0) {
+        document.querySelector("#accepted").innerText = "";
+      }
+      if (rejected <= 0) {
+        document.querySelector("#rejected").innerText = "";
+      }
+    }
+  }
+
+  display();
+</script>
+
+
+
+
+<script>
+  let isSignin = JSON.parse(localStorage.getItem("signinData"));
+  let current_user_name = isSignin[0].name;
+
+  if (isSignin !== null) {
+    document.querySelector("#login_text").innerHTML =
+
+      `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${current_user_name}</option>
+   <option class="dash_options" value="Dashboard">Dashboard</option>
+   <option class="dash_options" value="Notifications">Notifications</option>
+   <option class="dash_options" value="sign_out">Sign Out</option>
+ </select>`
+  }
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
+
+  function dashFunction() {
+    if (Dash.value == "sign_out") {
+      localStorage.removeItem("signinData");
+      window.location.reload();
+    } else if (Dash.value == "Dashboard") {
+      window.location.href = "dashboard_home.html" //link here
+    } else if (Dash.value == "Notifications") {
+      window.location.href = "notification.html" //here too 
+    }
+  }
+</script>

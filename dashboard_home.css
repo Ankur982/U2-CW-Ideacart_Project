@@ -1,0 +1,90 @@
+/* Dashboard CSS - Start*/
+* {
+  padding: 0;
+  margin: 0;
+  text-decoration: none;
+  font-family: 'Spartan', sans-serif;
+}
+
+.sidebar {
+  position: fixed;
+  margin: 0px;
+  left: 0;
+  width: 20%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+
+  background-color: #088178;
+}
+.sidebar header {
+  font-size: 22px;
+  color: white;
+  text-align: center;
+  line-height: 70px;
+  background-color: rgb(37, 63, 72);
+  user-select: none;
+}
+.sidebar ul a {
+  display: block;
+  height: 100%;
+  width: 100%;
+  line-height: 65px;
+  font-size: 20px;
+  color: white;
+  padding-left: 40px;
+  box-sizing: border-box;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid black;
+  transition: 0.4s;
+}
+ul li:hover a {
+  padding-left: 50px;
+}
+
+.sidebar ul a i {
+  margin-right: 16px;
+}
+
+/* Dasboard CSS end */
+
+/* Home dashboard CSS start */
+
+#home-head {
+  margin: 0px 0px 50px 650px;
+  padding: 70px;
+}
+
+#home-container {
+  margin: 0% 0% 10% 22%;
+  display: flex;
+  
+}
+#home-container > div {
+  margin: 8px;
+  padding: 100px;
+  transition: 1s;
+  border-radius: 49%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+#home-container :hover{
+ border: 2px solid;
+ cursor: pointer;
+}
+#home-container :nth-child(1) {
+  font-size: large;
+  font-weight: bold;
+  background-color: lightgreen;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+#home-container :nth-child(2) {
+  font-size: large;
+  font-weight: bold;
+  background-color: lightyellow;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+#home-container :nth-child(3) {
+  font-size: large;
+  font-weight: bold;
+  background-color: rgb(230, 125, 125);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+}
+/* Home dashboard CSS end */

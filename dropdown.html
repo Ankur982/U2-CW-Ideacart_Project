@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>navbar</title>
+        <link rel="stylesheet" href="navbar.css">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css">
+</head>
+
+<body>
+
+
+
+        <!-- navBar section -->
+
+
+        <section id="header">
+                <a href="home_page.html" class="logo">IdeaKart💡</a>
+                <div id="search_box">
+                        <input type="text" placeholder="Search for product">
+                        <button>Search</button>
+                </div>
+
+                <div>
+                        <ul id="navbar">
+                                <li><a href="home_page.html" class="active">Home</a></li>
+                                <li><a href="about_page.html">About</a></li>
+                                <li><a href="contact_us_page.html">Contact</a></li>
+                                <li><a href="login.html">LogIn</a></li>
+                                <li><a href="cart.html">🛒</a></li>
+
+                        </ul>
+                </div>
+                <div class="dropdown">
+                        <div class="select">
+                                <span class="selected">Dropdown</span>
+                                <div class="caret"></div>
+                        </div>
+                        <ul class="menu">
+                                <li href="#"> Dashboard</li>
+                                <li href="#">Account Info</li>
+                                <li href="#"> Notifications</li>
+                                <li class="active" href="#"> Sign Out</li>
+                        </ul>
+                </div>
+
+
+
+
+
+        </section>
+
+
+
+
+
+</body>
+
+</html>
+
+
+<script>
+
+
+        console.log("hi")
+
+        dropdown = document.querySelectorAll(".dropdown")
+        //       loop through all dropdown elements
+        dropdown.forEach(dropdown => {
+
+                // get inner elements from each dropdown
+                select = document.querySelector(".select")
+                caret = document.querySelector(".caret")
+                menu = document.querySelector(".menu")
+                options = document.querySelector(".menu li")
+                selected = document.querySelector(".selected")
+                //       add a click event to the select elements
+
+                select.addEventListener("click", () => {
+                        console.log("hi")
+                        // add the select clicked style tp the elements
+                        select.classList.toggle("selectclicked")
+                        caret.classList.toggle("caretrotate")
+                        menu.classList.toggle("menuopen")
+                })
+                // loop through all options element
+
+                options.forEach(option => {
+                        // add a click event listener to the option element
+                        option.addEventListener("click", () => {
+                                selected.innerText = option.innerText
+                                select.classList.remove("selectclicked")
+                                caret.classList.remove("createrotate")
+                                menu.classList.remove("menuopen")
+                                options.forEach(option => {
+                                        option.classList.remove("active")
+                                })
+                                option.classList.add("active")
+                        })
+
+
+                })
+
+
+
+        })
+
+
+</script>

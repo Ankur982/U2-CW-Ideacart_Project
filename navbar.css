@@ -101,3 +101,24 @@
   bottom: -4px;
   left: 20px
 }
+
+
+#current_user {
+  background-color: #e3e6f3;
+  border: transparent;
+  font-size: large;
+  text-align: center;
+  outline: none;
+}
+
+
+
+.dash_options {
+  width: 150px;
+  border: 2px solid teal;
+  border: 0px;
+  /* background-color: black; */
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+  outline: none;
+}

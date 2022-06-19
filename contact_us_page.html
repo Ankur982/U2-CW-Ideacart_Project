@@ -17,7 +17,7 @@
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       box-sizing: border-box;
       text-align: center;
-      color: white;
+      /* color: white; */
     }
 
     #contact_body {
@@ -26,6 +26,7 @@
       background-image: url(https://images2.alphacoders.com/559/559116.png);
       background-size: cover;
       background-repeat: no-repeat;
+      color: white;
     }
 
     #contact_section {
@@ -138,7 +139,7 @@
 
 
   <section id="header">
-    <a href="home_page.html" class="logo">IdeaKart💡</a>
+    <a href="index.html" class="logo">IdeaKart💡</a>
     <div id="search_box">
       <input type="text" placeholder="Search for product">
       <button>Search</button>
@@ -146,10 +147,11 @@
 
     <div>
       <ul id="navbar">
-        <li><a href="home_page.html">Home</a></li>
+        <li><a href="index.html">Home</a></li>
         <li><a href="about_page.html">About</a></li>
         <li><a href="contact_us_page.html" class="active">Contact</a></li>
-        <li><a id="login_text" href="login.html">LogIn</a></li>
+        <li id="login_text"><a href="login.html">Login</a></li>
+
         <li><a href="cart.html">🛒</a></li>
 
       </ul>
@@ -216,16 +218,34 @@
 
 </html>
 
-<script>
-  let user_messages = JSON.parse(localStorage.getItem("user_messages")) || [];
-
-  document.querySelector
-</script>
 
 
 <script>
   let isSignin = JSON.parse(localStorage.getItem("signinData"));
-    if(isSignin){
-      document.querySelector("#login_text").innerText = isSignin.userEmail;
+  let current_user_name = isSignin[0].name;
+
+  if (isSignin !== null) {
+    document.querySelector("#login_text").innerHTML =
+
+      `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${current_user_name}</option>
+   <option class="dash_options" value="Dashboard">Dashboard</option>
+   <option class="dash_options" value="Notifications">Notifications</option>
+   <option class="dash_options" value="sign_out">Sign Out</option>
+ </select>`
+  }
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
+
+  function dashFunction() {
+    if (Dash.value == "sign_out") {
+      localStorage.removeItem("signinData");
+      window.location.reload();
+    } else if (Dash.value == "Dashboard") {
+      window.location.href = "dashboard_home.html" //link here
+    } else if (Dash.value == "Notifications") {
+      window.location.href = "notification.html" //here too 
     }
+  }
 </script>

@@ -4,7 +4,7 @@ JSON.parse(localStorage.getItem("added-Product")) || [];
 document.querySelector("#form").addEventListener("submit", addPoductFun);
 let formData = document.querySelector("#form");
 
-function addPoductFun() {
+function addPoductFun(event) {
   event.preventDefault();
   //unique Id check function
 

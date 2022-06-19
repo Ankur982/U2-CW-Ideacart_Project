@@ -1,92 +1,121 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Admin page</title>
-    <link
-      rel="icon"
-      type="image/x-icon"
-      href="https://ideakart.com/assets/favicon-dc419e035c991f8f9c077a885c6ba6d589c3b552a1e4073cf07a392c54b93db7.jpg"
-    />
-    <link rel="stylesheet" href="admin.css" />
-    <link rel="stylesheet" href="navbar.css" />
-    <link rel="stylesheet" href="footer.css" />
-  </head>
-  <body>
-    <!-- navBar section  start-->
 
-    <section id="header">
-      <a href="home_page.html" class="logo">IdeaKart💡</a>
-      <div id="search_box">
-        <input type="text" placeholder="Search for product" />
-        <button>Search</button>
-      </div>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin page</title>
+  <link rel="icon" type="image/x-icon"
+    href="https://ideakart.com/assets/favicon-dc419e035c991f8f9c077a885c6ba6d589c3b552a1e4073cf07a392c54b93db7.jpg" />
+  <link rel="stylesheet" href="admin.css" />
+  <link rel="stylesheet" href="navbar.css" />
+  <link rel="stylesheet" href="footer.css" />
+</head>
 
-      <div>
-        <ul id="navbar">
-          <li><a href="home_page.html" class="active">Home</a></li>
-          <li><a href="about_page.html">About</a></li>
-          <li><a href="contact_us_page.html">Contact</a></li>
-          <li><a href="login.html">LogIn</a></li>
-          <li><a href="cart.html">🛒</a></li>
-        </ul>
-      </div>
-    </section>
-    <!-- navBar section end -->
+<body>
+  <!-- navBar section  start-->
 
-    <!-- Admin section start -->
-
-    <div class="table">
-      <h1>Verification Of Products</h1>
-
-      <table class="t1">
-        <thead>
-          <tr>
-            <th>Image</th>
-            <th>Name</th>
-            <th>Price</th>
-            <th>Approve</th>
-            <th>Reject</th>
-          </tr>
-        </thead>
-
-        <tbody id="tbody">
-          <!-- products append here -->
-        </tbody>
-      </table>
+  <section id="header">
+    <a href="index.html" class="logo">IdeaKart💡</a>
+    <div id="search_box">
+      <input type="text" placeholder="Search for product" />
+      <button>Search</button>
     </div>
 
-    <!-- Admin section end -->
-
-    <!-- footer part of ideakart start -->
-
-    <div id="foot-of-page">
-      <h3>Get To Know Us</h3>
-      <ul>
-        <li>
-          <a href="about.html">About</a>
-        </li>
-        <li>
-          <a href="contact.html">Contact</a>
-        </li>
-        <li>
-          <a href="search.html">Search</a>
-        </li>
-        <li>
-          <a href="privacy_policy.html">Privacy Policy</a>
-        </li>
-        <li>
-          <a href="refund.html">Refund Policy</a>
-        </li>
-        <li>
-          <a href="earn_money.html">Earn Money Online</a>
-        </li>
+    <div>
+      <ul id="navbar">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li><a href="login.html" class="active">LogIn</a></li>
+        <li><a href="cart.html">🛒</a></li>
       </ul>
     </div>
-    <!-- footer part of ideakart start -->
-  </body>
+  </section>
+  <!-- navBar section end -->
+
+  <!-- Admin section start -->
+
+  <div class="table">
+    <h1>Verification Of Products</h1>
+
+    <table class="t1">
+      <thead>
+        <tr>
+          <th>Image</th>
+          <th>Name</th>
+          <th>Price</th>
+          <th>Approve</th>
+          <th>Reject</th>
+        </tr>
+      </thead>
+
+      <tbody id="tbody">
+        <!-- products append here -->
+      </tbody>
+    </table>
+  </div>
+
+  <!-- Admin section end -->
+
+  <!-- footer part of ideakart start -->
+
+  <div id="foot-of-page">
+    <h3>Get To Know Us</h3>
+    <ul>
+      <li>
+        <a href="about_page.html">About</a>
+      </li>
+      <li>
+        <a href="contact_us_page.html">Contact</a>
+      </li>
+      <li>
+        <a href="search.html">Search</a>
+      </li>
+      <li>
+        <a href="privacy_policy.html">Privacy Policy</a>
+      </li>
+      <li>
+        <a href="refund_policy.html">Refund Policy</a>
+      </li>
+      <li>
+        <a href="earn_money.html">Earn Money Online</a>
+      </li>
+    </ul>
+  </div>
+  <!-- footer part of ideakart start -->
+</body>
+
 </html>
+<script>
+  let isSignin = JSON.parse(localStorage.getItem("signinData"));
+  let current_user_name = isSignin[0].name;
+
+  if (isSignin !== null) {
+    document.querySelector("#login_text").innerHTML =
+
+      `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${current_user_name}</option>
+   <option class="dash_options" value="Dashboard">Dashboard</option>
+   <option class="dash_options" value="Notifications">Notifications</option>
+   <option class="dash_options" value="sign_out">Sign Out</option>
+ </select>`
+  }
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
+
+  function dashFunction() {
+    if (Dash.value == "sign_out") {
+      localStorage.removeItem("signinData");
+      window.location.reload();
+    } else if (Dash.value == "Dashboard") {
+      window.location.href = "dashboard_home.html" //link here
+    } else if (Dash.value == "Notifications") {
+      window.location.href = "notification.html" //here too 
+    }
+  }
+</script>
 
 <script src="admin.js"></script>

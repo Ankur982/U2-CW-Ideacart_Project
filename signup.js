@@ -18,6 +18,7 @@ function mySignup(event) {
     } else {
       alert("Sign up completed....please signin");
         document.querySelector('.cont').classList.toggle('s--signup');
+        // window.location.reload();
     }
   } else {
     alert("Account already exist")

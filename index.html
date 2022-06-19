@@ -20,6 +20,26 @@
     max-width: 100vw;
   }
 
+  #current_user {
+    background-color: #e3e6f3;
+    border: transparent;
+    font-size: large;
+    text-align: center;
+    outline: none;
+  }
+
+  
+
+  .dash_options {
+    width: 150px;
+    border: 2px solid teal;
+    border: 0px;
+    /* background-color: black; */
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+
+    outline: none;
+  }
+
   .home_page_container {
     /* background-color: #a8a3a3; */
     /* margin-top: 60px; */
@@ -114,12 +134,11 @@
 
     <div>
       <ul id="navbar">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="blog.html">Contact</a></li>
-        <li><a id="login_text" href="login.html">Login</a></li>
-        <!-- <option value=""></option> -->
-        <li><a href="cart.html" class="active">🛒</a></li>
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="about_page.html">About</a></li>
+        <li><a href="contact_us_page.html">Contact</a></li>
+        <li id="login_text"><a href="login.html">Login</a></li>
+        <li><a href="cart.html">🛒</a></li>
       </ul>
     </div>
   </section>
@@ -128,15 +147,15 @@
 
     <div id="data_selectors">
       <select name="by_name" class="categories" id="alpha" onchange="sortByName()">
-        <option value="all">All</option>
+        <option value="all">Sort-by-name</option>
         <option value="Ascending">Ascending</option>
         <option value="Descending">Descinding</option>
       </select>
 
       <select name="by_price" class="categories" id="numeric" onchange="sortByPrice()">
-        <option value="all">All</option>
-        <option value="high-to-low">Price: High-to-Low</option>
+        <option value="all">sort-by-price</option>
         <option value="low-to-high">Price: Low-to-High</option>
+        <option value="high-to-low">Price: High-to-Low</option>
       </select>
     </div>
   </div>
@@ -152,10 +171,10 @@
     <h3>Get To Know Us</h3>
     <ul>
       <li>
-        <a href="about.html">About</a>
+        <a href="about_page.html">About</a>
       </li>
       <li>
-        <a href="contact.html">Contact</a>
+        <a href="contact_us_page.html">Contact</a>
       </li>
       <li>
         <a href="search.html">Search</a>
@@ -178,13 +197,6 @@
 </html>
 
 <script>
-  let isSignin = JSON.parse(localStorage.getItem("signinData"));
-
-  if (isSignin) {
-    document.querySelector("#login_text").innerText = isSignin.userEmail;
-  }
-
-
   var dataBase = [{
       image: 'https://images-eu.ssl-images-amazon.com/images/I/41m7FD8ZB4L.jpg',
       url: 'https://ideakart.com/book/startup-karnarach-mi-udyojak-honarach-mi-isbn10-9385223941-isbn13-9789385223945',
@@ -947,9 +959,41 @@
         // alert("Product added to cart")
         cartArray.push(elem);
         localStorage.setItem("cartData", JSON.stringify(cartArray));
+        alert("Item added to Cart!");
       });
 
       container.append(card);
     });
+  }
+
+</script>
+
+<script>
+  let isSignin = JSON.parse(localStorage.getItem("signinData"));
+  let current_user_name = isSignin[0].name;
+
+  if (isSignin !== null) {
+    document.querySelector("#login_text").innerHTML =
+
+      `<select name="current_user" id="current_user">
+   <option id="useless" class="dash_options" value="">${current_user_name}</option>
+   <option class="dash_options" value="Dashboard">Dashboard</option>
+   <option class="dash_options" value="Notifications">Notifications</option>
+   <option class="dash_options" value="sign_out">Sign Out</option>
+ </select>`
+  }
+
+  let Dash = document.querySelector("#current_user");
+  Dash.addEventListener("change", dashFunction);
+
+  function dashFunction() {
+    if (Dash.value == "sign_out") {
+      localStorage.removeItem("signinData");
+      window.location.reload();
+    } else if (Dash.value == "Dashboard") {
+      window.location.href = "dashboard_home.html" //link here
+    } else if (Dash.value == "Notifications") {
+      window.location.href = "notification.html" //here too 
+    }
   }
 </script>

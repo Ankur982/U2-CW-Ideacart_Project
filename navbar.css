@@ -101,3 +101,14 @@
     bottom: -4px;
     left: 20px
   }
+
+
+  /* dash */
+
+  #current_user {
+    background-color: #e3e6f3;
+    border: transparent;
+    font-size: large;
+    text-align: center;
+    outline: none;
+  }

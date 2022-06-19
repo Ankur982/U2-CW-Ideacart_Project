@@ -8,25 +8,33 @@ function mySignIn(event) {
     userPassword: document.querySelector("#entered_password").value,
   }
 
-  // if (data.userEmail == "admin@gmail.com" && data.userPassword == "admin") {
-  //   window.location.href = "https://www.google.com";
-  // } else
-   if (checkSignin(data.userEmail, data.userPassword) == true) {
-    alert("sign in successful")
-    window.location.href = "home_page.html";
-    localStorage.setItem("signinData", JSON.stringify(data));
-  } else {
-    alert("Invalid email or password")
+  if (data.userEmail == "admin@gmail.com" && data.userPassword == "admin") {
+    alert("Welcome Admin !")
+    window.location.href = "admin.html";
+    return;
   }
-
-  function checkSignin(email, password) {
-    let filter = users.filter(function(ele) {
-      return ele.email == email && ele.password == password
-    })
-    if (filter.length > 0) {
-      return true;
-    } else {
-      return false
+  else {
+    function checkSignin(email, password) {
+      let filter = users.filter(function(ele) {
+        return ele.email == email && ele.password == password
+      })
+      if (filter.length > 0) {
+        return filter;
+      } else {
+        return false
+      }
+    }
+    let currentUser = checkSignin(data.userEmail, data.userPassword);
+    if (currentUser == false) {
+      alert("User Not Found");
+    }
+  
+    else {
+      localStorage.setItem("signinData", JSON.stringify(currentUser));
+      alert("SignIn Success!!");
+      window.location.href = "index.html";
     }
   }
+  
+
 }

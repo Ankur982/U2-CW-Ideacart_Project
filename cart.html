@@ -101,7 +101,7 @@
     box-shadow: rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(255, 255, 255, 0.8) -6px -2px 16px 0px;
     margin-bottom: 30px;
   }
-  
+
   .cart_item:hover {
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
     cursor: pointer;
@@ -113,7 +113,7 @@
     width: 130px;
   }
 
-  
+
 
   #checkout_button {
     padding: 10px 40px;
@@ -254,7 +254,7 @@
 
   function displayItems() {
 
-    cart_data.forEach(function(elem, index) {
+    cart_data.forEach(function (elem, index) {
       totalPrice += Number(elem.price);
 
       let cart_item = document.createElement("div");
@@ -264,7 +264,7 @@
       let img = document.createElement("img");
       img.setAttribute("src", imgLink);
       img.setAttribute("class", "item_image")
-      img.addEventListener("click", function() {
+      img.addEventListener("click", function () {
         window.location.href = elem.url;
       })
 
@@ -280,7 +280,7 @@
       let remove_button = document.createElement("button");
       remove_button.innerText = "Remove Item";
       remove_button.classList.add("remove_button")
-      remove_button.addEventListener("click", function() {
+      remove_button.addEventListener("click", function () {
         deleteItem(index);
       })
       // remove_button
@@ -372,10 +372,9 @@
   }
 
 
-  document.querySelector("#checkout_button").addEventListener("click",redirect_fun);
+  document.querySelector("#checkout_button").addEventListener("click", redirect_fun);
 
-  function redirect_fun(){
+  function redirect_fun() {
     window.location.href = "payment.html";
   }
-
 </script>

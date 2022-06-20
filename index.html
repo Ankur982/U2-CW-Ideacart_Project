@@ -14,6 +14,7 @@
   * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
   }
 
   body {
@@ -34,15 +35,14 @@
     width: 150px;
     border: 2px solid teal;
     border: 0px;
-    /* background-color: black; */
+  
     box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
 
     outline: none;
   }
 
   .home_page_container {
-    /* background-color: #a8a3a3; */
-    /* margin-top: 60px; */
+  
     margin-left: 10%;
     display: flex;
     flex-direction: column;
@@ -94,7 +94,7 @@
 
   .price {
     padding: 10px 0;
-    color: blue;
+    color: rgb(43, 43, 128);
   }
 
   .home_image {
@@ -118,11 +118,10 @@
 
   <!-- navBar section -->
 
-  <!-- check -->
-
+<!-- 
   <div id="item_kart">
 
-  </div>
+  </div> -->
 
 
   <section id="header">
@@ -160,9 +159,12 @@
     </div>
   </div>
 
+
   <!-- home page cards section -->
   <div class="home_page_container">
   </div>
+
+
 
 
   <!-- footer part of ideakart -->
@@ -975,7 +977,7 @@
   if (isSignin !== null) {
     document.querySelector("#login_text").innerHTML =
 
-      `<select name="current_user" id="current_user">
+  `<select name="current_user" id="current_user">
    <option id="useless" class="dash_options" value="">${current_user_name}</option>
    <option class="dash_options" value="Dashboard">Dashboard</option>
    <option class="dash_options" value="Notifications">Notifications</option>
@@ -991,9 +993,9 @@
       localStorage.removeItem("signinData");
       window.location.reload();
     } else if (Dash.value == "Dashboard") {
-      window.location.href = "dashboard_home.html" //link here
+      window.location.href = "dashboard_home.html" 
     } else if (Dash.value == "Notifications") {
-      window.location.href = "notification.html" //here too 
+      window.location.href = "notification.html" 
     }
   }
 </script>

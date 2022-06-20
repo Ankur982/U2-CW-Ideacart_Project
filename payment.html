@@ -2,100 +2,101 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IdeaKart💡</title>
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="footer.css">
-    <style>
-        * {
-            margin: 0px;
-            padding: 0px;
-            box-sizing: border-box;
-            font-family: 'Spartan', sans-serif;
-        }
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IdeaKart💡</title>
+  <link rel="stylesheet" href="navbar.css">
+  <link rel="stylesheet" href="footer.css">
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+      box-sizing: border-box;
+      font-family: 'Spartan', sans-serif;
+    }
 
 
-        #paygateway{
-            margin: 40px 0;
-        }
+    #paygateway {
+      margin: 40px 0;
+    }
 
 
-        #paybox {
-            margin: auto;
-            width: 600px;
-            border: 1px solid transparent;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-            margin-top: 40px;
-            border-radius: 30px;
-        }
+    #paybox {
+      margin: auto;
+      width: 600px;
+      border: 1px solid transparent;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      margin-top: 40px;
+      border-radius: 30px;
+    }
 
-        #paydetail>label {
-            font-size: 20px;
-            color: #4B5563;
-        }
+    #paydetail>label {
+      font-size: 20px;
+      color: #4B5563;
+    }
 
-        #paydetail {
-            margin: auto;
-            padding: 10px 30px 30px 30px;
-            
+    #paydetail {
+      margin: auto;
+      padding: 10px 30px 30px 30px;
 
 
-        }
 
-       .cartdetail {
-            box-sizing: border-box;
-            margin-top: 10px;
-            resize: vertical;
-            width: 100%;
-            height: 50px;
-            font-size: large;
-            border: 1px solid #ccc;
-            border-radius: 9px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-            outline: none;
-            padding-left: 20px;
+    }
 
-        }
+    .cartdetail {
+      box-sizing: border-box;
+      margin-top: 10px;
+      resize: vertical;
+      width: 100%;
+      height: 50px;
+      font-size: large;
+      border: 1px solid #ccc;
+      border-radius: 9px;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      outline: none;
+      padding-left: 20px;
 
-        #cartsubmit{
-            width: 100%;
-            height: 50px;
-            border-radius: 30px;
-            margin-top: 30px;
-            font-size: large;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
-            outline: none;
-            padding-left: 20px;
-        }
+    }
 
-        #cartsubmit:hover {
-            background: #088178;
-    color:  white;;
-        }
+    #cartsubmit {
+      width: 100%;
+      height: 50px;
+      border-radius: 30px;
+      margin-top: 30px;
+      font-size: large;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
+      outline: none;
+      padding-left: 20px;
+    }
 
-        #paydetail>div {
+    #cartsubmit:hover {
+      background: #088178;
+      color: white;
+      ;
+    }
 
-            font-size: 14px;
-            font-weight: 450;
-            text-align: center;
-            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-            color: #CFA180;
+    #paydetail>div {
 
-        }
+      font-size: 14px;
+      font-weight: 450;
+      text-align: center;
+      font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+      color: #CFA180;
 
-       #paytitle{
-            margin: auto;
-            text-align: center;
-        }
-    </style>
+    }
+
+    #paytitle {
+      margin: auto;
+      text-align: center;
+    }
+  </style>
 </head>
 
 <body>
 
 
-     <!-- navBar section -->
+  <!-- navBar section -->
 
 
   <section id="header">
@@ -126,29 +127,29 @@
     <h1 id="paytitle">Payment Gateway</h1>
 
     <div id="paybox">
-        <form id="paydetail" action="">
-            <!-- name -->
-            <label for="">Full name</label>
-            <input class="cartdetail" type="text" id="name" required="true"><br><br>
-            <!-- card -->
-            <label for="">Your Card Number</label>
-            <input class="cartdetail" type="number" id="card" required="true"><br><br>
-            <!-- password -->
-            <label for="">date of expiry</label>
-            <input class="cartdetail" type="date" placeholder="MM/DD/YYYY" id="password" id="date" required="true"> <br><br>
+      <form id="paydetail" action="">
+        <!-- name -->
+        <label for="">Full name</label>
+        <input class="cartdetail" type="text" id="name" required="true"><br><br>
+        <!-- card -->
+        <label for="">Your Card Number</label>
+        <input class="cartdetail" type="number" id="card" required="true"><br><br>
+        <!-- password -->
+        <label for="">date of expiry</label>
+        <input class="cartdetail" type="date" placeholder="MM/DD/YYYY" id="password" id="date" required="true"> <br><br>
 
-            <label for="">Your CVV</label>
-            <input class="cartdetail" type="number" name="" id="cvv" required="true">
+        <label for="">Your CVV</label>
+        <input class="cartdetail" type="number" name="" id="cvv" required="true">
 
-            <input type="submit" name="" id="cartsubmit">
-        </form>
+        <input type="submit" name="" id="cartsubmit">
+      </form>
     </div>
   </section>
 
-   
 
 
-    <!-- footer part of ideakart -->
+
+  <!-- footer part of ideakart -->
 
   <div id="foot-of-page">
     <h3>Get To Know Us</h3>
@@ -175,50 +176,50 @@
     </ul>
   </div>
 
-        
+
 </body>
 
 </html>
 
 <script>
-    document.querySelector("form").addEventListener("submit", myPayment);
-    let pay = JSON.parse(localStorage.getItem("pay")) || []
+  document.querySelector("form").addEventListener("submit", myPayment);
+  let pay = JSON.parse(localStorage.getItem("pay")) || []
 
-    function myPayment() {
-        event.preventDefault();
-        console.log("inner")
+  function myPayment() {
+    event.preventDefault();
+    console.log("inner")
 
-        let obj = {
-            name: document.querySelector("#name").value,
-            card: document.querySelector("#card").value,
-            // date:document.querySelector("#date").value,
-            pass: document.querySelector("#cvv").value,
-        }
-        if (checksign(obj.pass) == true) {
-            pay.push(obj)
-            localStorage.setItem("pay", JSON.stringify(pay))
-            alert("Thank you😊")
-            window.location.href = "otp.html"
-
-        } else {
-            alert("Please enter correct cvv")
-        }
+    let obj = {
+      name: document.querySelector("#name").value,
+      card: document.querySelector("#card").value,
+      // date:document.querySelector("#date").value,
+      pass: document.querySelector("#cvv").value,
     }
+    if (checksign(obj.pass) == true) {
+      pay.push(obj)
+      localStorage.setItem("pay", JSON.stringify(pay))
+      alert("Thank you😊")
+      window.location.href = "otp.html"
 
-
-
-
-
-    function checksign(email) {
-        let filter = pay.filter(function (elem) {
-            return email === elem.email;
-        })
-        if (filter.length > 0) {
-            return false;
-        } else {
-            return true;
-        }
+    } else {
+      alert("Please enter correct cvv")
     }
+  }
+
+
+
+
+
+  function checksign(email) {
+    let filter = pay.filter(function (elem) {
+      return email === elem.email;
+    })
+    if (filter.length > 0) {
+      return false;
+    } else {
+      return true;
+    }
+  }
 </script>
 
 

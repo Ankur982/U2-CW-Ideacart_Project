@@ -1,33 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>IdeaKart💡</title>
-    <link rel="stylesheet" href="final_dashboard.css" />
-    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    
-  </head>
-  <body>
-    <div class="sidebar">
-      <header>Dashboard</header>
-      <ul>
-        <li id="home">  <a href="dashboard_home.html">  <i class="fas fa-home"></i>Home</a></li>
-        <li id="new_product"><a href="upload_product.html">  <i class="fa fa-upload"></i>Upload Product </a></li>
-         <li id="credits"><a href="#">  <i class="fa fa-credit-card"></i>Credits</a></li>
-         <li ><a href="added_products.html">  <i class="fa fa-plus"></i> Added Product</a></li>
-         <li><a href="approved_product.html">  <i class="fa fa-check"></i>Product Approved</a> </li>
-         <li><a href="under_review.html">   <i class="fas fa-comments"></i>Under Review</a></li>
-         <li><a href="rejected_product.html">  <i class="fa fa-exclamation-triangle"></i>Product Rejected</a></li>
-        </li>
-      </ul>
-    </div>
-  </body>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>IdeaKart💡</title>
+  <link rel="stylesheet" href="final_dashboard.css" />
+  <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+
+</head>
+
+<body>
+  <div class="sidebar">
+    <header>Dashboard</header>
+    <ul>
+      <li id="home"> <a href="dashboard_home.html"> <i class="fas fa-home"></i>Home</a></li>
+      <li id="new_product"><a href="upload_product.html"> <i class="fa fa-upload"></i>Upload Product </a></li>
+      <li id="credits"><a href="#"> <i class="fa fa-credit-card"></i>Credits</a></li>
+      <li><a href="added_products.html"> <i class="fa fa-plus"></i> Added Product</a></li>
+      <li><a href="approved_product.html"> <i class="fa fa-check"></i>Product Approved</a> </li>
+      <li><a href="under_review.html"> <i class="fas fa-comments"></i>Under Review</a></li>
+      <li><a href="rejected_product.html"> <i class="fa fa-exclamation-triangle"></i>Product Rejected</a></li>
+      </li>
+    </ul>
+  </div>
+</body>
+
 </html>
-
-
-
 
 
 
@@ -54,9 +54,9 @@
       localStorage.removeItem("signinData");
       window.location.reload();
     } else if (Dash.value == "Dashboard") {
-      window.location.href = "dashboard_home.html" //link here
+      window.location.href = "dashboard_home.html";
     } else if (Dash.value == "Notifications") {
-      window.location.href = "notification.html" //here too 
+      window.location.href = "notification.html";
     }
   }
 </script>

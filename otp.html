@@ -86,7 +86,7 @@
 <body>
 
 
-  <!-- navBar section -->
+  <!-- navBar section start -->
 
 
   <section id="header">
@@ -108,8 +108,10 @@
       </ul>
     </div>
   </section>
+  <!-- navBar section end -->
 
-  <!-- otp page of ideakart -->
+
+  <!-- otp page of ideakart start  -->
 
 
   <div id="payimage">
@@ -127,6 +129,7 @@
     </form>
   </div>
 
+  <!-- otp page of ideakart end  -->
 
 
 
@@ -158,6 +161,7 @@
     </ul>
   </div>
 
+  <!-- footer part of ideakart end -->
 
 </body>
 
@@ -165,11 +169,11 @@
 </html>
 
 <script>
-  document.querySelector("#optform").addEventListener("submit", myfun)
+  document.querySelector("#optform").addEventListener("submit", myfun);
 
   function myfun() {
     event.preventDefault();
-    let otp = document.querySelector("#otpinput").value
+    let otp = document.querySelector("#otpinput").value;
     let obj = {
       otp: otp,
     }
@@ -177,7 +181,7 @@
       alert("Payment Successful 🎉🎉!!.. Press Ok To Continue Shopping");
       window.location.href = "index.html";
     } else {
-      alert("Please enter Valid otp...!😓")
+      alert("Please enter Valid otp...!😓");
       window.location.reload();
     }
 
@@ -211,9 +215,9 @@
       localStorage.removeItem("signinData");
       window.location.reload();
     } else if (Dash.value == "Dashboard") {
-      window.location.href = "dashboard_home.html" //link here
+      window.location.href = "dashboard_home.html";
     } else if (Dash.value == "Notifications") {
-      window.location.href = "notification.html" //here too 
+      window.location.href = "notification.html";
     }
   }
 </script>

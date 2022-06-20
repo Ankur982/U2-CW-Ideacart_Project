@@ -2,7 +2,6 @@
 * {
   padding: 0;
   margin: 0;
-  box-sizing: border-box;
   text-decoration: none;
 }
 
@@ -15,7 +14,6 @@
   background-color: #088178;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
 }
-
 .sidebar header {
   font-size: 22px;
   color: white;
@@ -24,7 +22,6 @@
   background-color: rgb(37, 63, 72);
   user-select: none;
 }
-
 .sidebar ul a {
   display: block;
   height: 100%;
@@ -38,7 +35,6 @@
   border-bottom: 1px solid black;
   transition: 0.4s;
 }
-
 ul li:hover a {
   padding-left: 50px;
 }
@@ -57,26 +53,22 @@ ul li:hover a {
 
   margin: 0% 0% 3% 27%;
 }
-
 .table-Dashboard h2 {
   padding: 40px;
   margin-left: 270px;
 }
-
 .t1 {
   margin-left: 100px;
 }
-
-.t1>thead>tr>th {
+.t1 > thead > tr > th {
   width: 210px;
   padding: 10px;
   color: white;
   background-color: teal;
   border-radius: 8px;
-
+  
 }
-
-#tbody>tr>td {
+#tbody > tr > td {
   border: 1px solid grey;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   border: none;
@@ -89,14 +81,12 @@ ul li:hover a {
   width: 150px;
   height: 200px;
 }
-
 #tbody :nth-child(2) {
   text-align: center;
 
   width: 150px;
   height: 190px;
 }
-
 #tbody :nth-child(3) {
   font-weight: bold;
   text-align: center;
@@ -104,7 +94,6 @@ ul li:hover a {
   width: 150px;
   height: 190px;
 }
-
 #tbody :nth-child(4) {
   font-weight: bold;
   text-align: center;
@@ -114,7 +103,6 @@ ul li:hover a {
   width: 150px;
   height: 190px;
 }
-
 #tbody :nth-child(5) {
   color: white;
   font-weight: bold;

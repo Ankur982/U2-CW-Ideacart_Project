@@ -12,26 +12,29 @@ function mySignIn(event) {
     alert("Welcome Admin !")
     window.location.href = "admin.html";
     return;
-  } else {
+  }
+  else {
     function checkSignin(email, password) {
-      let filter = users.filter(function (ele) {
-        return ele.email == email && ele.password == password;
+      let filter = users.filter(function(ele) {
+        return ele.email == email && ele.password == password
       })
       if (filter.length > 0) {
         return filter;
       } else {
-        return false;
+        return false
       }
     }
     let currentUser = checkSignin(data.userEmail, data.userPassword);
     if (currentUser == false) {
       alert("User Not Found");
-    } else {
+    }
+  
+    else {
       localStorage.setItem("signinData", JSON.stringify(currentUser));
       alert("SignIn Success!!");
       window.location.href = "index.html";
     }
   }
-
+  
 
 }

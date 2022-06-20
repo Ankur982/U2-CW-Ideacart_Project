@@ -17,8 +17,8 @@ function mySignup(event) {
       alert("Please Enter All The Details")
     } else {
       alert("Welcome To IdeaKart ..🎉.. Please Sign In !");
-      document.querySelector('.cont').classList.toggle('s--signup');
-      // window.location.reload();
+        document.querySelector('.cont').classList.toggle('s--signup');
+        // window.location.reload();
     }
   } else {
     alert("Account Already Exists.. Please Sign In");
@@ -26,7 +26,7 @@ function mySignup(event) {
   }
 
   function checkEmail(email) {
-    let filtered = dataArr.filter(function (ele) {
+    let filtered = dataArr.filter(function(ele) {
       return email === ele.email;
     })
     if (filtered.length > 0) {

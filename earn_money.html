@@ -9,6 +9,12 @@
   <link rel="stylesheet" href="navbar.css">
   <link rel="stylesheet" href="footer.css">
   <style>
+    * {
+      padding: 0;
+      margin: 0;
+      box-sizing: border-box
+    }
+
     .headearn {
       padding: 30px 0;
       /* background-image: url("earn.jpg"); */
@@ -17,10 +23,6 @@
                         background-position: cover;
                         background-repeat: no-repeat */
 
-    }
-
-    * {
-      box-sizing: border-box
     }
 
     #earncontainer {
@@ -47,8 +49,8 @@
 
     }
 
-    #earncontainer>div:nth-child(2):hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    #earncontainer>div:nth-child(2):hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 
     #earncontainer>div:nth-child(3) {
@@ -58,8 +60,8 @@
 
     }
 
-    #earncontainer>div:nth-child(3):hover{
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
+    #earncontainer>div:nth-child(3):hover {
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 30px 60px -12px inset, rgba(0, 0, 0, 0.3) 0px 18px 36px -18px inset;
     }
 
     .earn1 {
@@ -170,6 +172,7 @@
     </div>
   </section>
 
+   <!-- navBar section end -->
 
 
   <!-- earn money section -->
@@ -204,7 +207,6 @@
             mandatory to upload videos.</li>
 
 
-
         </ul>
       </div>
       <div class="earn1 ">
@@ -224,6 +226,7 @@
     <button id="getstart">Get Started</button>
   </div>
 
+  <!-- earn money section end-->
 
 
 
@@ -257,7 +260,6 @@
 
 
 
-
 </body>
 
 </html>
@@ -266,25 +268,25 @@
   earn1.forEach((earn1) => {
     // console.log(earn1)
     earn1.addEventListener("click", () => {
-      removeActiveClasses()
-      earn1.classList.add("active")
+      removeActiveClasses();
+      earn1.classList.add("active");
     })
   })
 
   function removeActiveClasses() {
     earn1.forEach(earn1 => {
-      earn1.classList.remove("active")
+      earn1.classList.remove("active");
 
 
 
     })
   }
 
-  document.querySelector("#getstart").addEventListener("click",redir_fun);
+  document.querySelector("#getstart").addEventListener("click", redir_fun);
 
-  function redir_fun(){
-        alert("Please Sign In to Get Started");
-        window.location.href = "login.html"
+  function redir_fun() {
+    alert("Please Sign In to Get Started");
+    window.location.href = "login.html";
   }
 </script>
 
@@ -315,9 +317,9 @@
       localStorage.removeItem("signinData");
       window.location.reload();
     } else if (Dash.value == "Dashboard") {
-      window.location.href = "dashboard_home.html" //link here
-    } else if (Dash.value == "Notifications") {
-      window.location.href = "notification.html" //here too 
+      window.location.href = "dashboard_home.html";
+    } else if (Dash.value == "Notifications"){
+      window.location.href = "notification.html";
     }
   }
 </script>

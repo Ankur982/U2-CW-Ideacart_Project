@@ -6,7 +6,6 @@ let formData = document.querySelector("#form");
 
 function addPoductFun(event) {
   event.preventDefault();
-
   //unique Id check function
 
   // pushing data to localStorage

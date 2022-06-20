@@ -1,7 +1,7 @@
 let uploadedArr = JSON.parse(localStorage.getItem("New-Product")) || [];
 let review = JSON.parse(localStorage.getItem("review"));
-let productLS=JSON.parse(localStorage.getItem("accepted-Product"))||[]
-let productLS1=JSON.parse(localStorage.getItem("rejected-Product"))||[]
+let productLS=JSON.parse(localStorage.getItem("accepted-Product"))||[];
+let productLS1=JSON.parse(localStorage.getItem("rejected-Product"))||[];
 
 function displayProducts(uploadedArr) {
   document.querySelector("#tbody").innerHTML = "";

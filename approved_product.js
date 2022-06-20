@@ -20,5 +20,3 @@ function displayUploaded(addedProductArr) {
   });
 }
 displayUploaded(addedProductArr);
-
-

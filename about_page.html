@@ -11,6 +11,7 @@
   <style>
     * {
       margin: 0;
+      padding: 0;
       font-family: sans-serif;
       box-sizing: border-box;
     }
@@ -50,7 +51,7 @@
 
 <body>
 
-  <!-- navBar section -->
+  <!-- navBar section start -->
 
 
   <section id="header">
@@ -71,14 +72,21 @@
       </ul>
     </div>
   </section>
+  <!-- navBar section end-->
+
+  <!-- about section start -->
 
   <section class="about_data">
     <main class="grid">
       <h2>Welcome To Ideakart</h2>
-      <p>Ideakart is a site that gives you an idea about the book you want to buy. We offer a huge collection of books in diverse categories.
-        We have a user friendly search engine and a quick delivery system. With this we even provide best discounts on our books. You can write to us for any idea or any help you need.
-        Ideakart is a site that gives you an idea and a platform for the book you want. We offer a huge collection of books in diverse categories.
-        We have a user friendly search engine and a quick delivery system. With this we even provide best discounts on our books. You can write to us for any idea or any help you need.
+      <p>Ideakart is a site that gives you an idea about the book you want to buy. We offer a huge collection of books
+        in diverse categories.
+        We have a user friendly search engine and a quick delivery system. With this we even provide best discounts on
+        our books. You can write to us for any idea or any help you need.
+        Ideakart is a site that gives you an idea and a platform for the book you want. We offer a huge collection of
+        books in diverse categories.
+        We have a user friendly search engine and a quick delivery system. With this we even provide best discounts on
+        our books. You can write to us for any idea or any help you need.
       </p>
       <!-- <h2>Meet the team</h2>
       <div class="cards">Ankur</div>
@@ -88,6 +96,8 @@
       <div class="cards">Akshay</div> -->
     </main>
   </section>
+
+    <!-- about section end-->
 
   <!-- footer part of ideakart -->
 
@@ -115,6 +125,7 @@
 
     </ul>
   </div>
+   <!-- footer part of ideakart end-->
 
 </body>
 
@@ -146,11 +157,9 @@
       localStorage.removeItem("signinData");
       window.location.reload();
     } else if (Dash.value == "Dashboard") {
-      window.location.href = "dashboard_home.html" //link here
+      window.location.href = "dashboard_home.html";
     } else if (Dash.value == "Notifications") {
-      window.location.href = "notification.html" //here too 
+      window.location.href = "notification.html";
     }
   }
 </script>
-
-

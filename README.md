@@ -13,11 +13,12 @@ Have a look ⬇️
 
 ## Screenshots
 
-![App Screenshot](images/h)
+![Home page](images/homepage.PNG)
 
-<img src="./1.png">
-<img src="./2.png">
-<img src="./3.png">
+![Login page](images/login.PNG.PNG)
+![Cart page](images/cart%20page.PNG.PNG.PNG)
+![Dashboard page](images/dashboard.PNG.PNG)
+![Admin page](images/admin%20page.PNG.PNG)
 
 ##Contributors:
 

@@ -13,11 +13,11 @@ Have a look ⬇️
 
 ## Screenshots
 
-![App Screenshot](images/login.PNG)
+![App Screenshot](images/homepage.PNG)
 <img src="./images/login.PNG">
 <img src="./images/cart%20page.PNG">
-<img src="images/dashboard.PNG>
-<img src="./images/admin%20page.PNG">
+<img src="images/dashboard.PNG">
+<img src="images/admin%20page.PNG">
 
 
 

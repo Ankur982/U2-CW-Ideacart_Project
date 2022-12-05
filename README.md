@@ -23,14 +23,14 @@ Have a look ⬇️
 
 
 
-
+```
 ##Contributors:
 
-# Akashy     -  @akshay-puranik
-# Ankur      -  @Ankur982Sum
-# Shivaprasd -  @Shivaprasad-sBhat
-# Priyanshu  -  @priyanshupawar
-# Shivani    -  @shiivaniiawasthii
+## Akashy     -  @akshay-puranik
+## Ankur      -  @Ankur982Sum
+## Shivaprasad -  @Shivaprasad-sBhat
+## Priyanshu  -  @priyanshupawar
+## Shivani    -  @shiivaniiawasthii
 ## THANK YOU ❤️
 ```
 

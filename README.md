@@ -13,10 +13,15 @@ Have a look ⬇️
 
 ## Screenshots
 
-![App Screenshot](images/homepage.PNG)
-<img src="./images/login.PNG">
-<img src="./images/cart%20page.PNG">
+**Home page:**
+<img src="images/homepage.PNG">
+**Login/Signup page:**
+<img src="images/login.PNG">
+**Cart page:**
+<img src="images/cart%20page.PNG">
+**Dashboard page:**
 <img src="images/dashboard.PNG">
+**Admin page:**
 <img src="images/admin%20page.PNG">
 
 
@@ -31,6 +36,6 @@ Have a look ⬇️
 ## Shivaprasad -  @Shivaprasad-sBhat
 ## Priyanshu  -  @priyanshupawar
 ## Shivani    -  @shiivaniiawasthii
-## THANK YOU ❤️
-```
 
+```
+## THANK YOU ❤️

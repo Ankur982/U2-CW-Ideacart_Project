@@ -13,20 +13,24 @@ Have a look ⬇️
 
 ## Screenshots
 
-![Home page](images/homepage.PNG)
+![App Screenshot](images/login.PNG)
+<img src="./images/login.PNG">
+<img src="./images/cart%20page.PNG">
+<img src="images/dashboard.PNG>
+<img src="./images/admin%20page.PNG">
 
-![Login page](images/login.PNG.PNG)
-![Cart page](images/cart%20page.PNG.PNG.PNG)
-![Dashboard page](images/dashboard.PNG.PNG)
-![Admin page](images/admin%20page.PNG.PNG)
+
+
+
+
 
 ##Contributors:
 
-## Akashy     -  @akshay-puranik
-## Ankur      -  @Ankur982Sum
-## Shivaprasd -  @Shivaprasad-sBhat
-## Priyanshu  -  @priyanshupawar
-## Shivani    -  @shiivaniiawasthii
+# Akashy     -  @akshay-puranik
+# Ankur      -  @Ankur982Sum
+# Shivaprasd -  @Shivaprasad-sBhat
+# Priyanshu  -  @priyanshupawar
+# Shivani    -  @shiivaniiawasthii
 ## THANK YOU ❤️
 ```
 

@@ -4,7 +4,7 @@ Hello Everyone,  we would like to share our Experience in this Construction Week
 
 This was a group project executed within a 4 days of span.
 <br/>
-Netlify link :-legendary-gecko-c6ccce.netlify.app/
+Netlify link :- https://legendary-gecko-c6ccce.netlify.app/
 
 Have a look ⬇️
 

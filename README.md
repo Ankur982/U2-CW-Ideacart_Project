@@ -3,7 +3,8 @@
 Hello Everyone,  we would like to share our Experience in this Construction Week, this time Masai School give me and my team members an oppotunity to build a cloned website of Idea-Kart as a part of our construct week project.
 
 This was a group project executed within a 4 days of span.
-Netlify link :-
+<br/>
+Netlify link :-legendary-gecko-c6ccce.netlify.app/
 
 Have a look ⬇️
 
